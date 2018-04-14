@@ -1,0 +1,366 @@
+******************************************************************************
+                  TI ARM Linker PC v16.9.0                     
+******************************************************************************
+>> Linked Sat Apr 14 14:50:16 2018
+
+OUTPUT FILE NAME:   <emac_demo.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 000008e5
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00100000  00001130  000feed0  R  X
+  SRAM                  20000000   00040000  000014e0  0003eb20  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00001130   00001130    r-x
+  00000000    00000000    00000200   00000200    r-- .intvecs
+  00000200    00000200    00000be8   00000be8    r-x .text
+  00000de8    00000de8    00000310   00000310    r-- .const
+  000010f8    000010f8    00000038   00000038    r-- .cinit
+20000000    20000000    000014e0   00000000    rw-
+  20000000    20000000    000012c8   00000000    rw- .bss
+  200012c8    200012c8    00000200   00000000    rw- .stack
+  200014c8    200014c8    00000018   00000000    rw- .data
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    00000200     
+                  00000000    00000200     startup_ccs.obj (.intvecs)
+
+.text      0    00000200    00000be8     
+                  00000200    00000200     driverlib.lib : sysctl.obj (.text:SysCtlClockFreqSet)
+                  00000400    0000012c     eth.obj (.text:initEthernet)
+                  0000052c    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.obj (.text)
+                  000005c8    00000090     eth.obj (.text:InitDescriptors)
+                  00000658    0000007a     rtsv7M4_T_le_v4SPD16_eabi.lib : memset_t2.obj (.text)
+                  000006d2    00000002     startup_ccs.obj (.text:FaultISR)
+                  000006d4    00000078     driverlib.lib : emac.obj (.text:EMACInit)
+                  0000074c    00000070     rtsv7M4_T_le_v4SPD16_eabi.lib : autoinit.obj (.text)
+                  000007bc    00000068     driverlib.lib : interrupt.obj (.text:IntEnable)
+                  00000824    00000068     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_lzss.obj (.text:decompress:lzss)
+                  0000088c    00000058     driverlib.lib : emac.obj (.text:EMACPHYConfigSet)
+                  000008e4    00000054     rtsv7M4_T_le_v4SPD16_eabi.lib : boot.obj (.text)
+                  00000938    00000054                                   : exit.obj (.text)
+                  0000098c    00000050     driverlib.lib : sysctl.obj (.text:SysCtlPeripheralReset)
+                  000009dc    0000004c     rtsv7M4_T_le_v4SPD16_eabi.lib : cpy_tbl.obj (.text)
+                  00000a28    00000048     driverlib.lib : sysctl.obj (.text:_SysCtlFrequencyGet)
+                  00000a70    00000044     eth.obj (.text:PacketTransmit)
+                  00000ab4    00000044     eth.obj (.text:ProcessReceivedPacket)
+                  00000af8    00000040     uart_echo.obj (.text:main)
+                  00000b38    0000003a     driverlib.lib : emac.obj (.text:EMACIntEnable)
+                  00000b72    00000002     startup_ccs.obj (.text:IntDefaultHandler)
+                  00000b74    00000038     driverlib.lib : emac.obj (.text:EMACConfigSet)
+                  00000bac    00000038                   : sysctl.obj (.text:SysCtlPeripheralReady)
+                  00000be4    00000034                   : emac.obj (.text:EMACIntClear)
+                  00000c18    00000034                   : sysctl.obj (.text:SysCtlPeripheralEnable)
+                  00000c4c    00000030                   : emac.obj (.text:EMACAddrSet)
+                  00000c7c    0000002c                   : emac.obj (.text:EMACIntStatus)
+                  00000ca8    00000026                   : emac.obj (.text:EMACPHYRead)
+                  00000cce    00000002     startup_ccs.obj (.text:NmiSR)
+                  00000cd0    00000024     eth.obj (.text:EthernetIntHandler)
+                  00000cf4    00000020     driverlib.lib : sysctl.obj (.text:_SysCtlMemTimingGet)
+                  00000d14    00000018     rtsv7M4_T_le_v4SPD16_eabi.lib : args_main.obj (.text)
+                  00000d2c    00000016     driverlib.lib : emac.obj (.text:EMACReset)
+                  00000d42    00000016                   : emac.obj (.text:EMACRxEnable)
+                  00000d58    00000016                   : emac.obj (.text:EMACTxEnable)
+                  00000d6e    00000002     rtsv7M4_T_le_v4SPD16_eabi.lib : mpu_init.obj (.text)
+                  00000d70    00000014     driverlib.lib : flash.obj (.text:FlashUserGet)
+                  00000d84    00000014     rtsv7M4_T_le_v4SPD16_eabi.lib : _lock.obj (.text)
+                  00000d98    00000010     driverlib.lib : emac.obj (.text:EMACFrameFilterSet)
+                  00000da8    0000000e     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_none.obj (.text:decompress:none)
+                  00000db6    0000000c                                   : copy_zero_init.obj (.text:decompress:ZI)
+                  00000dc2    00000008     driverlib.lib : emac.obj (.text:EMACTxDMAPollDemand)
+                  00000dca    00000006                   : emac.obj (.text:EMACRxDMADescriptorListSet)
+                  00000dd0    00000006                   : emac.obj (.text:EMACTxDMADescriptorListSet)
+                  00000dd6    00000006     startup_ccs.obj (.text:ResetISR)
+                  00000ddc    00000006     driverlib.lib : sysctl.obj (.text:SysCtlDelay)
+                  00000de2    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.obj (.text)
+                  00000de6    00000002                                   : startup.obj (.text)
+
+.const     0    00000de8    00000310     
+                  00000de8    000001b0     driverlib.lib : sysctl.obj (.const:g_pppui32XTALtoVCO)
+                  00000f98    00000070                   : interrupt.obj (.const)
+                  00001008    0000006c                   : sysctl.obj (.const:g_pui32Xtals)
+                  00001074    00000031     uart_echo.obj (.const:.string:$P$T0$1)
+                  000010a5    00000003     --HOLE-- [fill = 0]
+                  000010a8    00000030     driverlib.lib : sysctl.obj (.const:g_sXTALtoMEMTIM)
+                  000010d8    00000018                   : emac.obj (.const)
+                  000010f0    00000008                   : sysctl.obj (.const)
+
+.cinit     0    000010f8    00000038     
+                  000010f8    00000011     (.cinit..data.load) [load image, compression = lzss]
+                  00001109    00000003     --HOLE-- [fill = 0]
+                  0000110c    0000000c     (__TI_handler_table)
+                  00001118    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00001120    00000010     (__TI_cinit_table)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.bss       0    20000000    000012c8     UNINITIALIZED
+                  20000000    00001200     (.common:g_ppui8RxBuffer)
+                  20001200    00000060     (.common:g_psRxDescriptor)
+                  20001260    00000060     (.common:g_psTxDescriptor)
+                  200012c0    00000004     (.common:g_ui32RxDescIndex)
+                  200012c4    00000004     (.common:g_ui32TxDescIndex)
+
+.stack     0    200012c8    00000200     UNINITIALIZED
+                  200012c8    00000200     --HOLE--
+
+.data      0    200014c8    00000018     UNINITIALIZED
+                  200014c8    0000000c     rtsv7M4_T_le_v4SPD16_eabi.lib : exit.obj (.data:$O1$$)
+                  200014d4    00000008                                   : _lock.obj (.data:$O1$$)
+                  200014dc    00000004                                   : stkdepth_vars.obj (.data)
+
+MODULE SUMMARY
+
+       Module                     code   ro data   rw data
+       ------                     ----   -------   -------
+    .\
+       eth.obj                    616    0         4808   
+       startup_ccs.obj            12     512       0      
+       uart_echo.obj              64     49        0      
+    +--+--------------------------+------+---------+---------+
+       Total:                     692    561       4808   
+                                                          
+    D:/ti/TivaWare/driverlib/ccs/Debug/driverlib.lib
+       sysctl.obj                 810    596       0      
+       emac.obj                   606    24        0      
+       interrupt.obj              104    112       0      
+       flash.obj                  20     0         0      
+    +--+--------------------------+------+---------+---------+
+       Total:                     1540   732       0      
+                                                          
+    D:\ti\ccsv7\tools\compiler\ti-cgt-arm_16.9.0.LTS\lib\rtsv7M4_T_le_v4SPD16_eabi.lib
+       memcpy_t2.obj              156    0         0      
+       memset_t2.obj              122    0         0      
+       autoinit.obj               112    0         0      
+       copy_decompress_lzss.obj   104    0         0      
+       exit.obj                   84     0         12     
+       boot.obj                   84     0         0      
+       cpy_tbl.obj                76     0         0      
+       _lock.obj                  20     0         8      
+       args_main.obj              24     0         0      
+       copy_decompress_none.obj   14     0         0      
+       copy_zero_init.obj         12     0         0      
+       pre_init.obj               4      0         0      
+       stkdepth_vars.obj          0      0         4      
+       mpu_init.obj               2      0         0      
+       startup.obj                2      0         0      
+    +--+--------------------------+------+---------+---------+
+       Total:                     816    0         24     
+                                                          
+       Stack:                     0      0         512    
+       Linker Generated:          0      53        0      
+    +--+--------------------------+------+---------+---------+
+       Grand Total:               3048   1346      5344   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00001120 records: 2, size/record: 8, table size: 16
+	.data: load addr=000010f8, load size=00000011 bytes, run addr=200014c8, run size=00000018 bytes, compression=lzss
+	.bss: load addr=00001118, load size=00000008 bytes, run addr=20000000, run size=000012c8 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 0000110c records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_lzss
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                           
+-------   ----                           
+00000939  C$$EXIT                        
+00000c4d  EMACAddrSet                    
+00000b75  EMACConfigSet                  
+00000d99  EMACFrameFilterSet             
+000006d5  EMACInit                       
+00000be5  EMACIntClear                   
+00000b39  EMACIntEnable                  
+00000c7d  EMACIntStatus                  
+0000088d  EMACPHYConfigSet               
+00000ca9  EMACPHYRead                    
+00000d2d  EMACReset                      
+00000dcb  EMACRxDMADescriptorListSet     
+00000d43  EMACRxEnable                   
+00000dd1  EMACTxDMADescriptorListSet     
+00000dc3  EMACTxDMAPollDemand            
+00000d59  EMACTxEnable                   
+00000cd1  EthernetIntHandler             
+00000d71  FlashUserGet                   
+000005c9  InitDescriptors                
+000007bd  IntEnable                      
+00000a71  PacketTransmit                 
+00000ab5  ProcessReceivedPacket          
+00000dd7  ResetISR                       
+UNDEFED   SHT$$INIT_ARRAY$$Base          
+UNDEFED   SHT$$INIT_ARRAY$$Limit         
+00000201  SysCtlClockFreqSet             
+00000ddd  SysCtlDelay                    
+00000c19  SysCtlPeripheralEnable         
+00000bad  SysCtlPeripheralReady          
+0000098d  SysCtlPeripheralReset          
+200014c8  __STACK_END                    
+00000200  __STACK_SIZE                   
+200014c8  __STACK_TOP                    
+00001120  __TI_CINIT_Base                
+00001130  __TI_CINIT_Limit               
+0000110c  __TI_Handler_Table_Base        
+00001118  __TI_Handler_Table_Limit       
+0000074d  __TI_auto_init                 
+200014c8  __TI_cleanup_ptr               
+00000825  __TI_decompress_lzss           
+00000da9  __TI_decompress_none           
+200014cc  __TI_dtors_ptr                 
+200014d0  __TI_enable_exit_profile_output
+ffffffff  __TI_pprof_out_hndl            
+ffffffff  __TI_prof_data_size            
+ffffffff  __TI_prof_data_start           
+00000000  __TI_static_base__             
+00000db7  __TI_zero_init                 
+00000659  __aeabi_memclr                 
+00000659  __aeabi_memclr4                
+00000659  __aeabi_memclr8                
+0000052d  __aeabi_memcpy                 
+0000052d  __aeabi_memcpy4                
+0000052d  __aeabi_memcpy8                
+0000065b  __aeabi_memset                 
+0000065b  __aeabi_memset4                
+0000065b  __aeabi_memset8                
+ffffffff  __binit__                      
+ffffffff  __c_args__                     
+00000d6f  __mpu_init                     
+200012c8  __stack                        
+00000d15  _args_main                     
+000008e5  _c_int00                       
+200014d4  _lock                          
+00000d93  _nop                           
+00000d8b  _register_lock                 
+00000d85  _register_unlock               
+00000de7  _system_post_cinit             
+00000de3  _system_pre_init               
+200014d8  _unlock                        
+0000093d  abort                          
+ffffffff  binit                          
+000009dd  copy_in                        
+00000945  exit                           
+00000000  g_pfnVectors                   
+20000000  g_ppui8RxBuffer                
+20001200  g_psRxDescriptor               
+20001260  g_psTxDescriptor               
+200012c0  g_ui32RxDescIndex              
+200012c4  g_ui32TxDescIndex              
+00000401  initEthernet                   
+00000af9  main                           
+200014dc  main_func_sp                   
+0000052d  memcpy                         
+00000661  memset                         
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                           
+-------   ----                           
+00000000  __TI_static_base__             
+00000000  g_pfnVectors                   
+00000200  __STACK_SIZE                   
+00000201  SysCtlClockFreqSet             
+00000401  initEthernet                   
+0000052d  __aeabi_memcpy                 
+0000052d  __aeabi_memcpy4                
+0000052d  __aeabi_memcpy8                
+0000052d  memcpy                         
+000005c9  InitDescriptors                
+00000659  __aeabi_memclr                 
+00000659  __aeabi_memclr4                
+00000659  __aeabi_memclr8                
+0000065b  __aeabi_memset                 
+0000065b  __aeabi_memset4                
+0000065b  __aeabi_memset8                
+00000661  memset                         
+000006d5  EMACInit                       
+0000074d  __TI_auto_init                 
+000007bd  IntEnable                      
+00000825  __TI_decompress_lzss           
+0000088d  EMACPHYConfigSet               
+000008e5  _c_int00                       
+00000939  C$$EXIT                        
+0000093d  abort                          
+00000945  exit                           
+0000098d  SysCtlPeripheralReset          
+000009dd  copy_in                        
+00000a71  PacketTransmit                 
+00000ab5  ProcessReceivedPacket          
+00000af9  main                           
+00000b39  EMACIntEnable                  
+00000b75  EMACConfigSet                  
+00000bad  SysCtlPeripheralReady          
+00000be5  EMACIntClear                   
+00000c19  SysCtlPeripheralEnable         
+00000c4d  EMACAddrSet                    
+00000c7d  EMACIntStatus                  
+00000ca9  EMACPHYRead                    
+00000cd1  EthernetIntHandler             
+00000d15  _args_main                     
+00000d2d  EMACReset                      
+00000d43  EMACRxEnable                   
+00000d59  EMACTxEnable                   
+00000d6f  __mpu_init                     
+00000d71  FlashUserGet                   
+00000d85  _register_unlock               
+00000d8b  _register_lock                 
+00000d93  _nop                           
+00000d99  EMACFrameFilterSet             
+00000da9  __TI_decompress_none           
+00000db7  __TI_zero_init                 
+00000dc3  EMACTxDMAPollDemand            
+00000dcb  EMACRxDMADescriptorListSet     
+00000dd1  EMACTxDMADescriptorListSet     
+00000dd7  ResetISR                       
+00000ddd  SysCtlDelay                    
+00000de3  _system_pre_init               
+00000de7  _system_post_cinit             
+0000110c  __TI_Handler_Table_Base        
+00001118  __TI_Handler_Table_Limit       
+00001120  __TI_CINIT_Base                
+00001130  __TI_CINIT_Limit               
+20000000  g_ppui8RxBuffer                
+20001200  g_psRxDescriptor               
+20001260  g_psTxDescriptor               
+200012c0  g_ui32RxDescIndex              
+200012c4  g_ui32TxDescIndex              
+200012c8  __stack                        
+200014c8  __STACK_END                    
+200014c8  __STACK_TOP                    
+200014c8  __TI_cleanup_ptr               
+200014cc  __TI_dtors_ptr                 
+200014d0  __TI_enable_exit_profile_output
+200014d4  _lock                          
+200014d8  _unlock                        
+200014dc  main_func_sp                   
+ffffffff  __TI_pprof_out_hndl            
+ffffffff  __TI_prof_data_size            
+ffffffff  __TI_prof_data_start           
+ffffffff  __binit__                      
+ffffffff  __c_args__                     
+ffffffff  binit                          
+UNDEFED   SHT$$INIT_ARRAY$$Base          
+UNDEFED   SHT$$INIT_ARRAY$$Limit         
+
+[85 symbols]
