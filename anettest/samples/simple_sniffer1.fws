@@ -1,0 +1,22 @@
+/*
+
+ Traces tcp and udp packets and displays info about them.
+
+ run program as
+     anettest -d eth0 -f this_file.fws
+
+*/
+
+   INCLUDE udp
+   name udp_packet
+   mes 'udp packet recieved from $srcip$:$srcport$ to $dstip$:$dstport$\n'
+or
+
+   INCLUDE tcp
+   name tcp_packet
+   mes 'tcp packet recieved from $srcip$:$srcport$ to $dstip$:$dstport$, syn = $syn$, rst = $rst$, fin = $fin$\n'
+or
+
+quiet
+
+cyc inf waitall

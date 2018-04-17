@@ -1,0 +1,23 @@
+/*
+	Udp server using system socket, binds to 2 ports and accepts data for both displaying it. 
+	There is a sample of corresponding client.
+*/
+
+// quiet // to avoid some output
+
+open 'udp' 's:localhost:69#s'
+open 'udp' 's:localhost:70#s2'
+
+cyc inf {
+	mi s	
+	recv	
+	printl '$data$'
+	
+	mi s2	
+	recv
+	printl '$data$'
+}
+	
+close 's'
+close 's2'
+

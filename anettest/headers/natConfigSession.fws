@@ -1,0 +1,175 @@
+/*
+   Configuration of conversation test in the case of NAT between two sides (client and server).
+   Trace file must represent one session.
+   There are some configuration parameters that must be defined on higher level.
+   After such configuration test may be started by RUN command.
+
+   Interfaces association:
+
+      0 - public zone
+      1 - private zone
+      2 - DMZ
+
+*/
+
+INCLUDE natDefines   // includes configuration of NAT
+
+ifndef clientIP {
+
+	print "ERROR: clientIP must be defined (if server is in DMZ then client is in public network, otherwise - in private)\n"
+	exit 1
+}
+
+ifndef serverIP {
+
+	print "ERROR: serverIP must be defined (server may be in DMZ or in public network, beyond or before the gateway)\n"
+	exit 1
+}
+
+ifndef externalServer {
+
+	print "ERROR: flag externalServer must be defined.\n1: the server is beyond the public subnet (is accessible via the gateway)\n0 - otherwise\n"
+	exit 1
+}
+
+ifndef ownClientMac {
+
+	print "ERROR: flag ownClientMac must be defined\n1: uses other client mac\n0: uses client mac from trace file\n"
+	exit 1
+}
+
+ifndef serverInDMZ {
+
+   print "ERROR: flag serverInDMZ must be defined\n1: server IP must represent the host located in DMZ\n0: server is in public network\n"
+   exit 1
+}
+
+if ownClientMac = 1 {
+
+	ifndef clientMac {
+
+	  print "ERROR: value of clientMac must be defined if flag ownClientMac was set\n"
+	  exit 1
+	}
+}
+
+if externalServer = 0 {
+
+	ifndef serverMac {
+
+	  print "ERROR: value of serverMac must be defined if server is in public subnet (before gateway) or in DMZ\n"
+	  exit 1
+	}
+}
+
+if serverInDMZ = 1 {
+
+	ifndef serverMac {
+
+	  print "ERROR: value of serverMac must be defined if server is in DMZ\n"
+	  exit 1
+	}
+}
+
+// ETHERNET
+
+if serverInDMZ = 0 {
+
+   print '\nSession from $clientIP$ in private zone to $serverIP$ in public zone\n'
+
+	rm torecv srcmac first natPublicMac
+	rm togen dstmac  first natPrivateMac
+
+	if externalServer = 1 {
+
+      print 'ServerIP is beyond the gateway (gw mac = $natPublicGwMac$)\n'
+
+		rm torecv dstmac first natPublicGwMac
+		rm togen srcmac second natPublicGwMac
+	}
+	else {
+
+      print 'ServerIP is in public subnet (its mac = $serverMac$)\n'
+
+		rm torecv dstmac first serverMac
+		rm togen srcmac second serverMac
+	}
+
+	rm torecv srcmac second natPrivateMac
+
+	rm togen dstmac second natPublicMac
+
+	if ownClientMac = 1 {
+
+		rm togen srcmac first clientMac
+		rm torecv dstmac second clientMac
+	}
+
+	// IP
+
+	rm togen  srcip first clientIP
+	rm torecv srcip first natPublicIP
+
+	rm togen dstip first serverIP
+	rm torecv dstip first serverIP
+
+	rm togen srcip second serverIP
+	rm torecv srcip second serverIP
+
+	rm togen dstip second natPublicIP
+	rm torecv dstip second clientIP
+
+	// PORTS
+
+	rm torecv srcport first 1
+	rm togen  dstport second 2
+	arm syn 1
+
+	// CIEVES
+
+	cieve ip.crc
+	cieve tcp.crc
+
+}
+else {	// serverInDMZ = 1
+
+   print '\nSession from $clientIP$ in public zone to $serverIP$ in DMZ\n'
+
+	rm togen srcip first clientIP
+	rm torecv srcip first clientIP
+
+	rm togen srcip second serverIP
+	rm torecv srcip second serverIP
+
+	rm togen dstip first serverIP
+	rm torecv dstip first serverIP
+
+	rm togen dstip second clientIP
+	rm torecv dstip second clientIP
+
+	cieve ip.crc
+	cieve tcp.crc
+}
+
+// END POINTS
+
+if serverInDMZ = 0 {
+
+   // client is in private network, server is in public
+
+	ep togen 1 srcip first
+	ep togen 0 srcip second
+
+	ep torecv 0 srcip first
+	ep torecv 1 srcip second
+}
+else {
+
+   // client is in public network, server is in DMZ
+
+	ep togen 0 srcip first
+	ep togen 2 srcip second
+
+	ep torecv 2 srcip first
+	ep torecv 0 srcip second
+}

@@ -1,0 +1,37 @@
+/*
+	Tcp server that connects to server, sends data and displays answer. 
+	There is a sample of corresponding server.
+*/
+
+ifndef port {
+	define port 67
+}
+
+quiet
+
+open tcp 'c:localhost:$port$#s$i$'
+timeout 5000
+pause 100
+mi 's$i$'
+
+data '3*3'	
+	send
+printl 'client sent $data$'	
+	recv
+printl 'client received $data$'
+	
+data '6*3'
+	send 	
+printl 'client sent $data$'		
+	recv		
+printl 'client received $data$'
+
+data '2*2'
+	send 	
+printl 'client sent $data$'		
+	recv				
+printl 'client received $data$'
+
+close 's$i$'
+
+clearreg

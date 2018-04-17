@@ -1,0 +1,43 @@
+/*
+  Example of how to define an environment for given trace file
+  Trace file: smtp_client
+
+  Values of previously defined variables (created in file smtp_client_defines) will be inserted in packets.
+*/
+
+// modification of packet with MAIL FROM command
+
+getpac 8	// loads packet from file
+
+CLEARHISTORY	// if not use this command new packet cannot become smaller than original
+
+pos = tcp.data // the packet contains TCP options
+pass 12  		// so don't use standart "tcp.data" field but make this offset
+
+.td_command_name "MAIL From: "
+.td_email  mail_from   // defined in smtp_client_defines
+.td_rest " SIZE=834\r\n"	// writes new data to packet, the size of packet will be set after the written value
+
+ip.len = IPlen	  // IP length has changed, mark it to be recalculated
+tcp.crc = TCPcrc // TCP checksum has changed, mark it to be recalculated
+
+setpac 8 // writes modified packet to file
+
+// modification of packet with RCPT TO command
+
+getpac 10	// loads packet from file
+
+CLEARHISTORY	// if not use this command new packet cannot become smaller than original
+
+pos = tcp.data // the packet contains TCP options
+pass 12  		// so don't use standart "tcp.data" field but make this offset
+
+.td_command_name "Rcpt To: "
+.td_email  mail_to   // defined in smtp_client_defines
+.td_newl_ine "\r\n"	// writes new data to packet, the size of packet will be set after the written value
+
+ip.len = IPlen	  // IP length has changed, mark it to be recalculated
+tcp.crc = TCPcrc // TCP checksum has changed, mark it to be recalculated
+
+setpac 10 // writes modified packet to file
+

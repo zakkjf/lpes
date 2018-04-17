@@ -1,0 +1,142 @@
+/*
+   Reads mail over POP3 protocol.
+
+   run like this:
+      anettest -T 999999 -d client:pop3.mail.ru:110 -f this_file.fws
+
+*/
+
+cyc inf {
+
+print "new connection\n"
+
+device tcp "client:pop3.mail.ru:110"     // opens TCP session
+
+INCLUDE tcp
+
+timeout 20000
+
+CLEARMASK    // when working with TCP this command must always present at the beginning of script after including header
+
+td "+OK"
+
+   wait        // in the case of TCP connection WAIT command gets the full array of data that has been recieved by TCP
+               // and treats it as one packet, just one byte may be a packet
+               // if no data recieved then command will wait at least one byte
+
+ifr timeout {
+
+   print "The server doesn't send invitation\n"
+   getch
+   exit 2
+}
+
+td 'user anettesttesting\r\n'
+
+   send      // SEND command sends data beginning from the standart position of TCP data = 14 + 20 + 20 = 54.
+
+CLEARMASK
+td '+OK'
+
+   wait
+
+ifr timeout {
+
+   print "User name is not accepted\n"
+   getch
+   exit 2
+}
+
+td 'pass anettest\r\n'
+
+   send
+
+var v1 num 0 static
+var v2 num 0 static
+var v3 tf 0 static
+
+precisewait
+copyrec
+
+.nummes ''
+
+clearreg
+
+name 'ERROR'
+CLEARMASK
+td '-ERR'
+
+   or
+
+name 'OK'
+CLEARMASK
+td '+OK'
+
+   or
+
+cyc 4 {
+
+   waitall
+
+   ifr timeout {
+
+      print "Doesnt send ERR or OK\n"
+      getch
+      exit 2
+   }
+
+   ifr 'ERROR' {
+
+      print "The password is not accepted\n"
+      getch
+      exit 2
+   }
+
+   ifr 'OK' {
+
+      //print '$td$\n'
+      pos td
+      goto ('signing off')
+      if gotores = 1 {
+
+         print "The password is not accepted\n"
+         getch
+         exit 2
+      }
+
+      pos = td
+      goto ('has ')
+      if gotores = 1 {
+
+         pass 4
+         setpos(nummes, curpos)
+         v1 = curpos
+         goto(' ')
+         v2 = curpos
+         v2 -= v1
+         setsize(nummes, v2)
+
+         if nummes != 0 {
+
+            beep
+            print 'You have $nummes$ messages\n'
+            break
+         }
+         else {
+
+            print 'You don\'t have messages\n'
+            break
+         }
+      }
+   }
+
+   unfix
+}
+
+td "quit\r\n"
+   send
+
+print "waits for next connection\n"
+pause 10000
+
+}

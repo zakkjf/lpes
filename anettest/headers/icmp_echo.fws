@@ -1,0 +1,24 @@
+// ICMP echo packet
+
+INCLUDE icmp
+
+// FIELDS FOR ECHO MESSAGES (unused field)
+pos icmp.unused
+// ECHO id
+.icmp.id         4500s2.
+// ECHO sequence number
+.icmp.num        1000s2.
+// ECHO data
+.icmp.data       ''
+
+CLEARMASK
+
+ethproto = ip
+ip.proto = icmp    // packet's mask will contain only this conditions
+
+//  ATTENTION: mask defines any icmp packet but not only echo
+
+pos icmp.data
+
+
+

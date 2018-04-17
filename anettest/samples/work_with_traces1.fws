@@ -1,0 +1,62 @@
+/*
+   Watches trace file with smtp packets. Searches for packets with MAIL FROM command.
+   Adds found email address to the list of variables.
+   After watch, displays the filled list of variables.
+*/
+
+trace smtp_client
+
+int i = 1
+int nf = 0
+int v1 = 1
+int v2 = 1
+
+// watches trace
+
+cyc 24 {
+
+   getpac i    // loads packet from file
+
+   pos = td
+   goto('MAIL F')    // searches "mail from"
+   if gotores = 1 {
+
+      .sss ''
+      goto('<')
+      pass 1
+      setpos(sss, curpos)
+      v1 = curpos
+      goto('>')
+      v2 = curpos
+      v2 -= v1
+      setsize(sss, v2)
+      if v2 != 0 {
+
+         //print 'packet$i$\t\t$sss$\n'
+         var('email$nf$',td,'$sss$')     // creates new variable in list
+         nf += 1
+      }
+   }
+   i += 1
+}
+
+// displays the list
+
+i = nf
+i = 0
+string v10 = ''
+
+cyc inf {
+
+   if i >= nf {
+
+      break
+   }
+   else {
+
+      v10 = 'email$i$'
+      print '$v10$\n'
+   }
+   i += 1
+}
+

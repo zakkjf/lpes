@@ -1,0 +1,20 @@
+/*
+	Udp client using system socket, sends to 2 ports. There is a sample of corresponding server.
+*/
+
+open 'udp' 'c:localhost:70#s2'
+open 'udp' 'c:localhost:69#s'
+
+mi s2
+udp.data  '70'
+send
+
+mi s
+udp.data  '69'
+send
+
+//pause 5000
+	
+close 's'
+close 's2'
+

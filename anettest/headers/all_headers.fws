@@ -1,0 +1,12 @@
+INCLUDE ethernet2
+INCLUDE ethernet_llc
+INCLUDE ethernet_snap
+INCLUDE arp
+INCLUDE vlan
+INCLUDE ipx_header
+INCLUDE ip_header
+INCLUDE ipv6_header
+INCLUDE icmp_header
+INCLUDE tcp_header
+INCLUDE udp_header
+INCLUDE ospf

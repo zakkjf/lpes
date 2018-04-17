@@ -1,0 +1,13 @@
+INCLUDE ethernet_llc  // you can include other headers instead of this
+
+// defining fields for IPX header
+
+INCLUDE ipx_header
+
+CLEARMASK
+
+// guard
+ethproto      33
+llc.cntfield  3
+llc.dsap      0xe0
+llc.ssap      0xe0

@@ -1,0 +1,18 @@
+/*
+
+ Traces TCP packets with destination port = 80 and displays destination IP address for each packet.
+ Doesn't print packets with destination IP which has been already printed.
+
+ run program as
+     anettest -d eth0 -f this_file.fws
+
+*/
+
+INCLUDE tcp
+
+quiet
+dstport = 80
+mes " -> $dstip$\n"
+NOTDOUBLEMES
+
+CYC inf WAIT

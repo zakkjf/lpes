@@ -1,0 +1,16 @@
+// Sample file for progam AnetTest.
+// run program as
+//   anettest -d eth0 -f generate_udp_packet.fws
+// to generate this packet (instead of 'eth0' you may insert your adapter's name, may be IP address)
+
+INCLUDE udp   // you may find and edit file udp.fws in HEADERS folder
+
+srcip 1.1.1.1
+dstip 2.2.2.2
+
+srcport 10000
+dstport 80
+
+udp.data 'hollow'
+
+      SEND

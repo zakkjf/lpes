@@ -1,0 +1,15 @@
+/*
+
+  Example of how to define an environment for given trace file
+  Trace file: http_client
+
+  Creates variables which may be modified. With help of header http_client_config these variables may be inserted in packets.
+*/
+
+trace http_client_one
+
+.string ''
+
+var (method, string, "GET")
+var (url, string, "/")
+var (host, string, "www.mail.ru")

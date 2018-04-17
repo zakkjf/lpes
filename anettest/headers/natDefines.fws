@@ -1,0 +1,6 @@
+gdef natPrivateIP 10.0.0.254
+gdef natPublicIP  192.168.0.1
+gdef natPrivateMac 00:00:00:00:00:01
+gdef natPublicMac  00:00:00:00:00:02
+gdef natPublicGwIP 192.168.0.254    // IP address of gateway in public subnet
+gdef natPublicGwMac 00:00:00:00:00:03  // MAC address of gateway in public subnet

@@ -1,0 +1,15 @@
+/*
+	Standart tcp encapsulated in standart ip encapsulated in standart ethernet2 header
+*/
+
+INCLUDE ip
+INCLUDE tcp_header
+
+CLEARMASK
+ip.len = IPlen
+ip.crc = IPcrc
+
+ethproto = ip
+ip.proto = tcp   // packet's mask will contain only this conditions
+
+pos td

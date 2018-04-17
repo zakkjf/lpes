@@ -1,0 +1,56 @@
+/*
+	Http client.
+*/
+
+cyc 5 {
+	open tcp 'c:localhost:79#con' 
+	//open tcp 'c:www.thegeekstuff.com:80#con'    // changing this also change host header in http request
+	ifr ok {
+		break
+	}
+	printl 'no server, try again...'
+	pause 1000
+}
+
+NEWLINEIS '\r\n'
+
+// we expect that final server is http so it will give us some error, you can change the addres and connect directly
+
+// define field like tcp data but with hex type
+pos = td
+.hex 0x00
+setsize hex any
+
+data
+"GET / HTTP/1.1
+User-Agent: Opera/9.80 (Windows NT 6.1) Presto/2.12.388 Version/12.16
+Host: www.thegeekstuff.com
+Accept: text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1
+Accept-Language: en,ru-RU;q=0.9,ru;q=0.8
+Accept-Encoding: gzip, deflate
+Cookie: __utma=52867053.1660385258.1381928626.1381932881.1381944769.3; __utmb=52867053.4.10.1381944771; __utmc=52867053; __utmz=52867053.1381944771.3.3.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided)
+Cache-Control: no-cache
+Connection: Keep-Alive
+
+"
+send 
+
+timeout 5000
+
+cyc inf {	
+	mes '$data$' 
+	//mes '$hex$' 
+	recv
+	
+	ifr timeout {
+		printl 'timeout'
+		break
+	}
+	ifr error {
+		printl 'closed'
+		break
+	}	
+}
+
+close con
+clearreg

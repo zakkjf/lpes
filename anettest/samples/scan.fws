@@ -1,0 +1,31 @@
+/*
+
+ Traces packets to and from, displays reports with number of packets, bytes, rate per second.
+
+ run program as
+     anettest -d eth0 -rf scan.fws
+
+*/
+
+INCLUDE tcp
+
+define myip 192.168.1.2
+define remoteip 173.194.71.138
+
+quiet
+
+name 'to'
+srcip = myip
+//dstport = 80	
+//dstip remoteip
+//mes "$srcip$:$srcport$ -> $dstip$:$dstport$\n"  // uncomment if you want to see this message displayed on each receiving packet
+
+   send
+	
+name 'from'
+clearmask
+//srcport = 80	
+dstip = myip
+//srcip remoteip
+
+	send

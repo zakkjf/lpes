@@ -1,0 +1,36 @@
+/*
+   Traces TCP packets and for each destination IP address performs system calls, 
+	running the browser, writing the address to file (for Windows).
+   run like this:
+      anettest -d eth0#0 -f this_file.fws
+*/
+
+// adds the packet which will be waited
+CLEARMASK
+name "tcp packet"             // specifies the name of described packet
+mes "$dstip$\n"
+
+   or
+
+// sets low-level filter
+filter 0 "tcp"
+
+// creates variable which will store the destination IP address from recieved packet
+var di dstip 0.0.0.0 autoset
+
+NOTDOUBLEMES   // avoids displaying double messages, also avoids recieving such double packets
+
+cyc inf {
+
+   waitall // waits for added packets
+
+   ifr "tcp packet" {   // if the packet with name "tcp packet" has been recieved while previous wait
+
+      // performs system calls
+
+      syscall '\"c:\\Program Files\\Opera 9\\Opera.exe\" http://$di$'
+      syscall 'c:\\windows\\system32\\cmd.exe /C \"echo $di$ >> file.txt\"'
+   }
+
+   unfix // resets results for already recieved packets so they may be waited again
+}

@@ -1,0 +1,71 @@
+/*
+   Using variables examples
+   rus as:
+      anettest -d eth0 -f this_file.fws
+*/
+
+// VARIABLE DECLARATION
+
+// legacy syntax
+var var1 num 56 static     // types is the same as for 'num' field, may be used for any field
+var (var2, num, 45)  		 // type is omitted, "static" type is assumed
+
+// new simple syntax
+int i1 = 5
+string str1 = 'value'
+hex hexnum = 0x78         // will be displayed as hex
+
+printl 'var1=$var1$'
+printl 'i1=$i1$'
+printl 'str1=$str1$'
+printl 'hex=$hexnum$'
+hexnum = 1	// 1 is treated as decimal number
+printl 'hex=$hexnum$'
+
+// MODIFICATION OF VARIABLES
+
+incvar var1 2
+var1 += 4      // is similar to incvar
+decvar var1 4
+var1 -= 3      // is similar to decvar
+
+var1 = 10000000
+mulvar var1 3
+divvar var1 2
+print '$var1$\n'
+
+// STROING IN FILES
+
+STRING v3 = "to save in file" // another way to declare variable
+
+// writing and reading from file
+writevar v3 'file_with_var'
+loadvar v3 'file_with_var'
+printl v3
+
+// CONVERT INT TO STRING
+
+string s1 = ''
+s1 = '$i1$'
+printl s1
+
+// USING VARIABLES AS VALUES TO COMMANDS
+
+INCLUDE tcp
+
+var1 = 777777
+ack = var1        // initialization field by variable
+print 'ack=$ack$\n'
+
+// USING AUTOSET VARIABLES
+
+CLEARMASK
+dstip 45.23.76.34 // comment this to really capture some packet
+timeout 3000
+
+var srcip_var srcip 1.1.1.1 autoset // VARIABLE WILL BE INITIALIZED BY RECEIVED PACKET, see also MES and COPYREC commands
+
+   wait     // waiting packet
+
+print 'srcip_var = $srcip_var$\n'
+

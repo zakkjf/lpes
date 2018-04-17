@@ -1,0 +1,15 @@
+// Header file for program AnetTest
+
+// **** Description of IP header (version 4) ******
+
+// Attention: this IP header is already included in Ethernet2 frame
+// Use can use 'ip_header' if you want to build different packets, including IP header
+
+INCLUDE ethernet2
+INCLUDE ip_header
+
+CLEARMASK
+ethproto = ip
+
+pos = dstip
+pass 4

@@ -1,0 +1,27 @@
+
+// DEFINING RUSSIAN NAMES OF FIELDS
+
+INCLUDE tcp
+
+// ***** TCP header  ********
+
+pos = srcport
+
+BACK 2
+.ткхж           32000s2.
+.тпвяп          81s2.
+.чвлж           1001s4.
+.мюкж           200001s4.
+PASS 1
+.цнвък          0x02
+.рмпр           5840s2.
+
+tcp.data        ''
+.двппэе         ''
+
+                CLEARMASK
+                CLEARHISTORY
+
+двппэе         ''
+
+               NEW

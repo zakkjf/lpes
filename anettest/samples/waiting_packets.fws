@@ -1,0 +1,75 @@
+/*
+
+   Waits for defined packets for a interval of time. Displays the result: accepted or not accepted (droped).
+
+   run like this:
+      anettest -d eth0 -f this_file.fws
+
+*/ 
+
+INCLUDE tcp  /* fills the packet's content by default values, but it's not important now
+                it's important that this header also defines the default mask for tcp packet, see below
+            */
+
+srcport = 80   /* after processing this record the buffer of packet will be changed,
+                  in the mask of packet will also be added condition: srcport must be equal to 80.
+               */
+ip.len < 40   /* in the mask of packet will be added this condition
+                  the buffer of packet will not change
+               */
+
+/* Supported conditions (don't change the buffer of packet)
+
+   ip.len > 500
+   ip.len >= 500
+   ip.len < 500
+   ip.len <= 500
+   ip.len != 500
+
+   */
+
+ip.len = any   /* excludes from mask the all conditions which are using ip.len field
+                  so the previous record may be ignored
+               */
+
+timeout 5000  /* sets timeout = 5000 milliseconds, the default timeout is infinite waiting,
+                  0 means infinite wait, this timeout will be used by WAIT command,
+                  see also the description of TIMEOUT command
+               */
+
+// starts to wait any TCP packet from HTTP server
+
+   wait  /* Waits for above packet, only mask of packet will be considered,
+            will wait until timeout is expired or such packet is recieved,
+            also fixes the current packet, registrates it,
+            the default request for packet will be applied: must be accepted
+         */
+
+// SECOND PACKET.
+
+// NOTE: the mask of packet will also be inherited by next packets
+
+   CLEARMASK    // this command clears the mask so that the mask will correspond to any packet
+
+   ethproto = ip     // these two conditions define any tcp packet (over IP, EthernetII)
+   ip.proto = tcp    // they are initially specified in TCP header file and are typed hear because of the presence of CLEARMASK command
+
+   dstport = 80
+
+// starts to wait any TCP packet to HTTP server
+
+   wait drop   // drop request is specified, the packet must not be recieved
+
+/*
+   Output - the list of packets whose status doesn't correspond the requests:
+
+   Web browser was working:
+
+      Packet on line 61 (waiting_packets.fws) : accepted (sdev 0)
+
+   Web browser was not working:
+
+      Packet on line 42 (waiting_packets.fws) : droped (sdev 0)
+
+   See also -v option.
+*/

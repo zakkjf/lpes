@@ -1,0 +1,39 @@
+/*
+  Example of how to define an environment for given trace file
+  Trace file: http_client
+
+  Values of previously defined variables (created in file http_client_defines) will be inserted in packets.
+*/
+
+getpac 4
+
+var (original_data, td, "")
+var (p1, num, 0)
+
+pos = td
+goto ("\r\nAccept")
+if gotores = 0 {
+
+   print "file http_client_config: error\n"
+   getch
+   exit 1
+}
+
+.ddd ""
+original_data = ddd
+
+CLEARHISTORY
+
+pos = td
+.fmethod method
+.ddd " "
+.fkurl url
+.ddd " HTTP/1.1\r\nUser-Agent: Opera/9.26 (Windows NT 5.1; U; en)\r\nHost: "
+.fhost host
+
+.other_data original_data
+
+ip.len  IPlen
+tcp.crc TCPcrc
+
+setpac 4

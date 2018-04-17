@@ -1,0 +1,37 @@
+/*
+   Sample for program AnetTest.
+
+   Example of standart DNS request.
+   Must be include in udp data.
+
+*/
+
+dstport 53
+
+udp.data ''        // sets pointer to the beginning of udp data
+
+.transID               0x0f63
+.flags                 0x0100
+
+.numQuestions          1s2.
+.numAnswers            0s2.
+.authorityRRS          0s2.
+.additionalRRs         0s2.
+
+// One Query
+
+// name of host
+
+.size                  3.
+.name                  'www'
+.size                  3.
+.name                  'ipm'
+.size                  4
+.name                  'kstu'
+.size                  2
+.name                  'ru'
+
+.null                  0x00
+
+.dnsType               0x0001
+.dnsClass              0x0001

@@ -1,0 +1,44 @@
+/*
+   
+
+   run program as
+     anettest -d eth0 -f this_file.fws
+*/
+
+INCLUDE arp
+
+DEFINE neededIP 10.178.205.1       // input here the IP address of target host
+//DEFINE myMac 00:19:5b:e9:ef:5b
+
+// variables (automatically initialized on an expected packet reception)
+
+var otherHostIP arp.srcip 0.0.0.0 autoset
+var otherHostMac srcmac 00:00:00:00:00:00 autoset
+
+// description of the arp request to wait
+
+INCLUDE arp
+
+mes 'reply from $otherHostIP$, $otherHostMac$\n'	
+arp.opcode = arep
+arp.dstmac = 55-55-55-55-55-55		
+arp.dstip = 1.1.1.1
+
+	towait
+
+INCLUDE arp      
+
+srcmac = 55-55-55-55-55-55	
+dstmac = 0xffffffffffff
+		
+arp.srcip 1.1.1.1
+arp.srcmac 55-55-55-55-55-55		
+arp.opcode = areq
+arp.dstmac = 0xffffffffffff
+arp.dstip = neededIP	
+	
+timeout 1000	
+sendwaitother
+
+
+

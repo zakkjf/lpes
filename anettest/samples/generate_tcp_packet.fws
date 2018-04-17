@@ -1,0 +1,14 @@
+// Sample file for progam AnetTest.
+// run program as
+//   anettest -d eth0 -f generate_tcp_packet.fws
+// to generate this packet (instead of 'eth0' you may insert your adapter's name, may be IP address)
+
+INCLUDE tcp.fws   // file from HEADERS folder, containing default values for fields
+
+srcip 1.1.1.1
+dstip 192.168.0.1
+
+srcport  = 45000
+dstport  = 80
+
+      SEND  // sending packet

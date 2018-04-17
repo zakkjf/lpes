@@ -1,0 +1,34 @@
+/*
+   Changes content of trace file
+
+   Runs as: anettest -d eth0 -f this_file.fws
+*/
+
+trace smtp_client.pcap  // opens trace file
+
+INCLUDE tcp
+
+// defines the mask for packets which will be modified
+
+CLEARMASK
+ethproto = ip
+ip.proto = tcp
+srcip 194.85.99.33
+
+// performs modification
+
+chtrace {
+
+	printl 'before:\n$fullpacket$\n'
+
+   dstip 88.210.60.143
+   dstport 25
+   ip.len IPlen
+   tcp.crc TCPcrc
+   ip.crc IPcrc
+
+   print '$srcport$\n'
+	printl 'after:\n$fullpacket$\n'
+}
+
+ // write // write file to disk

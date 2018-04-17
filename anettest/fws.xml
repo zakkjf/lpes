@@ -1,0 +1,1233 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<NotepadPlus>
+   <AutoComplete language="fws">
+       <Environment ignoreCase="no" startFunc="(" stopFunc=")" paramSeparator="," terminal=";" additionalWordChar = "."/>       <KeyWord name="ACCEPT" func="yes">
+   <Overload retVal="" descr="Request specification. The request that the packet must be received. Analog of SEND ACCEPT. It may be processed as command while testing packet filter only (command FASTTEST or option -c). In common regime it may be among parameters to command only. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="ADD" func="yes">
+   <Overload retVal="" descr="Alias of TOWAIT command. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="ANY" func="yes">
+   <Overload retVal="" descr="Request specification. No requests: the packet may be received or not. Analog of SEND ANY. It may be processed as command while testing packet filter only (command FASTTEST or option -c). In common regime it may be amoung parameters to command only. This special word may also be used as value for field that means exclusion the all conditions with this field from current mask of packet - value of the field may be any. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="ARM" func="yes">
+   <Overload retVal="" descr="Defines an adaptive replacement. This command gets two previously defined replacements (command RM), marks them as not active initially. While imitation of application's work program will wait for the first packet for which the given <name of field> has the given <field's value>. Then for each of two replacements program sets its <value to set>, copying it from the recieved packet, then marks replacements as active. So the test will be finally configured after recieving some packet only. Note: from recieved packet will be obtained value of that field which has been specified for the first replacement. Then this value will be copied to <value to set> of second replacement.">
+<Param name="name of field"/>
+<Param name="field's value"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="BACK" func="yes">
+   <Overload retVal="" descr="Reduces the pointer for the given <number of bytes>. ">
+<Param name="number of bytes"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="BEEP" func="yes">
+   <Overload retVal="" descr="Plays the sound via PC speaker. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="BREAK" func="yes">
+   <Overload retVal="" descr="Breaks the cycle caused by using CYC command. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="CALLRES" func="yes">
+   <Overload retVal="" descr="This special value allows to get the result of last system call (command SYSCALL). Only for UNIX. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="CHTRACE" func="yes">
+   <Overload retVal="" descr="The given block of script may contain field's values definitions or command PRINT. These definitions will be applied to every packet from trace file which corresponds the mask described before the command. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="CIEVE" func="yes">
+   <Overload retVal="" descr="Causes that while imitation of application's work the value of specified field will not be considered when comparing waited packet with recieving one. ">
+<Param name="name of field"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="CLEAR" func="yes">
+   <Overload retVal="" descr="Deprecated. Use CLEARHISTORY ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="CLEARHISTORY" func="yes">
+   <Overload retVal="" descr="Clears info about the maximum size of previous packets. New packet may be smaller than previous ones. This command also makes all auto-calculated values inactive. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="CLEARMASK" func="yes">
+   <Overload retVal="" descr="The mask of packet (the set of previously defined conditions) will be cleared. New mask will correspond to any packet. This command is usually contained in headers to make the mask correspond to all packets of given type (ex: TCP packets). ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="CLEARREG" func="yes">
+   <Overload retVal="" descr="Clears the information about all the packets which were added to the waited ones (by WAIT, ADD commands). They will not be displayed in final report (or in the report that is displayed by SHOWREP command). If this command is typed at the end of script then it omits the displaying of final report (sense there are no packet in it). ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="CLOSE" func="yes">
+   <Overload retVal="" descr="Closes interface with given name. ">
+<Param name="interface's name"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="COPYREC" func="yes">
+   <Overload retVal="" descr="The received packet (see command WAIT, its analogs) will be copied to the buffer of current packet. Precision waiting must be first enabled (command PRECISEWAIT). See also NOTCOPYREC command. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="CURPOS" func="yes">
+   <Overload retVal="" descr="This special value allows to get the current value of byte pointer. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="CURSIZE" func="yes">
+   <Overload retVal="" descr="This special value allows to get the current size of packet. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="CURTIME" func="yes">
+   <Overload retVal="" descr="This special value allows to get the current time. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="CYC" func="yes">
+   <Overload retVal="" descr="Command instructs that next WAIT command (its analogs) or next block of script will be processed by several times = <number of iterations>. The &quot;inf&quot; value is available which means infinite iterant processing. ">
+<Param name="number of iterations"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="DECVAR" func="yes">
+   <Overload retVal="" descr="Analog of INCVAR. Subtracts the given value from variable. ">
+<Param name="name of variable"/>
+<Param name="value to subtract"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="DEFAULTS" func="yes">
+   <Overload retVal="" descr="Defines default requests for packets. These requests will be applied when there are not enough explicitly defined requests for some packet (specified as parameters to command SEND, WAIT and its analogs). Initially default requests are ACCEPT ANY ANY... i.e. a single request for the first interface specified via option -d. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="DEFAULTTEST" func="yes">
+   <Overload retVal="" descr="Sets the default parameters for imitation of application's work (timeout, number of retransmitions, packets range, timed mode), removes all previously added end points (command EP) replacements (command RM), adaptive replacements (command ARM), cieves (command CIEVE). In short: full reset. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="DEFINE" func="yes">
+   <Overload retVal="" descr="Defines the substitution which will be applied while reading some values (in parameters to commands and others). <name> will be replaced by <value>. This substitution may be also performed in strings enclosed in apostrophes. In this case the <name> must be enclosed in $ (ex: 'value = $name$'. See also command GDEF. ">
+<Param name="name"/>
+<Param name="value"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="DELPAC" func="yes">
+   <Overload retVal="" descr="Deletes the specified packet from trace file. ">
+<Param name="number of packet"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="DEVICE" func="yes">
+   <Overload retVal="" descr="Reopens interfaces. The type of device: eth, ip, tcp. The name of device is the same as for -d option, depends on the type of device. New line terminates the list of names. ">
+<Param name="type of device"/>
+<Param name="name of interface"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="DIVVAR" func="yes">
+   <Overload retVal="" descr="Divide given variable by specified value. ">
+<Param name="name of variable"/>
+<Param name="divisor"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="DROP" func="yes">
+   <Overload retVal="" descr="Request specification. The request that the packet must not be received. May be used as command - replacement for &quot;SEND DROP&quot;. It may be processed as command while testing packet filter only (command FASTTEST or option -c). In common regime it may be among parameters to command only. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="EP" func="yes">
+   <Overload retVal="" descr="Defines an end point. While imitation of application's work the end point is a entity used for distinguishing between packets in trace file belonging to different sources (so they, for example, must be generated from different interfaces). All the packets for which the given <name of field> has the given <field's value> will belong to defined end point. There are two <types> of end points: &quot;recv&quot; (recieving ep) and &quot;gen&quot; (generating ep). Generating end points search their packets in trace file and generate them. Recieving end points - wait for their packets. The packets from trace file are scaned in series. The generation can only be performed after recieving previous packets. The wait will be started after generation previous packets. The <unique name of interface> specifies the interface from which packets will be generated or waited. See &quot;headers/configSession&quot;">
+<Param name="type"/>
+<Param name="name of interface"/>
+<Param name="name of field"/>
+<Param name="field's value"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="EXIT" func="yes">
+   <Overload retVal="" descr="Terminates the execution. The status may be some decimal number. Value 0 is reserved for successfull test, 1 - fatal error, 2 - not successfull test, 3 - error while TCP connecting or listening (timeout expires). ">
+<Param name="status"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="EXTENDED" func="yes">
+   <Overload retVal="" descr="Enables extended regime. Generating interface can be change by MI command. While specifying the requests for packet each request must be followed by the unique name of interface. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="FASTTEST" func="yes">
+   <Overload retVal="" descr="Enables fasttest regime for packet filter test. See &quot;samples/fasttest&quot;. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="FILTER" func="yes">
+   <Overload retVal="" descr="Sets the fast low-level filter (which is used by tcpdump) for the given interface. The format of filter is described in libpcap (WinPcap) or tcpdump documentation. See &quot;samples/my_gateway&quot; ">
+<Param name="name of interface"/>
+<Param name="filter string"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="FIRST" func="yes">
+   <Overload retVal="" descr="This special value retrieves field's value from the first packet in trace file. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="FIXMASK" func="yes">
+   <Overload retVal="" descr="Fixes the mask of packet so that the defining of field's values (also fields definitions) doesn't cause its changing. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="FULLMASK" func="yes">
+   <Overload retVal="" descr="Fills the mask of packet so that the all fields will be included in mask. So while comparing packets the full packet's content will be compared. By default while describing packet's content the mask will be also added by new conditions, so the using of this command make sense only after the use of RESET command (this command is used in headers). It must be well realized that packets will be compared only by mask which is not always synchronized with packet's content. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="GDEF" func="yes">
+   <Overload retVal="" descr="Defines the substitution which will be applied while reading almost any read word from text. <New name> will be replaced by <original name>. This substitution may be also performed in strings enclosed in apostrophes. In this case the name must be enclosed in $ (ex: 'value = $name$'). ">
+<Param name="new name"/>
+<Param name="original name"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="GETCH" func="yes">
+   <Overload retVal="" descr="Waits for press <Enter> ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="GETPAC" func="yes">
+   <Overload retVal="" descr="Copies the specified packet from trace file to the buffer of current packet. ">
+<Param name="number of packet"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="GOTO" func="yes">
+   <Overload retVal="" descr="Performs the search of the given value in current packet. The search will be started from the current position of byte pointer. Value may has any type. The result of search is available through GOTORES keyword. In the case of successfull search the byte pointer will be moved to the found entry. Stop position may be equal to -1. It means search to the end of packet. Stop position may be ommited but in this case parameters must be enclosed in brackets. ">
+<Param name="value of any type"/>
+<Param name="stop position"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="GOTOB" func="yes">
+   <Overload retVal="" descr="Is similar to GOTO command but performs back search. ">
+<Param name="value of any type"/>
+<Param name="stop position"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="GOTORES" func="yes">
+   <Overload retVal="" descr="This is a special value which allows to get the result of last search performed by GOTO or GOTOB command. 1 - successfull search, 0 - not successfull search. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="HELP" func="yes">
+   <Overload retVal="" descr="Displays the description of the command. The &quot;all&quot; value is available to display info about all commands. Also displays the list of fields which have the given string in their name. ">
+<Param name="name of command"/>
+<Param name="part of the field's name"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="IF" func="yes">
+   <Overload retVal="" descr="Processes the first block of script if condition is met, otherwise processes the second block if it is specified. <Types of compare>: = (==), !=, >, <, >=, <=. Hexadecimals number are treated as strings (with 0x prefix). If you have problems try to watch how these values are represented by string using PRINT command for example. ">
+<Param name="value1"/>
+<Param name="type of compare"/>
+<Param name="value2"/>
+<Param name="first block of script"/>
+<Param name="second block of script"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="IFDEF" func="yes">
+   <Overload retVal="" descr="Executes block if given entity has been defined (entity: variable, field, someone defined by GDEF or DEFINE commands). ">
+<Param name="name of entity"/>
+<Param name="script's block"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="IFNDEF" func="yes">
+   <Overload retVal="" descr="Executes block if given entity has not been defined (entity: variable, field, someone defined by GDEF or DEFINE commands). ">
+<Param name="name of entity"/>
+<Param name="script's block"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="IFR" func="yes">
+   <Overload retVal="" descr="Processes the block of script if the last received packet (command WAIT, its analogs) has the given name (which was specified by command NAME). &quot;timeout&quot; may be specified as the name of packet what means that the block must be processed in the case of timeout. Command will not distinguish newly added packets and old ones if they have the same name. Take a note of it when using UNFIX command. See also CLEARREG command.   For tcp (udp) this command is also used to check the general status of last waiting operation. Status string &quot;error&quot; may be given to check if connection is closed already. Check for timeout or error may be also performed just after opening of connection by command OPEN. See samples/tcp_gateway, samples/http_client, samples/http_server.">
+<Param name="name of packet or status of last wait operation"/>
+<Param name="block of script"/>
+<Param name="second block of script"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="INC" func="yes">
+   <Overload retVal="" descr="The field for which the value will be specified below becomes autoincremented. While generating several packets (command REP) the value of field will be incremented. See &quot;samples/synflood.fws&quot; ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="INCLUDE" func="yes">
+   <Overload retVal="" descr="Starts processing the content of given file. The search of file will be performed in the current directory, all search paths (see option -I). For every path the content of samples, headers, traces folders will be also examined. ">
+<Param name="name of file"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="INCVAR" func="yes">
+   <Overload retVal="" descr="Increases the given <name of variable> for the specified <value to add>. The <value to add> may be negative. ">
+<Param name="name of variable"/>
+<Param name="value to add"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="INSPAC" func="yes">
+   <Overload retVal="" descr="Insert the current packet in trace file, moving the all packets with given number and higher. ">
+<Param name="number of packet"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="INTERVAL" func="yes">
+   <Overload retVal="" descr="Sets the value of interval between generating multiple packets while using command REP. ">
+<Param name="number of milliseconds"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="LASTRES" func="yes">
+   <Overload retVal="" descr="This special value enables to get the last result of statistic analyzing performed by SHOWREP. 0 - successfull, 2 - some discrepancy is found. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="LOADVAR" func="yes">
+   <Overload retVal="" descr="Loads the file in variable's current value. The variable must have undefined size: use variables with string type or use SETSIZE command. ">
+<Param name="name of variable"/>
+<Param name="name of file"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="MASK" func="yes">
+   <Overload retVal="" descr="Defines the mask for the next defined field. Mask is hexadecimal number. Value for field will be written only in bits corresponding not null bits of mask. See &quot;headers/tcp_header.fws&quot;. ">
+<Param name="field's mask"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="MES" func="yes">
+   <Overload retVal="" descr="Defines the message which will be displayed the every time on recieving the currently described packet. Substitutions are allowed in the form of $name$. The 'name' may reference to the field's name, variable's name, someone defined by GDEF command. In the case of field's name field's value will be retrieved from the content of recieved packet. ">
+<Param name="string of message"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="MI" func="yes">
+   <Overload retVal="" descr="Sets the main interface at which packets will be generated or waited. The unique name of interface must be specified which may be defined while opening (-d option or OPEN command) after symbol # (e.g. &quot;-d eth0#0&quot;). If no unique name is specified then it will be assigned to number 0,1,2,3,... Default requests are being overwritten: a single ACCEPT request is set for the new main interface, others are ANY. This means that further WAIT command (its analogs) will wait packet ONLY at the new main interface. In order to wait a packet at several interfaces use command DEFAULTS after command MI or explicitly specify requests after WAIT command. ">
+<Param name="name of interface"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="MULVAR" func="yes">
+   <Overload retVal="" descr="Multiply given variable by specified value. ">
+<Param name="name of variable"/>
+<Param name="multiplier"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="NAME" func="yes">
+   <Overload retVal="" descr="Defines the name of currently described packet which will be displayed in report instead of not obvious &quot;Packet on line ...&quot; ">
+<Param name="name of packet"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="NEWLINEIS" func="yes">
+   <Overload retVal="" descr="Sets the string which must replace any original LF symbol while working with strings. See &quot;samples/strings.fws&quot; ">
+<Param name="string"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="NOTCOPYREC" func="yes">
+   <Overload retVal="" descr="Reverses the action of COPYREC command. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="NOTDOUBLEMES" func="yes">
+   <Overload retVal="" descr="Avoids displaying of double messages (specified by command MES). It also avoids the recieving of corresponding double packets, i.e. such packets will be ignored and don't cause WAIT command (its analogs) to terminate on them. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="NUMRET" func="yes">
+   <Overload retVal="" descr="While imitation of application's work if some packets have not been received for a long time (command TIMEOUT), then the previously generated packets will be retransmitted. One retransmission by default. ">
+<Param name="number of retransmitions"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="OFFSET" func="yes">
+   <Overload retVal="" descr="The position of the next defined field will be shifted to the left for the given <number of bits> which must be from 1 to 7. So every written value will be shifter to the left before writing. Nevertheless, after the writing the left bits will be also changed and set to 0. To avoid this use command MASK. See &quot;headers/tcp_header.fws&quot; ">
+<Param name="number of bites"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="OPEN" func="yes">
+   <Overload retVal="" descr="Opens interface of given type. Types: eth, ip, tcp, udp. For tcp this command will wait till connection with server is established or a client connection is accepted. For other types the command won't wait. See more in -d,-p,-T options. ">
+<Param name="interface's type"/>
+<Param name="interface's name"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="OR" func="yes">
+   <Overload retVal="" descr="Alias of TOWAIT command. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="PASS" func="yes">
+   <Overload retVal="" descr="Increases the byte pointer for the given <number of bytes>. ">
+<Param name="number of bytes"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="PAUSE" func="yes">
+   <Overload retVal="" descr="Pauses the execution for a specified interval of time. ">
+<Param name="number of milliseconds"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="PLAY" func="yes">
+   <Overload retVal="" descr="Windows only. Plays the specified sound, WAV-file. Sound system must be enabled. If the file is not found then default Windows sound will be played. If the file is in current folder or in standard system folder then the full path is not required (Media/<name>).  Under UNIX the sound will be played by PC speaker.">
+<Param name="name of wav file"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="POS" func="yes">
+   <Overload retVal="" descr="Sets the <new position> of byte pointer. In the case of <field's name> new position will be equal to field's position. ">
+<Param name="new position"/>
+<Param name="field's name"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="PRECISEWAIT" func="yes">
+   <Overload retVal="" descr="After the work of WAIT command (its analogs) all trace threads will be blocked until the next call to WAIT command. So there will be no missed packets between subsequent calls to WAIT command. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="PRINT" func="yes">
+   <Overload retVal="" descr="Displays the given message. Use symbol \n in message to indicate that line feed must be performed. ">
+<Param name="message"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="PRINTL" func="yes">
+   <Overload retVal="" descr="Analog of PRINT command. Additionally performs the line feed. ">
+<Param name="message"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="QUIET" func="yes">
+   <Overload retVal="" descr="Instructs to not display some annoying messages. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="RAND" func="yes">
+   <Overload retVal="" descr="Specifies the random value for field. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="RANGE" func="yes">
+   <Overload retVal="" descr="While imitation of application's work the work will be performed with packets (from trace file) which are within the given range. Null value for start packet means first packet in file. Null value for stop packet means last packet in file. ">
+<Param name="number of start packet"/>
+<Param name="number of stop packet"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="RECV" func="yes">
+   <Overload retVal="" descr="Analog of WAIT command. This command is more convenient to use when working with tcp(udp). It clears the mask of packet automatically so stops working after receiving any data. It also enables mode when received packet is copied to the buffer of current packet (COPYREC command). ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="REP" func="yes">
+   <Overload retVal="" descr="The next generation command (command SEND) will generate not one, but several packets. The use of this command also affects the request for packet: the packet must be accepted the specified number of times.">
+<Param name="the number of generation"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="RESET" func="yes">
+   <Overload retVal="" descr="Deprecated. Use CLEARMASK ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="RETURN" func="yes">
+   <Overload retVal="" descr="Stops processing current file. If it was included in another file then processing will continue from that include command. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="REVERS" func="yes">
+   <Overload retVal="" descr="Request specification. May only be given in parameters for DEFAULT command. Instructs to revers the request for every packet. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="RM" func="yes">
+   <Overload retVal="" descr="While imitation of application's work some values in packets from trace file may be automatically replaced before generating packet or before waiting one. So the <type> of replacement (&quot;recv&quot; or &quot;gen&quot;) instructs when the replacement must be applied: before generating packet or before forming the packet which will be waited. So it is possible to generate one packet but wait another. It may be useful if packets are modified on their way.">
+<Param name="type"/>
+<Param name="name of field"/>
+<Param name="sought value"/>
+<Param name="value to set"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="RUN" func="yes">
+   <Overload retVal="" descr="This command starts imitation of application's work. Parameters to command specify the request to result of test. <Base request> may be: drop, any, accept. List of packets, for example: 1;2;3-5;7-. Minus at the end of list means expanding to last packet in trace file. List &quot;any&quot; is equal to &quot;1-&quot;. The result for packets from list must correspond to base request. The result for packets not from list must correspond to inverted base request. Ex: &quot;run accept 1-&quot; means &quot;all packets must be accepted&quot;, &quot;run drop 6-&quot; means &quot;all packets before 6 must be accepted, rest of packets - dropped&quot;, &quot;run any any&quot; means no requests. See &quot;samples/convtest1&quot;">
+<Param name="base request"/>
+<Param name="list of packets"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="SAFETERM" func="yes">
+   <Overload retVal="" descr="If the intensity of packets is very high and the program fails in deadlock on terminating, then this command will help. Terminating may become slower. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="SECOND" func="yes">
+   <Overload retVal="" descr="This special value retrieves field's value from the second packet in trace file. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="SEND" func="yes">
+   <Overload retVal="" descr="In common regime generates the packet defined above. In other regimes (testing packet filter, see command FASTTEST and option -c) may simply separate packets one from another, so by this command the current content of buffer will be fixed and the new packet will be registered. The requests after command don't make sense in common regime (only while testing packet filter). ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="SENDWAIT" func="yes">
+   <Overload retVal="" descr="The analog of &quot;ADD <requests> SEND WAITALL&quot; sentence. Purpose: if this command is used then a packet will be added to the waited ones BEFORE its generation, otherwise there would be a chance that the packet is missed (sense it may be received by a sniffer just after the generation and before its addition to the waited packets). This command may be useful when you need to generate packets from one interface and registrate those on another interface. ">
+<Param name="requests"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="SENDWAITOTHER" func="yes">
+   <Overload retVal="" descr="Similar to SENDWAIT. In contrast to it, doesn't add the previously described packet to waitable ones, just sends it. Other packets will be waited that must be described before the sending of this packet (and added by ADD command). ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="SETPAC" func="yes">
+   <Overload retVal="" descr="Replaces the specified packet in trace file by the current packet. ">
+<Param name="number of packet"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="SETPOS" func="yes">
+   <Overload retVal="" descr="Sets a new position for the given field. ">
+<Param name="field's name"/>
+<Param name="decimal value of a new position"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="SETSIZE" func="yes">
+   <Overload retVal="" descr="Allows to specify the size for fields which don't have concrete size initially (strings). It can be also used to change the size for fields with concrete size (hexadecimal numbers). Value &quot;any&quot; may be used to specify the undefined size. A variable may be given so the size may be calculated before. See &quot;samples/http_parser&quot;. ">
+<Param name="name of field"/>
+<Param name="decimal value of a new size of field"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="SHOWREP" func="yes">
+   <Overload retVal="" descr="Displays a report which is the same as that displayed while program termination. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="SYSCALL" func="yes">
+   <Overload retVal="" descr="Implementes the system call. <command> must specify command's name (path to program) with parameters. Special value CALLRES may be used to obtain the status of last system call. ">
+<Param name="command"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="TIMED" func="yes">
+   <Overload retVal="" descr="Imitation of application's work will be implemented with considering time stamps from trace file. The test may become slower. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="TIMEOUT" func="yes">
+   <Overload retVal="" descr="Defines the timeout for WAIT command (and its analogs), also for imitation of application's work. Null value means infinite timeout (such timeout will not be applied for imitation of application's work). In the case of negative value its absolute value will be obtained as timeout, but WAIT command (its analogs) will work differently: it will always wait for the whole timeout (not terminating on first recieved packet). So several packets may be registered as recieved. This command also defines the timeout for TCP server while waiting for connections. ">
+<Param name="initval in milliseconds"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="TOGEN" func="yes">
+   <Overload retVal="" descr="This special word specifies that some entity must perform its function upon the sending of a packet. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="TORECV" func="yes">
+   <Overload retVal="" descr="This special word specifies that some entity must perform its function upon the receiving of a packet. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="TOWAIT" func="yes">
+   <Overload retVal="" descr="Analog of WAIT command. Adds the above packet to the set of packets which will be waited by command WAIT or its analogs. This command does not start real waiting (doesn't suspend script execution). Nevertheless, just after adding the packet may be registered as received. If some packet is registered as received before the call to WAIT (WAITALL) then command WAIT will terminate immediately. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="TRACE" func="yes">
+   <Overload retVal="" descr="Opens the given trace file for subsequent work with it. ">
+<Param name="name of trace file"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="UNFIX" func="yes">
+   <Overload retVal="" descr="By default after the work of WAIT command (its analogs) the statuses for all waited packets will be fixed, so there may be no packets to wait for the next call to WAIT. This command marks these old packets as newly added. The previous status for them will be lost. Take a note of that ALL old packets will be unfixed, so they will be waited: this may cause unexpected results. Consider the use of CLEARREG command. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="UNFIXMASK" func="yes">
+   <Overload retVal="" descr="Performs the action reversed to the action of FIXMASK ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="VAR" func="yes">
+   <Overload retVal="" descr="Command creates the new variable <name of variable> or reinitializes the old one if some variable of the same name is already exist. The newly created variable will have the same value's type as <name of field>. This command also sets the <initial value> for variable. Variable's value is stored separately from packet's buffer. The &quot;autoset&quot; type of variable indicates that the variable will be initialized by recieved packet (while using WAIT command or its analogs), i.e. from recieved packet will be obtained value of <name of field> and copied to variable. &quot;static&quot; type indicates that variable must not be changed while recieving packet. The &quot;static&quot; keyword may be ommited only if parameters to command are enclosed in round brackets. The <name of variable> may appear amoung parameters to other commands. In this case it will be replaced by its value. Such a replacement will be also performed in strings enclosed in apostrophes. In this case the <name of variable> must be enclosed in $ (ex: 'value of variable = $name$').">
+<Param name="name of variable"/>
+<Param name="name of field"/>
+<Param name="initial value"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="WAIT" func="yes">
+   <Overload retVal="" descr="Waits for packet whose mask is defined above. The command will finish work when such packet is recieved on waitable interface. The waitable interface is interface for which strict request (accept or drop) have been specified in parameters to command or in defaults (command DEFAULT). For TCP device the command will only wait data on the main interface. In the general case command may wait no one but several packets (added by ADD command). If any of them is recieved then command terminates. Command waits packets until timeout expires (command TIMEOUT). See &quot;samples/waiting_packets.fws&quot;. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="WAITALL" func="yes">
+   <Overload retVal="" descr="The analog of WAIT command. Doesn't add the previously defined packet to the list of waited ones. Starts waiting simply. Packets may be already added by ADD command (or using of UNFIX command). ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="WRITE" func="yes">
+   <Overload retVal="" descr="Writes the trace file opened by TRACE command on disk ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="accept" func="yes">
+   <Overload retVal="" descr="Request specification. The request that the packet must be received. Analog of SEND ACCEPT. It may be processed as command while testing packet filter only (command FASTTEST or option -c). In common regime it may be among parameters to command only. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="add" func="yes">
+   <Overload retVal="" descr="Alias of TOWAIT command. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="any" func="yes">
+   <Overload retVal="" descr="Request specification. No requests: the packet may be received or not. Analog of SEND ANY. It may be processed as command while testing packet filter only (command FASTTEST or option -c). In common regime it may be amoung parameters to command only. This special word may also be used as value for field that means exclusion the all conditions with this field from current mask of packet - value of the field may be any. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="arm" func="yes">
+   <Overload retVal="" descr="Defines an adaptive replacement. This command gets two previously defined replacements (command RM), marks them as not active initially. While imitation of application's work program will wait for the first packet for which the given <name of field> has the given <field's value>. Then for each of two replacements program sets its <value to set>, copying it from the recieved packet, then marks replacements as active. So the test will be finally configured after recieving some packet only. Note: from recieved packet will be obtained value of that field which has been specified for the first replacement. Then this value will be copied to <value to set> of second replacement.">
+<Param name="name of field"/>
+<Param name="field's value"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="back" func="yes">
+   <Overload retVal="" descr="Reduces the pointer for the given <number of bytes>. ">
+<Param name="number of bytes"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="beep" func="yes">
+   <Overload retVal="" descr="Plays the sound via PC speaker. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="break" func="yes">
+   <Overload retVal="" descr="Breaks the cycle caused by using CYC command. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="callres" func="yes">
+   <Overload retVal="" descr="This special value allows to get the result of last system call (command SYSCALL). Only for UNIX. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="chtrace" func="yes">
+   <Overload retVal="" descr="The given block of script may contain field's values definitions or command PRINT. These definitions will be applied to every packet from trace file which corresponds the mask described before the command. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="cieve" func="yes">
+   <Overload retVal="" descr="Causes that while imitation of application's work the value of specified field will not be considered when comparing waited packet with recieving one. ">
+<Param name="name of field"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="clear" func="yes">
+   <Overload retVal="" descr="Deprecated. Use CLEARHISTORY ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="clearhistory" func="yes">
+   <Overload retVal="" descr="Clears info about the maximum size of previous packets. New packet may be smaller than previous ones. This command also makes all auto-calculated values inactive. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="clearmask" func="yes">
+   <Overload retVal="" descr="The mask of packet (the set of previously defined conditions) will be cleared. New mask will correspond to any packet. This command is usually contained in headers to make the mask correspond to all packets of given type (ex: TCP packets). ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="clearreg" func="yes">
+   <Overload retVal="" descr="Clears the information about all the packets which were added to the waited ones (by WAIT, ADD commands). They will not be displayed in final report (or in the report that is displayed by SHOWREP command). If this command is typed at the end of script then it omits the displaying of final report (sense there are no packet in it). ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="close" func="yes">
+   <Overload retVal="" descr="Closes interface with given name. ">
+<Param name="interface's name"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="copyrec" func="yes">
+   <Overload retVal="" descr="The received packet (see command WAIT, its analogs) will be copied to the buffer of current packet. Precision waiting must be first enabled (command PRECISEWAIT). See also NOTCOPYREC command. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="curpos" func="yes">
+   <Overload retVal="" descr="This special value allows to get the current value of byte pointer. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="cursize" func="yes">
+   <Overload retVal="" descr="This special value allows to get the current size of packet. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="curtime" func="yes">
+   <Overload retVal="" descr="This special value allows to get the current time. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="cyc" func="yes">
+   <Overload retVal="" descr="Command instructs that next WAIT command (its analogs) or next block of script will be processed by several times = <number of iterations>. The &quot;inf&quot; value is available which means infinite iterant processing. ">
+<Param name="number of iterations"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="decvar" func="yes">
+   <Overload retVal="" descr="Analog of INCVAR. Subtracts the given value from variable. ">
+<Param name="name of variable"/>
+<Param name="value to subtract"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="defaults" func="yes">
+   <Overload retVal="" descr="Defines default requests for packets. These requests will be applied when there are not enough explicitly defined requests for some packet (specified as parameters to command SEND, WAIT and its analogs). Initially default requests are ACCEPT ANY ANY... i.e. a single request for the first interface specified via option -d. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="defaulttest" func="yes">
+   <Overload retVal="" descr="Sets the default parameters for imitation of application's work (timeout, number of retransmitions, packets range, timed mode), removes all previously added end points (command EP) replacements (command RM), adaptive replacements (command ARM), cieves (command CIEVE). In short: full reset. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="define" func="yes">
+   <Overload retVal="" descr="Defines the substitution which will be applied while reading some values (in parameters to commands and others). <name> will be replaced by <value>. This substitution may be also performed in strings enclosed in apostrophes. In this case the <name> must be enclosed in $ (ex: 'value = $name$'. See also command GDEF. ">
+<Param name="name"/>
+<Param name="value"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="delpac" func="yes">
+   <Overload retVal="" descr="Deletes the specified packet from trace file. ">
+<Param name="number of packet"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="device" func="yes">
+   <Overload retVal="" descr="Reopens interfaces. The type of device: eth, ip, tcp. The name of device is the same as for -d option, depends on the type of device. New line terminates the list of names. ">
+<Param name="type of device"/>
+<Param name="name of interface"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="divvar" func="yes">
+   <Overload retVal="" descr="Divide given variable by specified value. ">
+<Param name="name of variable"/>
+<Param name="divisor"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="drop" func="yes">
+   <Overload retVal="" descr="Request specification. The request that the packet must not be received. May be used as command - replacement for &quot;SEND DROP&quot;. It may be processed as command while testing packet filter only (command FASTTEST or option -c). In common regime it may be among parameters to command only. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="ep" func="yes">
+   <Overload retVal="" descr="Defines an end point. While imitation of application's work the end point is a entity used for distinguishing between packets in trace file belonging to different sources (so they, for example, must be generated from different interfaces). All the packets for which the given <name of field> has the given <field's value> will belong to defined end point. There are two <types> of end points: &quot;recv&quot; (recieving ep) and &quot;gen&quot; (generating ep). Generating end points search their packets in trace file and generate them. Recieving end points - wait for their packets. The packets from trace file are scaned in series. The generation can only be performed after recieving previous packets. The wait will be started after generation previous packets. The <unique name of interface> specifies the interface from which packets will be generated or waited. See &quot;headers/configSession&quot;">
+<Param name="type"/>
+<Param name="name of interface"/>
+<Param name="name of field"/>
+<Param name="field's value"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="exit" func="yes">
+   <Overload retVal="" descr="Terminates the execution. The status may be some decimal number. Value 0 is reserved for successfull test, 1 - fatal error, 2 - not successfull test, 3 - error while TCP connecting or listening (timeout expires). ">
+<Param name="status"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="extended" func="yes">
+   <Overload retVal="" descr="Enables extended regime. Generating interface can be change by MI command. While specifying the requests for packet each request must be followed by the unique name of interface. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="fasttest" func="yes">
+   <Overload retVal="" descr="Enables fasttest regime for packet filter test. See &quot;samples/fasttest&quot;. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="filter" func="yes">
+   <Overload retVal="" descr="Sets the fast low-level filter (which is used by tcpdump) for the given interface. The format of filter is described in libpcap (WinPcap) or tcpdump documentation. See &quot;samples/my_gateway&quot; ">
+<Param name="name of interface"/>
+<Param name="filter string"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="first" func="yes">
+   <Overload retVal="" descr="This special value retrieves field's value from the first packet in trace file. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="fixmask" func="yes">
+   <Overload retVal="" descr="Fixes the mask of packet so that the defining of field's values (also fields definitions) doesn't cause its changing. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="fullmask" func="yes">
+   <Overload retVal="" descr="Fills the mask of packet so that the all fields will be included in mask. So while comparing packets the full packet's content will be compared. By default while describing packet's content the mask will be also added by new conditions, so the using of this command make sense only after the use of RESET command (this command is used in headers). It must be well realized that packets will be compared only by mask which is not always synchronized with packet's content. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="gdef" func="yes">
+   <Overload retVal="" descr="Defines the substitution which will be applied while reading almost any read word from text. <New name> will be replaced by <original name>. This substitution may be also performed in strings enclosed in apostrophes. In this case the name must be enclosed in $ (ex: 'value = $name$'). ">
+<Param name="new name"/>
+<Param name="original name"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="getch" func="yes">
+   <Overload retVal="" descr="Waits for press <Enter> ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="getpac" func="yes">
+   <Overload retVal="" descr="Copies the specified packet from trace file to the buffer of current packet. ">
+<Param name="number of packet"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="goto" func="yes">
+   <Overload retVal="" descr="Performs the search of the given value in current packet. The search will be started from the current position of byte pointer. Value may has any type. The result of search is available through GOTORES keyword. In the case of successfull search the byte pointer will be moved to the found entry. Stop position may be equal to -1. It means search to the end of packet. Stop position may be ommited but in this case parameters must be enclosed in brackets. ">
+<Param name="value of any type"/>
+<Param name="stop position"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="gotob" func="yes">
+   <Overload retVal="" descr="Is similar to GOTO command but performs back search. ">
+<Param name="value of any type"/>
+<Param name="stop position"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="gotores" func="yes">
+   <Overload retVal="" descr="This is a special value which allows to get the result of last search performed by GOTO or GOTOB command. 1 - successfull search, 0 - not successfull search. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="help" func="yes">
+   <Overload retVal="" descr="Displays the description of the command. The &quot;all&quot; value is available to display info about all commands. Also displays the list of fields which have the given string in their name. ">
+<Param name="name of command"/>
+<Param name="part of the field's name"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="if" func="yes">
+   <Overload retVal="" descr="Processes the first block of script if condition is met, otherwise processes the second block if it is specified. <Types of compare>: = (==), !=, >, <, >=, <=. Hexadecimals number are treated as strings (with 0x prefix). If you have problems try to watch how these values are represented by string using PRINT command for example. ">
+<Param name="value1"/>
+<Param name="type of compare"/>
+<Param name="value2"/>
+<Param name="first block of script"/>
+<Param name="second block of script"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="ifdef" func="yes">
+   <Overload retVal="" descr="Executes block if given entity has been defined (entity: variable, field, someone defined by GDEF or DEFINE commands). ">
+<Param name="name of entity"/>
+<Param name="script's block"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="ifndef" func="yes">
+   <Overload retVal="" descr="Executes block if given entity has not been defined (entity: variable, field, someone defined by GDEF or DEFINE commands). ">
+<Param name="name of entity"/>
+<Param name="script's block"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="ifr" func="yes">
+   <Overload retVal="" descr="Processes the block of script if the last received packet (command WAIT, its analogs) has the given name (which was specified by command NAME). &quot;timeout&quot; may be specified as the name of packet what means that the block must be processed in the case of timeout. Command will not distinguish newly added packets and old ones if they have the same name. Take a note of it when using UNFIX command. See also CLEARREG command.   For tcp (udp) this command is also used to check the general status of last waiting operation. Status string &quot;error&quot; may be given to check if connection is closed already. Check for timeout or error may be also performed just after opening of connection by command OPEN. See samples/tcp_gateway, samples/http_client, samples/http_server.">
+<Param name="name of packet or status of last wait operation"/>
+<Param name="block of script"/>
+<Param name="second block of script"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="inc" func="yes">
+   <Overload retVal="" descr="The field for which the value will be specified below becomes autoincremented. While generating several packets (command REP) the value of field will be incremented. See &quot;samples/synflood.fws&quot; ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="include" func="yes">
+   <Overload retVal="" descr="Starts processing the content of given file. The search of file will be performed in the current directory, all search paths (see option -I). For every path the content of samples, headers, traces folders will be also examined. ">
+<Param name="name of file"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="incvar" func="yes">
+   <Overload retVal="" descr="Increases the given <name of variable> for the specified <value to add>. The <value to add> may be negative. ">
+<Param name="name of variable"/>
+<Param name="value to add"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="inspac" func="yes">
+   <Overload retVal="" descr="Insert the current packet in trace file, moving the all packets with given number and higher. ">
+<Param name="number of packet"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="interval" func="yes">
+   <Overload retVal="" descr="Sets the value of interval between generating multiple packets while using command REP. ">
+<Param name="number of milliseconds"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="lastres" func="yes">
+   <Overload retVal="" descr="This special value enables to get the last result of statistic analyzing performed by SHOWREP. 0 - successfull, 2 - some discrepancy is found. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="loadvar" func="yes">
+   <Overload retVal="" descr="Loads the file in variable's current value. The variable must have undefined size: use variables with string type or use SETSIZE command. ">
+<Param name="name of variable"/>
+<Param name="name of file"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="mask" func="yes">
+   <Overload retVal="" descr="Defines the mask for the next defined field. Mask is hexadecimal number. Value for field will be written only in bits corresponding not null bits of mask. See &quot;headers/tcp_header.fws&quot;. ">
+<Param name="field's mask"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="mes" func="yes">
+   <Overload retVal="" descr="Defines the message which will be displayed the every time on recieving the currently described packet. Substitutions are allowed in the form of $name$. The 'name' may reference to the field's name, variable's name, someone defined by GDEF command. In the case of field's name field's value will be retrieved from the content of recieved packet. ">
+<Param name="string of message"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="mi" func="yes">
+   <Overload retVal="" descr="Sets the main interface at which packets will be generated or waited. The unique name of interface must be specified which may be defined while opening (-d option or OPEN command) after symbol # (e.g. &quot;-d eth0#0&quot;). If no unique name is specified then it will be assigned to number 0,1,2,3,... Default requests are being overwritten: a single ACCEPT request is set for the new main interface, others are ANY. This means that further WAIT command (its analogs) will wait packet ONLY at the new main interface. In order to wait a packet at several interfaces use command DEFAULTS after command MI or explicitly specify requests after WAIT command. ">
+<Param name="name of interface"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="mulvar" func="yes">
+   <Overload retVal="" descr="Multiply given variable by specified value. ">
+<Param name="name of variable"/>
+<Param name="multiplier"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="name" func="yes">
+   <Overload retVal="" descr="Defines the name of currently described packet which will be displayed in report instead of not obvious &quot;Packet on line ...&quot; ">
+<Param name="name of packet"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="newlineis" func="yes">
+   <Overload retVal="" descr="Sets the string which must replace any original LF symbol while working with strings. See &quot;samples/strings.fws&quot; ">
+<Param name="string"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="notcopyrec" func="yes">
+   <Overload retVal="" descr="Reverses the action of COPYREC command. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="notdoublemes" func="yes">
+   <Overload retVal="" descr="Avoids displaying of double messages (specified by command MES). It also avoids the recieving of corresponding double packets, i.e. such packets will be ignored and don't cause WAIT command (its analogs) to terminate on them. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="numret" func="yes">
+   <Overload retVal="" descr="While imitation of application's work if some packets have not been received for a long time (command TIMEOUT), then the previously generated packets will be retransmitted. One retransmission by default. ">
+<Param name="number of retransmitions"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="offset" func="yes">
+   <Overload retVal="" descr="The position of the next defined field will be shifted to the left for the given <number of bits> which must be from 1 to 7. So every written value will be shifter to the left before writing. Nevertheless, after the writing the left bits will be also changed and set to 0. To avoid this use command MASK. See &quot;headers/tcp_header.fws&quot; ">
+<Param name="number of bites"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="open" func="yes">
+   <Overload retVal="" descr="Opens interface of given type. Types: eth, ip, tcp, udp. For tcp this command will wait till connection with server is established or a client connection is accepted. For other types the command won't wait. See more in -d,-p,-T options. ">
+<Param name="interface's type"/>
+<Param name="interface's name"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="or" func="yes">
+   <Overload retVal="" descr="Alias of TOWAIT command. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="pass" func="yes">
+   <Overload retVal="" descr="Increases the byte pointer for the given <number of bytes>. ">
+<Param name="number of bytes"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="pause" func="yes">
+   <Overload retVal="" descr="Pauses the execution for a specified interval of time. ">
+<Param name="number of milliseconds"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="play" func="yes">
+   <Overload retVal="" descr="Windows only. Plays the specified sound, WAV-file. Sound system must be enabled. If the file is not found then default Windows sound will be played. If the file is in current folder or in standard system folder then the full path is not required (Media/<name>).  Under UNIX the sound will be played by PC speaker.">
+<Param name="name of wav file"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="pos" func="yes">
+   <Overload retVal="" descr="Sets the <new position> of byte pointer. In the case of <field's name> new position will be equal to field's position. ">
+<Param name="new position"/>
+<Param name="field's name"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="precisewait" func="yes">
+   <Overload retVal="" descr="After the work of WAIT command (its analogs) all trace threads will be blocked until the next call to WAIT command. So there will be no missed packets between subsequent calls to WAIT command. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="print" func="yes">
+   <Overload retVal="" descr="Displays the given message. Use symbol \n in message to indicate that line feed must be performed. ">
+<Param name="message"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="printl" func="yes">
+   <Overload retVal="" descr="Analog of PRINT command. Additionally performs the line feed. ">
+<Param name="message"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="quiet" func="yes">
+   <Overload retVal="" descr="Instructs to not display some annoying messages. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="rand" func="yes">
+   <Overload retVal="" descr="Specifies the random value for field. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="range" func="yes">
+   <Overload retVal="" descr="While imitation of application's work the work will be performed with packets (from trace file) which are within the given range. Null value for start packet means first packet in file. Null value for stop packet means last packet in file. ">
+<Param name="number of start packet"/>
+<Param name="number of stop packet"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="recv" func="yes">
+   <Overload retVal="" descr="Analog of WAIT command. This command is more convenient to use when working with tcp(udp). It clears the mask of packet automatically so stops working after receiving any data. It also enables mode when received packet is copied to the buffer of current packet (COPYREC command). ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="rep" func="yes">
+   <Overload retVal="" descr="The next generation command (command SEND) will generate not one, but several packets. The use of this command also affects the request for packet: the packet must be accepted the specified number of times.">
+<Param name="the number of generation"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="reset" func="yes">
+   <Overload retVal="" descr="Deprecated. Use CLEARMASK ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="return" func="yes">
+   <Overload retVal="" descr="Stops processing current file. If it was included in another file then processing will continue from that include command. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="revers" func="yes">
+   <Overload retVal="" descr="Request specification. May only be given in parameters for DEFAULT command. Instructs to revers the request for every packet. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="rm" func="yes">
+   <Overload retVal="" descr="While imitation of application's work some values in packets from trace file may be automatically replaced before generating packet or before waiting one. So the <type> of replacement (&quot;recv&quot; or &quot;gen&quot;) instructs when the replacement must be applied: before generating packet or before forming the packet which will be waited. So it is possible to generate one packet but wait another. It may be useful if packets are modified on their way.">
+<Param name="type"/>
+<Param name="name of field"/>
+<Param name="sought value"/>
+<Param name="value to set"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="run" func="yes">
+   <Overload retVal="" descr="This command starts imitation of application's work. Parameters to command specify the request to result of test. <Base request> may be: drop, any, accept. List of packets, for example: 1;2;3-5;7-. Minus at the end of list means expanding to last packet in trace file. List &quot;any&quot; is equal to &quot;1-&quot;. The result for packets from list must correspond to base request. The result for packets not from list must correspond to inverted base request. Ex: &quot;run accept 1-&quot; means &quot;all packets must be accepted&quot;, &quot;run drop 6-&quot; means &quot;all packets before 6 must be accepted, rest of packets - dropped&quot;, &quot;run any any&quot; means no requests. See &quot;samples/convtest1&quot;">
+<Param name="base request"/>
+<Param name="list of packets"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="safeterm" func="yes">
+   <Overload retVal="" descr="If the intensity of packets is very high and the program fails in deadlock on terminating, then this command will help. Terminating may become slower. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="second" func="yes">
+   <Overload retVal="" descr="This special value retrieves field's value from the second packet in trace file. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="send" func="yes">
+   <Overload retVal="" descr="In common regime generates the packet defined above. In other regimes (testing packet filter, see command FASTTEST and option -c) may simply separate packets one from another, so by this command the current content of buffer will be fixed and the new packet will be registered. The requests after command don't make sense in common regime (only while testing packet filter). ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="sendwait" func="yes">
+   <Overload retVal="" descr="The analog of &quot;ADD <requests> SEND WAITALL&quot; sentence. Purpose: if this command is used then a packet will be added to the waited ones BEFORE its generation, otherwise there would be a chance that the packet is missed (sense it may be received by a sniffer just after the generation and before its addition to the waited packets). This command may be useful when you need to generate packets from one interface and registrate those on another interface. ">
+<Param name="requests"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="sendwaitother" func="yes">
+   <Overload retVal="" descr="Similar to SENDWAIT. In contrast to it, doesn't add the previously described packet to waitable ones, just sends it. Other packets will be waited that must be described before the sending of this packet (and added by ADD command). ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="setpac" func="yes">
+   <Overload retVal="" descr="Replaces the specified packet in trace file by the current packet. ">
+<Param name="number of packet"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="setpos" func="yes">
+   <Overload retVal="" descr="Sets a new position for the given field. ">
+<Param name="field's name"/>
+<Param name="decimal value of a new position"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="setsize" func="yes">
+   <Overload retVal="" descr="Allows to specify the size for fields which don't have concrete size initially (strings). It can be also used to change the size for fields with concrete size (hexadecimal numbers). Value &quot;any&quot; may be used to specify the undefined size. A variable may be given so the size may be calculated before. See &quot;samples/http_parser&quot;. ">
+<Param name="name of field"/>
+<Param name="decimal value of a new size of field"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="showrep" func="yes">
+   <Overload retVal="" descr="Displays a report which is the same as that displayed while program termination. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="syscall" func="yes">
+   <Overload retVal="" descr="Implementes the system call. <command> must specify command's name (path to program) with parameters. Special value CALLRES may be used to obtain the status of last system call. ">
+<Param name="command"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="timed" func="yes">
+   <Overload retVal="" descr="Imitation of application's work will be implemented with considering time stamps from trace file. The test may become slower. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="timeout" func="yes">
+   <Overload retVal="" descr="Defines the timeout for WAIT command (and its analogs), also for imitation of application's work. Null value means infinite timeout (such timeout will not be applied for imitation of application's work). In the case of negative value its absolute value will be obtained as timeout, but WAIT command (its analogs) will work differently: it will always wait for the whole timeout (not terminating on first recieved packet). So several packets may be registered as recieved. This command also defines the timeout for TCP server while waiting for connections. ">
+<Param name="initval in milliseconds"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="togen" func="yes">
+   <Overload retVal="" descr="This special word specifies that some entity must perform its function upon the sending of a packet. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="torecv" func="yes">
+   <Overload retVal="" descr="This special word specifies that some entity must perform its function upon the receiving of a packet. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="towait" func="yes">
+   <Overload retVal="" descr="Analog of WAIT command. Adds the above packet to the set of packets which will be waited by command WAIT or its analogs. This command does not start real waiting (doesn't suspend script execution). Nevertheless, just after adding the packet may be registered as received. If some packet is registered as received before the call to WAIT (WAITALL) then command WAIT will terminate immediately. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="trace" func="yes">
+   <Overload retVal="" descr="Opens the given trace file for subsequent work with it. ">
+<Param name="name of trace file"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="unfix" func="yes">
+   <Overload retVal="" descr="By default after the work of WAIT command (its analogs) the statuses for all waited packets will be fixed, so there may be no packets to wait for the next call to WAIT. This command marks these old packets as newly added. The previous status for them will be lost. Take a note of that ALL old packets will be unfixed, so they will be waited: this may cause unexpected results. Consider the use of CLEARREG command. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="unfixmask" func="yes">
+   <Overload retVal="" descr="Performs the action reversed to the action of FIXMASK ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="var" func="yes">
+   <Overload retVal="" descr="Command creates the new variable <name of variable> or reinitializes the old one if some variable of the same name is already exist. The newly created variable will have the same value's type as <name of field>. This command also sets the <initial value> for variable. Variable's value is stored separately from packet's buffer. The &quot;autoset&quot; type of variable indicates that the variable will be initialized by recieved packet (while using WAIT command or its analogs), i.e. from recieved packet will be obtained value of <name of field> and copied to variable. &quot;static&quot; type indicates that variable must not be changed while recieving packet. The &quot;static&quot; keyword may be ommited only if parameters to command are enclosed in round brackets. The <name of variable> may appear amoung parameters to other commands. In this case it will be replaced by its value. Such a replacement will be also performed in strings enclosed in apostrophes. In this case the <name of variable> must be enclosed in $ (ex: 'value of variable = $name$').">
+<Param name="name of variable"/>
+<Param name="name of field"/>
+<Param name="initial value"/>
+
+   </Overload>
+</Keyword>
+<KeyWord name="wait" func="yes">
+   <Overload retVal="" descr="Waits for packet whose mask is defined above. The command will finish work when such packet is recieved on waitable interface. The waitable interface is interface for which strict request (accept or drop) have been specified in parameters to command or in defaults (command DEFAULT). For TCP device the command will only wait data on the main interface. In the general case command may wait no one but several packets (added by ADD command). If any of them is recieved then command terminates. Command waits packets until timeout expires (command TIMEOUT). See &quot;samples/waiting_packets.fws&quot;. ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="waitall" func="yes">
+   <Overload retVal="" descr="The analog of WAIT command. Doesn't add the previously defined packet to the list of waited ones. Starts waiting simply. Packets may be already added by ADD command (or using of UNFIX command). ">
+   
+   </Overload>
+</Keyword>
+<KeyWord name="write" func="yes">
+   <Overload retVal="" descr="Writes the trace file opened by TRACE command on disk ">
+   
+   </Overload>
+</Keyword>
+</AutoComplete>
+</NotepadPlus>

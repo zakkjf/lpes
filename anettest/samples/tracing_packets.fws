@@ -1,0 +1,32 @@
+/*
+   Periodically displays reports about each packet: is recieved and how mush.
+
+   run program as
+     anettest -vr -d eth0 -f tracing_packets.fws
+*/
+
+// program will show you table with total number and rate for each packet
+
+include ip          // include IP header, where must be defined 'icmp' value
+
+CLEARMASK   // reseting mask to 0, that is waiting any packet
+        // otherwise we will be wait packets, defined in IP header
+
+ip.proto   tcp      // tracing only icmp packets
+
+// defining field's values for packets, we are interested
+
+name 10.179.0.1     // name of this packet which will be displayed in report
+srcip   10.179.0.1  // insert you IP address or DNS name
+
+                   send >>
+
+name google.ru
+srcip   www.google.ru  // insert you IP address or DNS name
+
+                   send >>
+
+name yandex.ru
+srcip   87.250.250.203  // insert you IP address or DNS name
+
+                   send >>

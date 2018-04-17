@@ -1,0 +1,17 @@
+
+// THIS HEADER CAN ONLY BE USED WHEN BUILDING MORE COMPLEX HEADERS BUT NOT INDEPENDENT
+// YOU MUST INCLUDE SOME CHANNEL LAYER PROTOCOL
+// BEFOR INCLUDING THIS HEADER
+
+.ipx.checksum   0xffff
+.ipx.len	30s2.
+.ipx.transp     0x00
+.ipx.pactype	4
+.ipx.dstnet	0x00010000
+.ipx.dsthost	0xfffff0ffffff
+.ipx.dstsock	0x0454
+.ipx.srcnet	0x01000000
+.ipx.srchost	0x000400ab786a
+.ipx.srcsock	0x83c2
+
+.ipx.data     ''

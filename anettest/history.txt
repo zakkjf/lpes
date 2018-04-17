@@ -1,0 +1,44 @@
+CHANGES TO VERSION 1.1
+
+1. Strings must always be quoted. Each not quoted word will be processed as the name of variable or something else.
+
+2. Using variables, fields, substitutions with the same name is not allowed. 
+Ex: while creating a new variable if some variable
+with the same name already exists then its parameters will be overwritten,
+but if some field with the same name already exists then it's error.
+
+3. IFDEF, PLAY, NEWLINEIS, SENDWAITOTHER commands have been added
+
+4. if there is a unallowed symbol after symbol \ then it will be ignored.
+   the using of \ before a new line will cause the omission of the new line
+
+5. include command also permits of use of string with $ enclosed references to variables or to what has been defined by GDEF command
+
+6. fixed the bug while adding a second mask condition for a not simple field (with custom offset and mask),
+   several diffrent equality conditions might have happened to exist so it hadn't worked (diffrent equal conditions cannot be satisfied for the same value of field),
+   now if there is a equalty condition for a field then the addition of second equality condition for this field will override the previous,
+   
+7. timeout specified by TIMEOUT command (and used in a conversation test) will not further be resetted by DEFAULTTEST command
+
+8. recursive GDEFs and DEFINEs like 
+
+		var(var1, num, 1) 
+		gdef p1 var1 
+		gdef p2 p1 
+		gdef p3 p2
+		var1 = 5
+		print '$p3$'
+		
+	Output will be "5".
+
+9. while specifying a range of packet numbers ; must be used insteed of ,
+
+10. fixed bug in SENDWAIT when a packet might be received between sending and starting of waiting,
+	so the packet was marked as received in final report but wait command finished by timeout
+	(while omitting operations that had to be performed upon receiving)
+	
+11. User numbers of interfaces are defined by the order of interface opening.    Not only number may be used but any string if given in interface's name after #.
+12. Command OR has become ADD
+13. rand keyword is now may be specified anywhere as other special values but the size of random value will be 1 byte,	only for fields the size will be equal to the size of field
+14. OPEN, CLOSE commands15. udp device to use system socket as for tcp16. variables can be declared more simple <type> <name> = <initial value>, ex. STRING s1 = 'string_value', INT i1 = 3, HEX h1 = 0x817. after waiting for data in a tcp connection you can use IFR with statuses ERROR, TIMEOUT or OK, after connection also18. RETURN, RECV, TOWAIT (as ADD) commands added19. renamed commands CLEAR to CLEARHISTORY, RESET to CLEARMASK20. field with name 'data' as alias for tcp.data or udp.data depending on interface type21. 
+	
