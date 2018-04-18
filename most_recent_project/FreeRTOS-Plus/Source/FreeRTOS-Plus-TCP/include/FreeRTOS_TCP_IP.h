@@ -32,7 +32,8 @@
 extern "C" {
 #endif
 
-#include "FreeRTOS_IP.h"
+#include "FreeRTOS_IP.h"//ADDED
+
 BaseType_t xProcessReceivedTCPPacket( NetworkBufferDescriptor_t *pxNetworkBuffer );
 
 typedef enum eTCP_STATE {

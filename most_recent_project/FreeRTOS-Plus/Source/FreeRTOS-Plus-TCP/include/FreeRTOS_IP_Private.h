@@ -38,6 +38,7 @@ extern "C" {
 #include "FreeRTOS_Sockets.h"
 #include "IPTraceMacroDefaults.h"
 #include "FreeRTOS_Stream_Buffer.h"
+#include "FreeRTOS_IP.h"
 #if( ipconfigUSE_TCP == 1 )
 	#include "FreeRTOS_TCP_WIN.h"
 	#include "FreeRTOS_TCP_IP.h"

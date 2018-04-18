@@ -32,8 +32,6 @@
 extern "C" {
 #endif
 
-#include "FreeRTOS_IP.h"
-
 /* NOTE PUBLIC API FUNCTIONS. */
 BaseType_t xNetworkBuffersInitialise( void );
 NetworkBufferDescriptor_t *pxGetNetworkBufferWithDescriptor( size_t xRequestedSizeBytes, TickType_t xBlockTimeTicks );

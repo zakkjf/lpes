@@ -158,13 +158,13 @@ size_t uxSize = uxStreamBufferMidSpace( pxBuffer );
 		pxBuffer->uxMid -= pxBuffer->LENGTH;
 	}
 }
-/*-----------------------------------------------------------
+/*-----------------------------------------------------------*/
 static portINLINE BaseType_t xStreamBufferIsEmpty( const StreamBuffer_t *pxBuffer );
 static portINLINE BaseType_t xStreamBufferIsEmpty( const StreamBuffer_t *pxBuffer )
 {
 BaseType_t xReturn;
 
-	// True if no item is available
+	/* True if no item is available */
 	if( pxBuffer->uxHead == pxBuffer->uxTail )
 	{
 		xReturn = pdTRUE;
@@ -175,16 +175,14 @@ BaseType_t xReturn;
 	}
 	return xReturn;
 }
-*/
-/*
+/*-----------------------------------------------------------*/
 
 static portINLINE BaseType_t xStreamBufferIsFull( const StreamBuffer_t *pxBuffer );
 static portINLINE BaseType_t xStreamBufferIsFull( const StreamBuffer_t *pxBuffer )
 {
-	// True if the available space equals zero.
+	/* True if the available space equals zero. */
 	return ( BaseType_t ) ( uxStreamBufferGetSpace( pxBuffer ) == 0u );
 }
-*/
 /*-----------------------------------------------------------*/
 
 static portINLINE BaseType_t xStreamBufferLessThenEqual( const StreamBuffer_t *pxBuffer, const size_t uxLeft, const size_t uxRight );

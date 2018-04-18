@@ -70,7 +70,7 @@ int main(void)
     PinoutSet(false, false);
 
     //initialize ethernet PHY
-    //initEthernet(output_clock_rate_hz);
+    initEthernet(output_clock_rate_hz);
     //vCreateTCPClientSocket();
     // Create tasks
     xTaskCreate(task1, (const portCHAR *)"LED1",
@@ -97,7 +97,7 @@ void vTCPSend(char *pcBufferToTransmit, const size_t xTotalLengthToSend )
     /* Set the IP address (192.168.0.50) and port (1500) of the remote socket
     to which this client socket will transmit. */
     xRemoteAddress.sin_port = FreeRTOS_htons( 15000 );
-    xRemoteAddress.sin_addr = FreeRTOS_inet_addr_quick( 192, 168, 0, 200 );
+    xRemoteAddress.sin_addr = FreeRTOS_inet_addr_quick( 192, 168, 1, 200 );
 
     /* Create a socket. */
     xSocket = FreeRTOS_socket( FREERTOS_AF_INET,
@@ -108,8 +108,8 @@ void vTCPSend(char *pcBufferToTransmit, const size_t xTotalLengthToSend )
     /* Connect to the remote socket.  The socket has not previously been bound to
     a local port number so will get automatically bound to a local port inside
     the FreeRTOS_connect() function. */
-    if( FreeRTOS_connect( xSocket, &xRemoteAddress, sizeof( xRemoteAddress ) ) == 0 )
-    {
+    if( FreeRTOS_connect( xSocket, &xRemoteAddress, sizeof( xRemoteAddress ) ) == 0 );
+   // {
         /* Keep sending until the entire buffer has been sent. */
         while( xAlreadyTransmitted < xTotalLengthToSend )
         {
@@ -135,7 +135,7 @@ void vTCPSend(char *pcBufferToTransmit, const size_t xTotalLengthToSend )
                 break;
             }
         }
-    }
+   // }
 
     /* Initiate graceful shutdown. */
     FreeRTOS_shutdown( xSocket, FREERTOS_SHUT_RDWR );

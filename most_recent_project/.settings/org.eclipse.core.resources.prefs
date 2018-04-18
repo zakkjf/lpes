@@ -1,6 +1,8 @@
 eclipse.preferences.version=1
 encoding//Debug/FreeRTOS-Plus/Source/FreeRTOS-Plus-TCP/portable/BufferManagement/subdir_rules.mk=UTF-8
 encoding//Debug/FreeRTOS-Plus/Source/FreeRTOS-Plus-TCP/portable/BufferManagement/subdir_vars.mk=UTF-8
+encoding//Debug/FreeRTOS-Plus/Source/FreeRTOS-Plus-TCP/portable/NetworkInterface/Common/subdir_rules.mk=UTF-8
+encoding//Debug/FreeRTOS-Plus/Source/FreeRTOS-Plus-TCP/portable/NetworkInterface/Common/subdir_vars.mk=UTF-8
 encoding//Debug/FreeRTOS-Plus/Source/FreeRTOS-Plus-TCP/portable/NetworkInterface/subdir_rules.mk=UTF-8
 encoding//Debug/FreeRTOS-Plus/Source/FreeRTOS-Plus-TCP/portable/NetworkInterface/subdir_vars.mk=UTF-8
 encoding//Debug/FreeRTOS-Plus/Source/FreeRTOS-Plus-TCP/protocols/Common/subdir_rules.mk=UTF-8
