@@ -22,7 +22,7 @@ typedef struct gps_data{
     float lon_sec;
     char lon_hem;
     //quality data
-    float fixq;
+    uint16_t fixq;
     uint16_t sat_count;
     uint16_t hdilution;
     //altitude

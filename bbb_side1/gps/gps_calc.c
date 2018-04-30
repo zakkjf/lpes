@@ -1,4 +1,4 @@
-//Code adapted from GEODATASOURCE website.
+//Code borrowed from GEODATASOURCE website.
 /*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 /*::                                                                         :*/
 /*::  This routine calculates the distance between two points (given the     :*/
@@ -14,6 +14,7 @@
 /*::    unit = the unit you desire for results                               :*/
 /*::           where: 'M' is statute miles (default)                         :*/
 /*::                  'K' is kilometers                                      :*/
+/*::                  'N' is nautical miles                                  :*/
 /*::  Worldwide cities and other features databases with latitude lonitude  :*/
 /*::  are available at https://www.geodatasource.com                          :*/
 /*::                                                                         :*/

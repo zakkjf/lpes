@@ -1,0 +1,1482 @@
+04/29/2018 15:20:14 : Comm Thread: Active
+04/29/2018 15:20:14 : Navmath Thread: Active
+04/29/2018 15:20:15 : Fix Quality: 9.850000
+04/29/2018 15:20:15 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:15 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:15 : Current time: 03:59:07
+04/29/2018 15:20:15 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:16 : Fix Quality: 9.850000
+04/29/2018 15:20:16 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:16 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:16 : Current time: 03:59:07
+04/29/2018 15:20:16 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:17 : Fix Quality: 9.850000
+04/29/2018 15:20:17 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:17 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:17 : Current time: 03:59:07
+04/29/2018 15:20:17 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:18 : Fix Quality: 9.850000
+04/29/2018 15:20:18 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:18 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:18 : Current time: 03:59:07
+04/29/2018 15:20:18 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:19 : Fix Quality: 9.850000
+04/29/2018 15:20:19 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:19 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:19 : Current time: 03:59:07
+04/29/2018 15:20:19 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:20 : Fix Quality: 9.850000
+04/29/2018 15:20:20 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:20 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:20 : Current time: 03:59:07
+04/29/2018 15:20:20 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:21 : Fix Quality: 9.850000
+04/29/2018 15:20:21 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:21 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:21 : Current time: 03:59:07
+04/29/2018 15:20:21 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:22 : Fix Quality: 9.850000
+04/29/2018 15:20:22 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:22 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:22 : Current time: 03:59:07
+04/29/2018 15:20:22 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:23 : Fix Quality: 9.850000
+04/29/2018 15:20:23 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:23 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:23 : Current time: 03:59:07
+04/29/2018 15:20:23 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:24 : Fix Quality: 9.850000
+04/29/2018 15:20:24 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:24 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:24 : Current time: 03:59:07
+04/29/2018 15:20:24 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:25 : Fix Quality: 9.850000
+04/29/2018 15:20:25 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:25 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:25 : Current time: 03:59:07
+04/29/2018 15:20:25 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:26 : Fix Quality: 9.850000
+04/29/2018 15:20:26 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:26 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:26 : Current time: 03:59:07
+04/29/2018 15:20:26 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:27 : Fix Quality: 9.850000
+04/29/2018 15:20:27 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:27 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:27 : Current time: 03:59:07
+04/29/2018 15:20:27 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:28 : Fix Quality: 9.850000
+04/29/2018 15:20:28 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:28 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:28 : Current time: 03:59:07
+04/29/2018 15:20:28 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:29 : Fix Quality: 9.850000
+04/29/2018 15:20:29 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:29 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:29 : Current time: 03:59:07
+04/29/2018 15:20:29 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:30 : Fix Quality: 9.850000
+04/29/2018 15:20:30 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:30 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:30 : Current time: 03:59:07
+04/29/2018 15:20:30 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:31 : Fix Quality: 9.850000
+04/29/2018 15:20:31 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:31 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:31 : Current time: 03:59:07
+04/29/2018 15:20:31 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:32 : Fix Quality: 9.850000
+04/29/2018 15:20:32 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:32 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:32 : Current time: 03:59:07
+04/29/2018 15:20:32 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:33 : Fix Quality: 9.850000
+04/29/2018 15:20:33 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:33 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:33 : Current time: 03:59:07
+04/29/2018 15:20:33 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:34 : Fix Quality: 9.850000
+04/29/2018 15:20:34 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:34 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:34 : Current time: 03:59:07
+04/29/2018 15:20:34 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:35 : Fix Quality: 9.850000
+04/29/2018 15:20:35 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:35 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:35 : Current time: 03:59:07
+04/29/2018 15:20:35 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:36 : Fix Quality: 9.850000
+04/29/2018 15:20:36 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:36 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:36 : Current time: 03:59:07
+04/29/2018 15:20:36 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:37 : Fix Quality: 9.850000
+04/29/2018 15:20:37 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:37 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:37 : Current time: 03:59:07
+04/29/2018 15:20:37 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:38 : Fix Quality: 9.850000
+04/29/2018 15:20:38 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:38 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:38 : Current time: 03:59:07
+04/29/2018 15:20:38 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:39 : Fix Quality: 9.850000
+04/29/2018 15:20:39 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:39 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:39 : Current time: 03:59:07
+04/29/2018 15:20:39 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:40 : Fix Quality: 9.850000
+04/29/2018 15:20:40 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:40 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:40 : Current time: 03:59:07
+04/29/2018 15:20:40 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:41 : Fix Quality: 9.850000
+04/29/2018 15:20:41 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:41 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:41 : Current time: 03:59:07
+04/29/2018 15:20:41 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:42 : Fix Quality: 9.850000
+04/29/2018 15:20:42 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:42 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:42 : Current time: 03:59:07
+04/29/2018 15:20:42 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:43 : Fix Quality: 9.850000
+04/29/2018 15:20:43 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:43 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:43 : Current time: 03:59:07
+04/29/2018 15:20:43 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:44 : Fix Quality: 9.850000
+04/29/2018 15:20:44 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:44 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:44 : Current time: 03:59:07
+04/29/2018 15:20:44 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:45 : Fix Quality: 9.850000
+04/29/2018 15:20:45 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:45 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:45 : Current time: 03:59:07
+04/29/2018 15:20:45 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:46 : Fix Quality: 9.850000
+04/29/2018 15:20:46 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:46 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:46 : Current time: 03:59:07
+04/29/2018 15:20:46 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:47 : Fix Quality: 9.850000
+04/29/2018 15:20:47 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:47 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:47 : Current time: 03:59:07
+04/29/2018 15:20:47 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:20:48 : Fix Quality: 9.850000
+04/29/2018 15:20:48 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:20:48 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:20:48 : Current time: 03:59:07
+04/29/2018 15:20:48 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:22:13 : Comm Thread: Active
+04/29/2018 15:22:13 : Navmath Thread: Active
+04/29/2018 15:22:14 : Fix Quality: 9.850000
+04/29/2018 15:22:14 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:22:14 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:22:14 : Current time: 03:59:07
+04/29/2018 15:22:14 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:22:15 : Fix Quality: 9.850000
+04/29/2018 15:22:15 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:22:15 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:22:15 : Current time: 03:59:07
+04/29/2018 15:22:15 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:22:16 : Fix Quality: 9.850000
+04/29/2018 15:22:16 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:22:16 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:22:16 : Current time: 03:59:07
+04/29/2018 15:22:16 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:22:17 : Fix Quality: 9.850000
+04/29/2018 15:22:17 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:22:17 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:22:17 : Current time: 03:59:07
+04/29/2018 15:22:17 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:22:18 : Fix Quality: 9.850000
+04/29/2018 15:22:18 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:22:18 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:22:18 : Current time: 03:59:07
+04/29/2018 15:22:18 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:22:19 : Fix Quality: 9.850000
+04/29/2018 15:22:19 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:22:19 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:22:19 : Current time: 03:59:07
+04/29/2018 15:22:19 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:22:48 : Comm Thread: Active
+04/29/2018 15:22:48 : Navmath Thread: Active
+04/29/2018 15:22:49 : ERROR: Missed heartbeat 1
+04/29/2018 15:22:50 : Fix Quality: 9.850000
+04/29/2018 15:22:50 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:22:50 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:22:50 : Current time: 03:59:07
+04/29/2018 15:22:50 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:22:51 : ERROR: Missed heartbeat 2
+04/29/2018 15:22:52 : Fix Quality: 9.850000
+04/29/2018 15:22:52 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:22:52 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:22:52 : Current time: 03:59:07
+04/29/2018 15:22:52 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:22:53 : ERROR: Missed heartbeat 3
+04/29/2018 15:22:54 : Fix Quality: 9.850000
+04/29/2018 15:22:54 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:22:54 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:22:54 : Current time: 03:59:07
+04/29/2018 15:22:54 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:22:55 : ERROR: Missed heartbeat 4
+04/29/2018 15:22:56 : Fix Quality: 9.850000
+04/29/2018 15:22:56 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:22:56 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:22:56 : Current time: 03:59:07
+04/29/2018 15:22:56 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:22:57 : ERROR: Missed heartbeat 5
+04/29/2018 15:22:58 : Fix Quality: 9.850000
+04/29/2018 15:22:58 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:22:58 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:22:58 : Current time: 03:59:07
+04/29/2018 15:22:58 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:22:59 : ERROR: Missed heartbeat 6
+04/29/2018 15:23:00 : Fix Quality: 9.850000
+04/29/2018 15:23:00 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:23:00 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:23:00 : Current time: 03:59:07
+04/29/2018 15:23:00 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:23:01 : ERROR: Missed heartbeat 7
+04/29/2018 15:23:02 : Fix Quality: 9.850000
+04/29/2018 15:23:02 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:23:02 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:23:02 : Current time: 03:59:07
+04/29/2018 15:23:02 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:23:03 : ERROR: Missed heartbeat 8
+04/29/2018 15:23:04 : Fix Quality: 9.850000
+04/29/2018 15:23:04 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:23:04 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:23:04 : Current time: 03:59:07
+04/29/2018 15:23:04 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:23:05 : ERROR: Missed heartbeat 9
+04/29/2018 15:30:19 : Comm Thread: Active
+04/29/2018 15:30:19 : Navmath Thread: Active
+04/29/2018 15:30:20 : Fix Quality: 9.850000
+04/29/2018 15:30:20 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:30:20 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:30:20 : Current time: 03:59:07
+04/29/2018 15:30:20 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:30:21 : Fix Quality: 9.850000
+04/29/2018 15:30:21 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:30:21 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:30:21 : Current time: 03:59:07
+04/29/2018 15:30:21 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:30:22 : Fix Quality: 9.850000
+04/29/2018 15:30:22 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:30:22 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:30:22 : Current time: 03:59:07
+04/29/2018 15:30:22 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:30:23 : Fix Quality: 9.850000
+04/29/2018 15:30:23 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 15:30:23 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 15:30:23 : Current time: 03:59:07
+04/29/2018 15:30:23 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:30:35 : Comm Thread: Active
+04/29/2018 15:30:35 : Navmath Thread: Active
+04/29/2018 15:30:36 : Sensor fault on Tiva side. Resetting.04/29/2018 15:30:36 : Current time: 03:59:07
+04/29/2018 15:30:36 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:30:37 : Sensor fault on Tiva side. Resetting.04/29/2018 15:30:37 : Current time: 03:59:07
+04/29/2018 15:30:37 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:30:38 : Sensor fault on Tiva side. Resetting.04/29/2018 15:30:38 : Current time: 03:59:07
+04/29/2018 15:30:38 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:30:39 : Sensor fault on Tiva side. Resetting.04/29/2018 15:30:39 : Current time: 03:59:07
+04/29/2018 15:30:39 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:30:40 : Sensor fault on Tiva side. Resetting.04/29/2018 15:30:40 : Current time: 03:59:07
+04/29/2018 15:30:40 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:30:41 : Sensor fault on Tiva side. Resetting.04/29/2018 15:30:41 : Current time: 03:59:07
+04/29/2018 15:30:41 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:31:04 : Comm Thread: Active
+04/29/2018 15:31:04 : Navmath Thread: Active
+04/29/2018 15:31:05 : Sensor fault on Tiva side. Resetting.04/29/2018 15:31:05 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:31:06 : Sensor fault on Tiva side. Resetting.04/29/2018 15:31:06 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:31:07 : Sensor fault on Tiva side. Resetting.04/29/2018 15:31:07 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:31:09 : Sensor fault on Tiva side. Resetting.04/29/2018 15:31:09 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:31:10 : Sensor fault on Tiva side. Resetting.04/29/2018 15:31:10 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:31:11 : Sensor fault on Tiva side. Resetting.04/29/2018 15:31:11 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:31:12 : Sensor fault on Tiva side. Resetting.04/29/2018 15:31:12 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:31:26 : Comm Thread: Active
+04/29/2018 15:31:26 : Navmath Thread: Active
+04/29/2018 15:31:27 : Sensor fault on Tiva side. Resetting.
+04/29/2018 15:31:27 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:31:28 : Sensor fault on Tiva side. Resetting.
+04/29/2018 15:31:28 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:31:29 : Sensor fault on Tiva side. Resetting.
+04/29/2018 15:31:29 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:31:30 : Sensor fault on Tiva side. Resetting.
+04/29/2018 15:31:30 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:31:31 : Sensor fault on Tiva side. Resetting.
+04/29/2018 15:31:31 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 15:31:32 : Sensor fault on Tiva side. Resetting.
+04/29/2018 15:31:32 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:27:49 : Comm Thread: Active
+04/29/2018 18:27:49 : Navmath Thread: Active
+04/29/2018 18:27:50 : Board Type: @TIV ID: 1 Firmware version: 1.
+04/29/2018 18:27:50 : Fix Quality: 9.850000
+04/29/2018 18:27:50 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:27:50 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:27:50 : Current time: 03:59:07
+04/29/2018 18:27:50 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:27:51 : Board Type: @TIV ID: 1 Firmware version: 1.
+04/29/2018 18:27:51 : Fix Quality: 9.850000
+04/29/2018 18:27:51 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:27:51 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:27:51 : Current time: 03:59:07
+04/29/2018 18:27:51 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:27:52 : Board Type: @TIV ID: 1 Firmware version: 1.
+04/29/2018 18:27:52 : Fix Quality: 9.850000
+04/29/2018 18:27:52 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:27:52 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:27:52 : Current time: 03:59:07
+04/29/2018 18:27:52 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:27:53 : Board Type: @TIV ID: 1 Firmware version: 1.
+04/29/2018 18:27:53 : Fix Quality: 9.850000
+04/29/2018 18:27:53 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:27:53 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:27:53 : Current time: 03:59:07
+04/29/2018 18:27:53 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:27:54 : Board Type: @TIV ID: 1 Firmware version: 1.
+04/29/2018 18:27:54 : Fix Quality: 9.850000
+04/29/2018 18:27:54 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:27:54 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:27:54 : Current time: 03:59:07
+04/29/2018 18:27:54 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:27:55 : Board Type: @TIV ID: 1 Firmware version: 1.
+04/29/2018 18:27:55 : Fix Quality: 9.850000
+04/29/2018 18:27:55 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:27:55 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:27:55 : Current time: 03:59:07
+04/29/2018 18:27:55 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:27:56 : Board Type: @TIV ID: 1 Firmware version: 1.
+04/29/2018 18:27:56 : Fix Quality: 9.850000
+04/29/2018 18:27:56 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:27:56 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:27:56 : Current time: 03:59:07
+04/29/2018 18:27:56 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:27:57 : Board Type: @TIV ID: 1 Firmware version: 1.
+04/29/2018 18:27:57 : Fix Quality: 9.850000
+04/29/2018 18:27:57 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:27:57 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:27:57 : Current time: 03:59:07
+04/29/2018 18:27:57 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:27:58 : Board Type: @TIV ID: 1 Firmware version: 1.
+04/29/2018 18:27:58 : Fix Quality: 9.850000
+04/29/2018 18:27:58 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:27:58 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:27:58 : Current time: 03:59:07
+04/29/2018 18:27:58 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:27:59 : Board Type: @TIV ID: 1 Firmware version: 1.
+04/29/2018 18:27:59 : Fix Quality: 9.850000
+04/29/2018 18:27:59 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:27:59 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:27:59 : Current time: 03:59:07
+04/29/2018 18:27:59 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:28:03 : Comm Thread: Active
+04/29/2018 18:28:03 : Navmath Thread: Active
+04/29/2018 18:28:04 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:28:04 : Fix Quality: 9.850000
+04/29/2018 18:28:04 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:28:04 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:28:04 : Current time: 03:59:07
+04/29/2018 18:28:04 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:28:05 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:28:05 : Fix Quality: 9.850000
+04/29/2018 18:28:05 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:28:05 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:28:05 : Current time: 03:59:07
+04/29/2018 18:28:05 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:28:06 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:28:06 : Fix Quality: 9.850000
+04/29/2018 18:28:06 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:28:06 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:28:06 : Current time: 03:59:07
+04/29/2018 18:28:06 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:28:07 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:28:07 : Fix Quality: 9.850000
+04/29/2018 18:28:07 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:28:07 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:28:07 : Current time: 03:59:07
+04/29/2018 18:28:07 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:28:08 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:28:08 : Fix Quality: 9.850000
+04/29/2018 18:28:08 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:28:08 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:28:08 : Current time: 03:59:07
+04/29/2018 18:28:08 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:28:09 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:28:09 : Fix Quality: 9.850000
+04/29/2018 18:28:09 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:28:09 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:28:09 : Current time: 03:59:07
+04/29/2018 18:28:09 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:28:10 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:28:10 : Fix Quality: 9.850000
+04/29/2018 18:28:10 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:28:10 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:28:10 : Current time: 03:59:07
+04/29/2018 18:28:10 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:28:11 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:28:11 : Fix Quality: 9.850000
+04/29/2018 18:28:11 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:28:11 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:28:11 : Current time: 03:59:07
+04/29/2018 18:28:11 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:28:12 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:28:12 : Fix Quality: 9.850000
+04/29/2018 18:28:12 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:28:12 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:28:12 : Current time: 03:59:07
+04/29/2018 18:28:12 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:28:13 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:28:13 : Fix Quality: 9.850000
+04/29/2018 18:28:13 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:28:13 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:28:13 : Current time: 03:59:07
+04/29/2018 18:28:13 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:28:14 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:28:14 : Fix Quality: 9.850000
+04/29/2018 18:28:14 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:28:14 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:28:14 : Current time: 03:59:07
+04/29/2018 18:28:14 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:28:15 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:28:15 : Fix Quality: 9.850000
+04/29/2018 18:28:15 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:28:15 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:28:15 : Current time: 03:59:07
+04/29/2018 18:28:15 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:28:16 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:28:16 : Fix Quality: 9.850000
+04/29/2018 18:28:16 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:28:16 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:28:16 : Current time: 03:59:07
+04/29/2018 18:28:16 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:28:17 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:28:17 : Fix Quality: 9.850000
+04/29/2018 18:28:17 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:28:17 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:28:17 : Current time: 03:59:07
+04/29/2018 18:28:17 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:28:18 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:28:18 : Fix Quality: 9.850000
+04/29/2018 18:28:18 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:28:18 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:28:18 : Current time: 03:59:07
+04/29/2018 18:28:18 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:28:19 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:28:19 : Fix Quality: 9.850000
+04/29/2018 18:28:19 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:28:19 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:28:19 : Current time: 03:59:07
+04/29/2018 18:28:19 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:28:20 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:28:20 : Fix Quality: 9.850000
+04/29/2018 18:28:20 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:28:20 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:28:20 : Current time: 03:59:07
+04/29/2018 18:28:20 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:28:21 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:28:21 : Fix Quality: 9.850000
+04/29/2018 18:28:21 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:28:21 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:28:21 : Current time: 03:59:07
+04/29/2018 18:28:21 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:28:22 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:28:22 : Fix Quality: 9.850000
+04/29/2018 18:28:22 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:28:22 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:28:22 : Current time: 03:59:07
+04/29/2018 18:28:22 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:54:16 : Comm Thread: Active
+04/29/2018 18:54:16 : Navmath Thread: Active
+04/29/2018 18:54:17 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:54:17 : Fix Quality: 9.850000
+04/29/2018 18:54:17 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:54:17 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:54:17 : Pointing 156.467087 degrees from target04/29/2018 18:54:17 : Pointing within 5 degrees of target.04/29/2018 18:54:17 : Current time: 03:59:07
+04/29/2018 18:54:17 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:54:18 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:54:18 : Fix Quality: 9.850000
+04/29/2018 18:54:18 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:54:18 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:54:18 : Pointing 167.979324 degrees from target04/29/2018 18:54:18 : Pointing within 5 degrees of target.04/29/2018 18:54:18 : Current time: 03:59:07
+04/29/2018 18:54:18 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:54:19 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:54:19 : Fix Quality: 9.850000
+04/29/2018 18:54:19 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:54:19 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:54:19 : Pointing 167.979324 degrees from target04/29/2018 18:54:19 : Pointing within 5 degrees of target.04/29/2018 18:54:19 : Current time: 03:59:07
+04/29/2018 18:54:19 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:54:20 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:54:20 : Fix Quality: 9.850000
+04/29/2018 18:54:20 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:54:20 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:54:20 : Pointing 167.979324 degrees from target04/29/2018 18:54:20 : Pointing within 5 degrees of target.04/29/2018 18:54:20 : Current time: 03:59:07
+04/29/2018 18:54:20 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:54:21 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:54:21 : Fix Quality: 9.850000
+04/29/2018 18:54:21 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:54:21 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:54:21 : Pointing 167.979324 degrees from target04/29/2018 18:54:21 : Pointing within 5 degrees of target.04/29/2018 18:54:21 : Current time: 03:59:07
+04/29/2018 18:54:21 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:54:22 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:54:22 : Fix Quality: 9.850000
+04/29/2018 18:54:22 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:54:22 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:54:22 : Pointing 167.979324 degrees from target04/29/2018 18:54:22 : Pointing within 5 degrees of target.04/29/2018 18:54:22 : Current time: 03:59:07
+04/29/2018 18:54:22 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:54:23 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:54:23 : Fix Quality: 9.850000
+04/29/2018 18:54:23 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:54:23 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:54:23 : Pointing 167.979324 degrees from target04/29/2018 18:54:23 : Pointing within 5 degrees of target.04/29/2018 18:54:23 : Current time: 03:59:07
+04/29/2018 18:54:23 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:54:24 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:54:24 : Fix Quality: 9.850000
+04/29/2018 18:54:24 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:54:24 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:54:24 : Pointing 167.979324 degrees from target04/29/2018 18:54:24 : Pointing within 5 degrees of target.04/29/2018 18:54:24 : Current time: 03:59:07
+04/29/2018 18:54:24 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:54:25 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:54:25 : Fix Quality: 9.850000
+04/29/2018 18:54:25 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:54:25 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:54:25 : Pointing 167.979324 degrees from target04/29/2018 18:54:25 : Pointing within 5 degrees of target.04/29/2018 18:54:25 : Current time: 03:59:07
+04/29/2018 18:54:25 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:54:26 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:54:26 : Fix Quality: 9.850000
+04/29/2018 18:54:26 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:54:26 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:54:26 : Pointing 167.979324 degrees from target04/29/2018 18:54:26 : Pointing within 5 degrees of target.04/29/2018 18:54:26 : Current time: 03:59:07
+04/29/2018 18:54:26 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:54:27 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:54:27 : Fix Quality: 9.850000
+04/29/2018 18:54:27 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:54:27 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:54:27 : Pointing 167.979324 degrees from target04/29/2018 18:54:27 : Pointing within 5 degrees of target.04/29/2018 18:54:27 : Current time: 03:59:07
+04/29/2018 18:54:27 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:54:28 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:54:28 : Fix Quality: 9.850000
+04/29/2018 18:54:28 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:54:28 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:54:28 : Pointing 167.979324 degrees from target04/29/2018 18:54:28 : Pointing within 5 degrees of target.04/29/2018 18:54:28 : Current time: 03:59:07
+04/29/2018 18:54:28 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:54:29 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:54:29 : Fix Quality: 9.850000
+04/29/2018 18:54:29 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:54:29 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:54:29 : Pointing 167.979324 degrees from target04/29/2018 18:54:29 : Pointing within 5 degrees of target.04/29/2018 18:54:29 : Current time: 03:59:07
+04/29/2018 18:54:29 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:54:30 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:54:30 : Fix Quality: 9.850000
+04/29/2018 18:54:30 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:54:30 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:54:30 : Pointing 167.979324 degrees from target04/29/2018 18:54:30 : Pointing within 5 degrees of target.04/29/2018 18:54:30 : Current time: 03:59:07
+04/29/2018 18:54:30 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:54:31 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:54:31 : Fix Quality: 9.850000
+04/29/2018 18:54:31 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:54:31 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:54:31 : Pointing 167.979324 degrees from target04/29/2018 18:54:31 : Pointing within 5 degrees of target.04/29/2018 18:54:31 : Current time: 03:59:07
+04/29/2018 18:54:31 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:04 : Comm Thread: Active
+04/29/2018 18:55:04 : Navmath Thread: Active
+04/29/2018 18:55:05 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:05 : Fix Quality: 9.850000
+04/29/2018 18:55:05 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:05 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:05 : Pointing 156.467087 degrees from target04/29/2018 18:55:05 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:05 : Current time: 03:59:07
+04/29/2018 18:55:05 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:06 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:06 : Fix Quality: 9.850000
+04/29/2018 18:55:06 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:06 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:06 : Pointing 167.979324 degrees from target04/29/2018 18:55:06 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:06 : Current time: 03:59:07
+04/29/2018 18:55:06 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:07 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:07 : Fix Quality: 9.850000
+04/29/2018 18:55:07 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:07 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:07 : Pointing 167.979324 degrees from target04/29/2018 18:55:07 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:07 : Current time: 03:59:07
+04/29/2018 18:55:07 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:08 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:08 : Fix Quality: 9.850000
+04/29/2018 18:55:08 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:08 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:08 : Pointing 167.979324 degrees from target04/29/2018 18:55:08 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:08 : Current time: 03:59:07
+04/29/2018 18:55:08 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:24 : Comm Thread: Active
+04/29/2018 18:55:24 : Navmath Thread: Active
+04/29/2018 18:55:25 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:25 : Fix Quality: 9.850000
+04/29/2018 18:55:25 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:25 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:25 : Pointing 156.467087 degrees from target04/29/2018 18:55:25 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:25 : Current time: 03:59:07
+04/29/2018 18:55:25 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:26 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:26 : Fix Quality: 9.850000
+04/29/2018 18:55:26 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:26 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:26 : Pointing 167.979324 degrees from target04/29/2018 18:55:26 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:26 : Current time: 03:59:07
+04/29/2018 18:55:26 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:27 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:27 : Fix Quality: 9.850000
+04/29/2018 18:55:27 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:27 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:27 : Pointing 167.979324 degrees from target04/29/2018 18:55:27 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:27 : Current time: 03:59:07
+04/29/2018 18:55:27 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:28 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:28 : Fix Quality: 9.850000
+04/29/2018 18:55:28 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:28 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:28 : Pointing 167.979324 degrees from target04/29/2018 18:55:28 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:28 : Current time: 03:59:07
+04/29/2018 18:55:28 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:29 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:29 : Fix Quality: 9.850000
+04/29/2018 18:55:29 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:29 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:29 : Pointing 167.979324 degrees from target04/29/2018 18:55:29 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:29 : Current time: 03:59:07
+04/29/2018 18:55:29 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:30 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:30 : Fix Quality: 9.850000
+04/29/2018 18:55:30 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:30 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:30 : Pointing 167.979324 degrees from target04/29/2018 18:55:30 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:30 : Current time: 03:59:07
+04/29/2018 18:55:30 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:31 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:31 : Fix Quality: 9.850000
+04/29/2018 18:55:31 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:31 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:31 : Pointing 167.979324 degrees from target04/29/2018 18:55:31 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:31 : Current time: 03:59:07
+04/29/2018 18:55:31 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:32 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:32 : Fix Quality: 9.850000
+04/29/2018 18:55:32 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:32 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:32 : Pointing 167.979324 degrees from target04/29/2018 18:55:32 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:32 : Current time: 03:59:07
+04/29/2018 18:55:32 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:33 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:33 : Fix Quality: 9.850000
+04/29/2018 18:55:33 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:33 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:33 : Pointing 167.979324 degrees from target04/29/2018 18:55:33 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:33 : Current time: 03:59:07
+04/29/2018 18:55:33 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:34 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:34 : Fix Quality: 9.850000
+04/29/2018 18:55:34 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:34 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:34 : Pointing 167.979324 degrees from target04/29/2018 18:55:34 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:34 : Current time: 03:59:07
+04/29/2018 18:55:34 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:35 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:35 : Fix Quality: 9.850000
+04/29/2018 18:55:35 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:35 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:35 : Pointing 167.979324 degrees from target04/29/2018 18:55:35 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:35 : Current time: 03:59:07
+04/29/2018 18:55:35 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:36 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:36 : Fix Quality: 9.850000
+04/29/2018 18:55:36 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:36 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:36 : Pointing 167.979324 degrees from target04/29/2018 18:55:36 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:36 : Current time: 03:59:07
+04/29/2018 18:55:36 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:37 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:37 : Fix Quality: 9.850000
+04/29/2018 18:55:37 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:37 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:37 : Pointing 167.979324 degrees from target04/29/2018 18:55:37 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:37 : Current time: 03:59:07
+04/29/2018 18:55:37 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:38 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:38 : Fix Quality: 9.850000
+04/29/2018 18:55:38 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:38 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:38 : Pointing 167.979324 degrees from target04/29/2018 18:55:38 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:38 : Current time: 03:59:07
+04/29/2018 18:55:38 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:39 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:39 : Fix Quality: 9.850000
+04/29/2018 18:55:39 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:39 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:39 : Pointing 167.979324 degrees from target04/29/2018 18:55:39 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:39 : Current time: 03:59:07
+04/29/2018 18:55:39 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:40 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:40 : Fix Quality: 9.850000
+04/29/2018 18:55:40 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:40 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:40 : Pointing 167.979324 degrees from target04/29/2018 18:55:40 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:40 : Current time: 03:59:07
+04/29/2018 18:55:40 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:41 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:41 : Fix Quality: 9.850000
+04/29/2018 18:55:41 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:41 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:41 : Pointing 167.979324 degrees from target04/29/2018 18:55:41 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:41 : Current time: 03:59:07
+04/29/2018 18:55:41 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:42 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:42 : Fix Quality: 9.850000
+04/29/2018 18:55:42 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:42 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:42 : Pointing 167.979324 degrees from target04/29/2018 18:55:42 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:42 : Current time: 03:59:07
+04/29/2018 18:55:42 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:43 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:43 : Fix Quality: 9.850000
+04/29/2018 18:55:43 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:43 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:43 : Pointing 167.979324 degrees from target04/29/2018 18:55:43 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:43 : Current time: 03:59:07
+04/29/2018 18:55:43 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:44 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:44 : Fix Quality: 9.850000
+04/29/2018 18:55:44 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:44 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:44 : Pointing 167.979324 degrees from target04/29/2018 18:55:44 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:44 : Current time: 03:59:07
+04/29/2018 18:55:44 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:45 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:45 : Fix Quality: 9.850000
+04/29/2018 18:55:45 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:45 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:45 : Pointing 167.979324 degrees from target04/29/2018 18:55:45 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:45 : Current time: 03:59:07
+04/29/2018 18:55:45 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:46 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:46 : Fix Quality: 9.850000
+04/29/2018 18:55:46 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:46 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:46 : Pointing 167.979324 degrees from target04/29/2018 18:55:46 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:46 : Current time: 03:59:07
+04/29/2018 18:55:46 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:47 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:47 : Fix Quality: 9.850000
+04/29/2018 18:55:47 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:47 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:47 : Pointing 167.979324 degrees from target04/29/2018 18:55:47 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:47 : Current time: 03:59:07
+04/29/2018 18:55:47 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:48 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:48 : Fix Quality: 9.850000
+04/29/2018 18:55:48 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:48 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:48 : Pointing 167.979324 degrees from target04/29/2018 18:55:48 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:48 : Current time: 03:59:07
+04/29/2018 18:55:48 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:49 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:49 : Fix Quality: 9.850000
+04/29/2018 18:55:49 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:49 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:49 : Pointing 167.979324 degrees from target04/29/2018 18:55:49 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:49 : Current time: 03:59:07
+04/29/2018 18:55:49 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:50 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:50 : Fix Quality: 9.850000
+04/29/2018 18:55:50 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:50 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:50 : Pointing 167.979324 degrees from target04/29/2018 18:55:50 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:50 : Current time: 03:59:07
+04/29/2018 18:55:50 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:51 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:51 : Fix Quality: 9.850000
+04/29/2018 18:55:51 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:51 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:51 : Pointing 167.979324 degrees from target04/29/2018 18:55:51 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:51 : Current time: 03:59:07
+04/29/2018 18:55:51 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:52 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:52 : Fix Quality: 9.850000
+04/29/2018 18:55:52 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:52 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:52 : Pointing 167.979324 degrees from target04/29/2018 18:55:52 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:52 : Current time: 03:59:07
+04/29/2018 18:55:52 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:53 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:53 : Fix Quality: 9.850000
+04/29/2018 18:55:53 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:53 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:53 : Pointing 167.979324 degrees from target04/29/2018 18:55:53 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:53 : Current time: 03:59:07
+04/29/2018 18:55:53 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:55:54 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:55:54 : Fix Quality: 9.850000
+04/29/2018 18:55:54 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:55:54 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:55:54 : Pointing 167.979324 degrees from target04/29/2018 18:55:54 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:55:54 : Current time: 03:59:07
+04/29/2018 18:55:54 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:56:56 : Navmath Thread: Active
+04/29/2018 18:56:56 : Comm Thread: Active
+04/29/2018 18:56:57 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:56:57 : Fix Quality: 9.850000
+04/29/2018 18:56:57 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:56:57 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:56:57 : Pointing 156.467087 degrees from target04/29/2018 18:56:57 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:56:57 : Current time: 03:59:07
+04/29/2018 18:56:57 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:56:58 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:56:58 : Fix Quality: 9.850000
+04/29/2018 18:56:58 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:56:58 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:56:58 : Pointing 167.979324 degrees from target04/29/2018 18:56:58 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:56:58 : Current time: 03:59:07
+04/29/2018 18:56:58 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:56:59 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:56:59 : Fix Quality: 9.850000
+04/29/2018 18:56:59 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:56:59 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:56:59 : Pointing 167.979324 degrees from target04/29/2018 18:56:59 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:56:59 : Current time: 03:59:07
+04/29/2018 18:56:59 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:00 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:00 : Fix Quality: 9.850000
+04/29/2018 18:57:00 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:00 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:00 : Pointing 167.979324 degrees from target04/29/2018 18:57:00 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:00 : Current time: 03:59:07
+04/29/2018 18:57:00 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:01 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:01 : Fix Quality: 9.850000
+04/29/2018 18:57:01 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:01 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:01 : Pointing 167.979324 degrees from target04/29/2018 18:57:01 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:01 : Current time: 03:59:07
+04/29/2018 18:57:01 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:02 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:02 : Fix Quality: 9.850000
+04/29/2018 18:57:02 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:02 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:02 : Pointing 167.979324 degrees from target04/29/2018 18:57:02 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:02 : Current time: 03:59:07
+04/29/2018 18:57:02 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:03 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:03 : Fix Quality: 9.850000
+04/29/2018 18:57:03 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:03 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:03 : Pointing 167.979324 degrees from target04/29/2018 18:57:03 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:03 : Current time: 03:59:07
+04/29/2018 18:57:03 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:04 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:04 : Fix Quality: 9.850000
+04/29/2018 18:57:04 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:04 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:04 : Pointing 167.979324 degrees from target04/29/2018 18:57:04 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:04 : Current time: 03:59:07
+04/29/2018 18:57:04 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:05 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:05 : Fix Quality: 9.850000
+04/29/2018 18:57:05 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:05 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:05 : Pointing 167.979324 degrees from target04/29/2018 18:57:05 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:05 : Current time: 03:59:07
+04/29/2018 18:57:05 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:06 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:06 : Fix Quality: 9.850000
+04/29/2018 18:57:06 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:06 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:06 : Pointing 167.979324 degrees from target04/29/2018 18:57:06 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:06 : Current time: 03:59:07
+04/29/2018 18:57:06 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:07 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:07 : Fix Quality: 9.850000
+04/29/2018 18:57:07 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:07 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:07 : Pointing 167.979324 degrees from target04/29/2018 18:57:07 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:07 : Current time: 03:59:07
+04/29/2018 18:57:07 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:08 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:08 : Fix Quality: 9.850000
+04/29/2018 18:57:08 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:08 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:08 : Pointing 167.979324 degrees from target04/29/2018 18:57:08 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:08 : Current time: 03:59:07
+04/29/2018 18:57:08 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:09 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:09 : Fix Quality: 9.850000
+04/29/2018 18:57:09 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:09 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:09 : Pointing 167.979324 degrees from target04/29/2018 18:57:09 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:09 : Current time: 03:59:07
+04/29/2018 18:57:09 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:10 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:10 : Fix Quality: 9.850000
+04/29/2018 18:57:10 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:10 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:10 : Pointing 167.979324 degrees from target04/29/2018 18:57:10 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:10 : Current time: 03:59:07
+04/29/2018 18:57:10 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:11 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:11 : Fix Quality: 9.850000
+04/29/2018 18:57:11 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:11 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:11 : Pointing 167.979324 degrees from target04/29/2018 18:57:11 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:11 : Current time: 03:59:07
+04/29/2018 18:57:11 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:12 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:12 : Fix Quality: 9.850000
+04/29/2018 18:57:12 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:12 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:12 : Pointing 167.979324 degrees from target04/29/2018 18:57:12 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:12 : Current time: 03:59:07
+04/29/2018 18:57:12 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:13 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:13 : Fix Quality: 9.850000
+04/29/2018 18:57:13 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:13 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:13 : Pointing 167.979324 degrees from target04/29/2018 18:57:13 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:13 : Current time: 03:59:07
+04/29/2018 18:57:13 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:14 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:14 : Fix Quality: 9.850000
+04/29/2018 18:57:14 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:14 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:14 : Pointing 167.979324 degrees from target04/29/2018 18:57:14 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:14 : Current time: 03:59:07
+04/29/2018 18:57:14 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:15 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:15 : Fix Quality: 9.850000
+04/29/2018 18:57:15 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:15 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:15 : Pointing 167.979324 degrees from target04/29/2018 18:57:15 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:15 : Current time: 03:59:07
+04/29/2018 18:57:15 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:16 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:16 : Fix Quality: 9.850000
+04/29/2018 18:57:16 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:16 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:16 : Pointing 167.979324 degrees from target04/29/2018 18:57:16 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:16 : Current time: 03:59:07
+04/29/2018 18:57:16 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:17 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:17 : Fix Quality: 9.850000
+04/29/2018 18:57:17 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:17 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:17 : Pointing 167.979324 degrees from target04/29/2018 18:57:17 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:17 : Current time: 03:59:07
+04/29/2018 18:57:17 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:18 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:18 : Fix Quality: 9.850000
+04/29/2018 18:57:18 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:18 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:18 : Pointing 167.979324 degrees from target04/29/2018 18:57:18 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:18 : Current time: 03:59:07
+04/29/2018 18:57:18 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:19 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:19 : Fix Quality: 9.850000
+04/29/2018 18:57:19 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:19 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:19 : Pointing 167.979324 degrees from target04/29/2018 18:57:19 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:19 : Current time: 03:59:07
+04/29/2018 18:57:19 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:20 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:20 : Fix Quality: 9.850000
+04/29/2018 18:57:20 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:20 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:20 : Pointing 167.979324 degrees from target04/29/2018 18:57:20 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:20 : Current time: 03:59:07
+04/29/2018 18:57:20 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:21 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:21 : Fix Quality: 9.850000
+04/29/2018 18:57:21 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:21 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:21 : Pointing 167.979324 degrees from target04/29/2018 18:57:21 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:21 : Current time: 03:59:07
+04/29/2018 18:57:21 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:22 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:22 : Fix Quality: 9.850000
+04/29/2018 18:57:22 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:22 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:22 : Pointing 167.979324 degrees from target04/29/2018 18:57:22 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:22 : Current time: 03:59:07
+04/29/2018 18:57:22 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:23 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:23 : Fix Quality: 9.850000
+04/29/2018 18:57:23 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:23 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:23 : Pointing 167.979324 degrees from target04/29/2018 18:57:23 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:23 : Current time: 03:59:07
+04/29/2018 18:57:23 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:24 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:24 : Fix Quality: 9.850000
+04/29/2018 18:57:24 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:24 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:24 : Pointing 167.979324 degrees from target04/29/2018 18:57:24 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:24 : Current time: 03:59:07
+04/29/2018 18:57:24 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:25 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:25 : Fix Quality: 9.850000
+04/29/2018 18:57:25 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:25 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:25 : Pointing 167.979324 degrees from target04/29/2018 18:57:25 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:25 : Current time: 03:59:07
+04/29/2018 18:57:25 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:26 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:26 : Fix Quality: 9.850000
+04/29/2018 18:57:26 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:26 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:26 : Pointing 167.979324 degrees from target04/29/2018 18:57:26 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:26 : Current time: 03:59:07
+04/29/2018 18:57:26 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:27 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:27 : Fix Quality: 9.850000
+04/29/2018 18:57:27 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:27 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:27 : Pointing 167.979324 degrees from target04/29/2018 18:57:27 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:27 : Current time: 03:59:07
+04/29/2018 18:57:27 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:28 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:28 : Fix Quality: 9.850000
+04/29/2018 18:57:28 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:28 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:28 : Pointing 167.979324 degrees from target04/29/2018 18:57:28 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:28 : Current time: 03:59:07
+04/29/2018 18:57:28 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:29 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:29 : Fix Quality: 9.850000
+04/29/2018 18:57:29 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:29 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:29 : Pointing 167.979324 degrees from target04/29/2018 18:57:29 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:29 : Current time: 03:59:07
+04/29/2018 18:57:29 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:30 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:30 : Fix Quality: 9.850000
+04/29/2018 18:57:30 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:30 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:30 : Pointing 167.979324 degrees from target04/29/2018 18:57:30 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:30 : Current time: 03:59:07
+04/29/2018 18:57:30 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:31 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:31 : Fix Quality: 9.850000
+04/29/2018 18:57:31 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:31 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:31 : Pointing 167.979324 degrees from target04/29/2018 18:57:31 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:31 : Current time: 03:59:07
+04/29/2018 18:57:31 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:32 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:32 : Fix Quality: 9.850000
+04/29/2018 18:57:32 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:32 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:32 : Pointing 167.979324 degrees from target04/29/2018 18:57:32 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:32 : Current time: 03:59:07
+04/29/2018 18:57:32 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:33 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:33 : Fix Quality: 9.850000
+04/29/2018 18:57:33 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:33 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:33 : Pointing 167.979324 degrees from target04/29/2018 18:57:33 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:33 : Current time: 03:59:07
+04/29/2018 18:57:33 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:34 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:34 : Fix Quality: 9.850000
+04/29/2018 18:57:34 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:34 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:34 : Pointing 167.979324 degrees from target04/29/2018 18:57:34 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:34 : Current time: 03:59:07
+04/29/2018 18:57:34 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:35 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:35 : Fix Quality: 9.850000
+04/29/2018 18:57:35 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:35 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:35 : Pointing 167.979324 degrees from target04/29/2018 18:57:35 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:35 : Current time: 03:59:07
+04/29/2018 18:57:35 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:36 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:36 : Fix Quality: 9.850000
+04/29/2018 18:57:36 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:36 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:36 : Pointing 167.979324 degrees from target04/29/2018 18:57:36 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:36 : Current time: 03:59:07
+04/29/2018 18:57:36 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:37 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:37 : Fix Quality: 9.850000
+04/29/2018 18:57:37 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:37 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:37 : Pointing 167.979324 degrees from target04/29/2018 18:57:37 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:37 : Current time: 03:59:07
+04/29/2018 18:57:37 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:38 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:38 : Fix Quality: 9.850000
+04/29/2018 18:57:38 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:38 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:38 : Pointing 167.979324 degrees from target04/29/2018 18:57:38 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:38 : Current time: 03:59:07
+04/29/2018 18:57:38 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:39 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:39 : Fix Quality: 9.850000
+04/29/2018 18:57:39 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:39 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:39 : Pointing 167.979324 degrees from target04/29/2018 18:57:39 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:39 : Current time: 03:59:07
+04/29/2018 18:57:39 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:40 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:40 : Fix Quality: 9.850000
+04/29/2018 18:57:40 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:40 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:40 : Pointing 167.979324 degrees from target04/29/2018 18:57:40 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:40 : Current time: 03:59:07
+04/29/2018 18:57:40 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:41 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:41 : Fix Quality: 9.850000
+04/29/2018 18:57:41 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:41 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:41 : Pointing 167.979324 degrees from target04/29/2018 18:57:41 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:41 : Current time: 03:59:07
+04/29/2018 18:57:41 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:42 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:42 : Fix Quality: 9.850000
+04/29/2018 18:57:42 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:42 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:42 : Pointing 167.979324 degrees from target04/29/2018 18:57:42 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:42 : Current time: 03:59:07
+04/29/2018 18:57:42 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:43 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:43 : Fix Quality: 9.850000
+04/29/2018 18:57:43 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:43 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:43 : Pointing 167.979324 degrees from target04/29/2018 18:57:43 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:43 : Current time: 03:59:07
+04/29/2018 18:57:43 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:44 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:44 : Fix Quality: 9.850000
+04/29/2018 18:57:44 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:44 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:44 : Pointing 167.979324 degrees from target04/29/2018 18:57:44 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:44 : Current time: 03:59:07
+04/29/2018 18:57:44 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:45 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:45 : Fix Quality: 9.850000
+04/29/2018 18:57:45 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:45 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:45 : Pointing 167.979324 degrees from target04/29/2018 18:57:45 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:45 : Current time: 03:59:07
+04/29/2018 18:57:45 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:46 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:46 : Fix Quality: 9.850000
+04/29/2018 18:57:46 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:46 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:46 : Pointing 167.979324 degrees from target04/29/2018 18:57:46 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:46 : Current time: 03:59:07
+04/29/2018 18:57:46 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:47 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:47 : Fix Quality: 9.850000
+04/29/2018 18:57:47 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:47 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:47 : Pointing 167.979324 degrees from target04/29/2018 18:57:47 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:47 : Current time: 03:59:07
+04/29/2018 18:57:47 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:48 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:48 : Fix Quality: 9.850000
+04/29/2018 18:57:48 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:48 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:48 : Pointing 167.979324 degrees from target04/29/2018 18:57:48 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:48 : Current time: 03:59:07
+04/29/2018 18:57:48 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:49 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:49 : Fix Quality: 9.850000
+04/29/2018 18:57:49 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:49 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:49 : Pointing 167.979324 degrees from target04/29/2018 18:57:49 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:49 : Current time: 03:59:07
+04/29/2018 18:57:49 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:50 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:50 : Fix Quality: 9.850000
+04/29/2018 18:57:50 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:50 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:50 : Pointing 167.979324 degrees from target04/29/2018 18:57:50 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:50 : Current time: 03:59:07
+04/29/2018 18:57:50 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:51 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:51 : Fix Quality: 9.850000
+04/29/2018 18:57:51 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:51 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:51 : Pointing 167.979324 degrees from target04/29/2018 18:57:51 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:51 : Current time: 03:59:07
+04/29/2018 18:57:51 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:52 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:52 : Fix Quality: 9.850000
+04/29/2018 18:57:52 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:52 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:52 : Pointing 167.979324 degrees from target04/29/2018 18:57:52 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:52 : Current time: 03:59:07
+04/29/2018 18:57:52 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:53 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:53 : Fix Quality: 9.850000
+04/29/2018 18:57:53 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:53 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:53 : Pointing 167.979324 degrees from target04/29/2018 18:57:53 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:53 : Current time: 03:59:07
+04/29/2018 18:57:53 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:54 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:54 : Fix Quality: 9.850000
+04/29/2018 18:57:54 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:54 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:54 : Pointing 167.979324 degrees from target04/29/2018 18:57:54 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:54 : Current time: 03:59:07
+04/29/2018 18:57:54 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:55 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:55 : Fix Quality: 9.850000
+04/29/2018 18:57:55 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:55 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:55 : Pointing 167.979324 degrees from target04/29/2018 18:57:55 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:55 : Current time: 03:59:07
+04/29/2018 18:57:55 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:56 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:56 : Fix Quality: 9.850000
+04/29/2018 18:57:56 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:56 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:56 : Pointing 167.979324 degrees from target04/29/2018 18:57:56 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:56 : Current time: 03:59:07
+04/29/2018 18:57:56 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:57 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:57 : Fix Quality: 9.850000
+04/29/2018 18:57:57 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:57 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:57 : Pointing 167.979324 degrees from target04/29/2018 18:57:57 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:57 : Current time: 03:59:07
+04/29/2018 18:57:57 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:58 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:58 : Fix Quality: 9.850000
+04/29/2018 18:57:58 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:58 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:58 : Pointing 167.979324 degrees from target04/29/2018 18:57:58 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:58 : Current time: 03:59:07
+04/29/2018 18:57:58 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:57:59 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:57:59 : Fix Quality: 9.850000
+04/29/2018 18:57:59 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:57:59 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:57:59 : Pointing 167.979324 degrees from target04/29/2018 18:57:59 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:57:59 : Current time: 03:59:07
+04/29/2018 18:57:59 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:00 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:00 : Fix Quality: 9.850000
+04/29/2018 18:58:00 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:00 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:00 : Pointing 167.979324 degrees from target04/29/2018 18:58:00 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:00 : Current time: 03:59:07
+04/29/2018 18:58:00 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:01 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:01 : Fix Quality: 9.850000
+04/29/2018 18:58:01 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:01 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:01 : Pointing 167.979324 degrees from target04/29/2018 18:58:01 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:01 : Current time: 03:59:07
+04/29/2018 18:58:01 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:02 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:02 : Fix Quality: 9.850000
+04/29/2018 18:58:02 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:02 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:02 : Pointing 167.979324 degrees from target04/29/2018 18:58:02 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:02 : Current time: 03:59:07
+04/29/2018 18:58:02 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:03 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:03 : Fix Quality: 9.850000
+04/29/2018 18:58:03 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:03 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:03 : Pointing 167.979324 degrees from target04/29/2018 18:58:03 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:03 : Current time: 03:59:07
+04/29/2018 18:58:03 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:04 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:04 : Fix Quality: 9.850000
+04/29/2018 18:58:04 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:04 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:04 : Pointing 167.979324 degrees from target04/29/2018 18:58:04 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:04 : Current time: 03:59:07
+04/29/2018 18:58:04 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:05 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:05 : Fix Quality: 9.850000
+04/29/2018 18:58:05 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:05 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:05 : Pointing 167.979324 degrees from target04/29/2018 18:58:05 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:05 : Current time: 03:59:07
+04/29/2018 18:58:05 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:06 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:06 : Fix Quality: 9.850000
+04/29/2018 18:58:06 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:06 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:06 : Pointing 167.979324 degrees from target04/29/2018 18:58:06 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:06 : Current time: 03:59:07
+04/29/2018 18:58:06 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:07 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:07 : Fix Quality: 9.850000
+04/29/2018 18:58:07 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:07 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:07 : Pointing 167.979324 degrees from target04/29/2018 18:58:07 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:07 : Current time: 03:59:07
+04/29/2018 18:58:07 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:08 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:08 : Fix Quality: 9.850000
+04/29/2018 18:58:08 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:08 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:08 : Pointing 167.979324 degrees from target04/29/2018 18:58:08 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:08 : Current time: 03:59:07
+04/29/2018 18:58:08 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:09 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:09 : Fix Quality: 9.850000
+04/29/2018 18:58:09 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:09 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:09 : Pointing 167.979324 degrees from target04/29/2018 18:58:09 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:09 : Current time: 03:59:07
+04/29/2018 18:58:09 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:10 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:10 : Fix Quality: 9.850000
+04/29/2018 18:58:10 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:10 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:10 : Pointing 167.979324 degrees from target04/29/2018 18:58:10 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:10 : Current time: 03:59:07
+04/29/2018 18:58:10 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:11 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:11 : Fix Quality: 9.850000
+04/29/2018 18:58:11 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:11 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:11 : Pointing 167.979324 degrees from target04/29/2018 18:58:11 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:11 : Current time: 03:59:07
+04/29/2018 18:58:11 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:12 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:12 : Fix Quality: 9.850000
+04/29/2018 18:58:12 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:12 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:12 : Pointing 167.979324 degrees from target04/29/2018 18:58:12 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:12 : Current time: 03:59:07
+04/29/2018 18:58:12 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:13 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:13 : Fix Quality: 9.850000
+04/29/2018 18:58:13 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:13 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:13 : Pointing 167.979324 degrees from target04/29/2018 18:58:13 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:13 : Current time: 03:59:07
+04/29/2018 18:58:13 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:14 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:14 : Fix Quality: 9.850000
+04/29/2018 18:58:14 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:14 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:14 : Pointing 167.979324 degrees from target04/29/2018 18:58:14 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:14 : Current time: 03:59:07
+04/29/2018 18:58:14 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:15 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:15 : Fix Quality: 9.850000
+04/29/2018 18:58:15 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:15 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:15 : Pointing 167.979324 degrees from target04/29/2018 18:58:15 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:15 : Current time: 03:59:07
+04/29/2018 18:58:15 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:16 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:16 : Fix Quality: 9.850000
+04/29/2018 18:58:16 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:16 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:16 : Pointing 167.979324 degrees from target04/29/2018 18:58:16 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:16 : Current time: 03:59:07
+04/29/2018 18:58:16 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:17 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:17 : Fix Quality: 9.850000
+04/29/2018 18:58:17 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:17 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:17 : Pointing 167.979324 degrees from target04/29/2018 18:58:17 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:17 : Current time: 03:59:07
+04/29/2018 18:58:17 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:18 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:18 : Fix Quality: 9.850000
+04/29/2018 18:58:18 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:18 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:18 : Pointing 167.979324 degrees from target04/29/2018 18:58:18 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:18 : Current time: 03:59:07
+04/29/2018 18:58:18 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:19 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:19 : Fix Quality: 9.850000
+04/29/2018 18:58:19 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:19 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:19 : Pointing 167.979324 degrees from target04/29/2018 18:58:19 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:19 : Current time: 03:59:07
+04/29/2018 18:58:19 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:20 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:20 : Fix Quality: 9.850000
+04/29/2018 18:58:20 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:20 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:20 : Pointing 167.979324 degrees from target04/29/2018 18:58:20 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:20 : Current time: 03:59:07
+04/29/2018 18:58:20 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:21 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:21 : Fix Quality: 9.850000
+04/29/2018 18:58:21 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:21 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:21 : Pointing 167.979324 degrees from target04/29/2018 18:58:21 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:21 : Current time: 03:59:07
+04/29/2018 18:58:21 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:22 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:22 : Fix Quality: 9.850000
+04/29/2018 18:58:22 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:22 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:22 : Pointing 167.979324 degrees from target04/29/2018 18:58:22 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:22 : Current time: 03:59:07
+04/29/2018 18:58:22 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:23 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:23 : Fix Quality: 9.850000
+04/29/2018 18:58:23 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:23 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:23 : Pointing 167.979324 degrees from target04/29/2018 18:58:23 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:23 : Current time: 03:59:07
+04/29/2018 18:58:23 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:24 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:24 : Fix Quality: 9.850000
+04/29/2018 18:58:24 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:24 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:24 : Pointing 167.979324 degrees from target04/29/2018 18:58:24 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:24 : Current time: 03:59:07
+04/29/2018 18:58:24 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:25 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:25 : Fix Quality: 9.850000
+04/29/2018 18:58:25 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:25 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:25 : Pointing 167.979324 degrees from target04/29/2018 18:58:25 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:25 : Current time: 03:59:07
+04/29/2018 18:58:25 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:26 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:26 : Fix Quality: 9.850000
+04/29/2018 18:58:26 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:26 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:26 : Pointing 167.979324 degrees from target04/29/2018 18:58:26 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:26 : Current time: 03:59:07
+04/29/2018 18:58:26 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:27 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:27 : Fix Quality: 9.850000
+04/29/2018 18:58:27 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:27 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:27 : Pointing 167.979324 degrees from target04/29/2018 18:58:27 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:27 : Current time: 03:59:07
+04/29/2018 18:58:27 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:28 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:28 : Fix Quality: 9.850000
+04/29/2018 18:58:28 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:28 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:28 : Pointing 167.979324 degrees from target04/29/2018 18:58:28 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:28 : Current time: 03:59:07
+04/29/2018 18:58:28 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:29 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:29 : Fix Quality: 9.850000
+04/29/2018 18:58:29 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:29 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:29 : Pointing 167.979324 degrees from target04/29/2018 18:58:29 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:29 : Current time: 03:59:07
+04/29/2018 18:58:29 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:30 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:30 : Fix Quality: 9.850000
+04/29/2018 18:58:30 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:30 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:30 : Pointing 167.979324 degrees from target04/29/2018 18:58:30 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:30 : Current time: 03:59:07
+04/29/2018 18:58:30 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:31 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:31 : Fix Quality: 9.850000
+04/29/2018 18:58:31 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:31 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:31 : Pointing 167.979324 degrees from target04/29/2018 18:58:31 : !!!!!!Pointing within 5 degrees of target.04/29/2018 18:58:31 : Current time: 03:59:07
+04/29/2018 18:58:31 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:35 : Comm Thread: Active
+04/29/2018 18:58:35 : Navmath Thread: Active
+04/29/2018 18:58:36 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:36 : Fix Quality: 9.850000
+04/29/2018 18:58:36 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:36 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:36 : Pointing within 156.467087 degrees of target04/29/2018 18:58:36 : Current time: 03:59:07
+04/29/2018 18:58:36 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:37 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:37 : Fix Quality: 9.850000
+04/29/2018 18:58:37 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:37 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:37 : Pointing within 167.979324 degrees of target04/29/2018 18:58:37 : Current time: 03:59:07
+04/29/2018 18:58:37 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:38 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:38 : Fix Quality: 9.850000
+04/29/2018 18:58:38 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:38 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:38 : Pointing within 167.979324 degrees of target04/29/2018 18:58:38 : Current time: 03:59:07
+04/29/2018 18:58:38 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:39 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:39 : Fix Quality: 9.850000
+04/29/2018 18:58:39 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:39 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:39 : Pointing within 167.979324 degrees of target04/29/2018 18:58:39 : Current time: 03:59:07
+04/29/2018 18:58:39 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:40 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:40 : Fix Quality: 9.850000
+04/29/2018 18:58:40 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:40 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:40 : Pointing within 167.979324 degrees of target04/29/2018 18:58:40 : Current time: 03:59:07
+04/29/2018 18:58:40 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:41 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:41 : Fix Quality: 9.850000
+04/29/2018 18:58:41 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:41 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:41 : Pointing within 167.979324 degrees of target04/29/2018 18:58:41 : Current time: 03:59:07
+04/29/2018 18:58:41 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:42 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:42 : Fix Quality: 9.850000
+04/29/2018 18:58:42 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:42 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:42 : Pointing within 167.979324 degrees of target04/29/2018 18:58:42 : Current time: 03:59:07
+04/29/2018 18:58:42 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:43 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:43 : Fix Quality: 9.850000
+04/29/2018 18:58:43 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:43 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:43 : Pointing within 167.979324 degrees of target04/29/2018 18:58:43 : Current time: 03:59:07
+04/29/2018 18:58:43 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:58:44 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:58:44 : Fix Quality: 9.850000
+04/29/2018 18:58:44 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:58:44 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:58:44 : Pointing within 167.979324 degrees of target04/29/2018 18:58:44 : Current time: 03:59:07
+04/29/2018 18:58:44 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:59:36 : Comm Thread: Active
+04/29/2018 18:59:36 : Navmath Thread: Active
+04/29/2018 18:59:37 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:59:37 : Fix Quality: 9.850000
+04/29/2018 18:59:37 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:59:37 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:59:37 : Pointing within 156.467087 degrees of target04/29/2018 18:59:37 : Current time: 03:59:07
+04/29/2018 18:59:37 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:59:38 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:59:38 : Fix Quality: 9.850000
+04/29/2018 18:59:38 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:59:38 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:59:38 : Pointing within 167.979324 degrees of target04/29/2018 18:59:38 : Current time: 03:59:07
+04/29/2018 18:59:38 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:59:39 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:59:39 : Fix Quality: 9.850000
+04/29/2018 18:59:39 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:59:39 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:59:39 : Pointing within 167.979324 degrees of target04/29/2018 18:59:39 : Current time: 03:59:07
+04/29/2018 18:59:39 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:59:40 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:59:40 : Fix Quality: 9.850000
+04/29/2018 18:59:40 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:59:40 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:59:40 : Pointing within 167.979324 degrees of target04/29/2018 18:59:40 : Current time: 03:59:07
+04/29/2018 18:59:40 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:59:41 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:59:41 : Fix Quality: 9.850000
+04/29/2018 18:59:41 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:59:41 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:59:41 : Pointing within 167.979324 degrees of target04/29/2018 18:59:41 : Current time: 03:59:07
+04/29/2018 18:59:41 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:59:42 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:59:42 : Fix Quality: 9.850000
+04/29/2018 18:59:42 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:59:42 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:59:42 : Pointing within 167.979324 degrees of target04/29/2018 18:59:42 : Current time: 03:59:07
+04/29/2018 18:59:42 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:59:43 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:59:43 : Fix Quality: 9.850000
+04/29/2018 18:59:43 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:59:43 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:59:43 : Pointing within 167.979324 degrees of target04/29/2018 18:59:43 : Current time: 03:59:07
+04/29/2018 18:59:43 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:59:44 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:59:44 : Fix Quality: 9.850000
+04/29/2018 18:59:44 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:59:44 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:59:44 : Pointing within 167.979324 degrees of target04/29/2018 18:59:44 : Current time: 03:59:07
+04/29/2018 18:59:44 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:59:45 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:59:45 : Fix Quality: 9.850000
+04/29/2018 18:59:45 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:59:45 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:59:45 : Pointing within 167.979324 degrees of target04/29/2018 18:59:45 : Current time: 03:59:07
+04/29/2018 18:59:45 : FIX LIKELY: GPS antenna is pointing above the horizon.
+04/29/2018 18:59:46 : Board Type: TIVA ID: 1 Firmware version: 1.
+04/29/2018 18:59:46 : Fix Quality: 9.850000
+04/29/2018 18:59:46 : Distance to the APES lecture hall 30.451908 meters
+04/29/2018 18:59:46 : Heading to the APES lecture hall 193.917862 degrees CW of N
+04/29/2018 18:59:46 : Pointing within 167.979324 degrees of target04/29/2018 18:59:46 : Current time: 03:59:07
+04/29/2018 18:59:46 : FIX LIKELY: GPS antenna is pointing above the horizon.

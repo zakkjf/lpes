@@ -1,12 +1,11 @@
 CFLAGS= -Wall -Werror -g
 LDFLAGS=-pthread -lm
 CC=gcc
-#arm-linux-gnueabihf-gcc
-OBJECTS=test.o gps_decoder.o gps_calc.o gps_dist.o
-TARGET=5013P1
+OBJECTS=main.o
+TARGET=5013HW4P2C
 
 all: $(TARGET)
-	
+
 $(TARGET): $(OBJECTS)
 	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
 

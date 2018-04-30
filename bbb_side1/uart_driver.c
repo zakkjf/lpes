@@ -9,7 +9,6 @@
 
 #define BUFSIZE 95
 #define BUFHEADER '@'
-#define INITHEADER '*'
 
 int get_uart_line(char* buf, int fd, int buflen)
 {       
@@ -17,7 +16,7 @@ int get_uart_line(char* buf, int fd, int buflen)
         int i;
         if(buflen<BUFSIZE) return 1; //supplied buffer is too small
 
-        //memset(buf,' ',BUFSIZE);
+        memset(buf,' ',BUFSIZE);
 
         read(fd,&top,1);
 

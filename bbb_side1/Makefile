@@ -2,8 +2,8 @@ CFLAGS= -Wall -Werror -g
 LDFLAGS=-pthread -lm
 CC=gcc
 #arm-linux-gnueabihf-gcc
-OBJECTS=test.o gps_decoder.o gps_calc.o gps_dist.o
-TARGET=5013P1
+OBJECTS=main.o uart_driver.o parser.o gps/gps_calc.o gps/gps_decoder.o
+TARGET=5013P2
 
 all: $(TARGET)
 	
@@ -12,3 +12,4 @@ $(TARGET): $(OBJECTS)
 
 clean:
 	rm ./$(TARGET) *.o
+	rm ./gps/*.o

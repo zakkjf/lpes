@@ -6,12 +6,12 @@
 #include "gps/gps_decoder.h"
 #include "parser.h"
 
-int split_packet(char* str, char* board, char* id, char* ver, imu_raw_t *imu, gps_raw_t *gps)
+int split_packet(char* str, imu_raw_t *imu, gps_raw_t *gps)
 {
     char *r = strdup(str);
     // check for errors
     
-    char *stor[7]; //larger than total fields for safety
+    char *stor[3]; //larger than total fields for safety
     char *tok = r, *end = r;
     unsigned char i=0;
     
@@ -23,14 +23,9 @@ int split_packet(char* str, char* board, char* id, char* ver, imu_raw_t *imu, gp
 
     //printf("%s\n",stor[2]);
     //printf("%s\n",stor[1]);
-    memcpy(board,stor[0],4); //board
-    *id = atoi(stor[1]); //id
-    *ver = atoi(stor[2]); //version
+    imu->z_accel = atoi(stor[1]);
 
-    //data below
-    imu->z_accel = atoi(stor[3]);
-
-    split_GPGGA(stor[4], gps);
+    split_GPGGA(stor[2], gps);
 
     free(r);
 

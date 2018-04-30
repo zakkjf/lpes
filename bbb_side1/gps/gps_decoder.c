@@ -85,10 +85,10 @@ int split_GPGGA(char* str, gps_raw_t *gps)
     gps->lon_deg = atoi(stor[6])/100;
     gps->lon_sec = atoi(stor[6])%100 + make_fractional(atoi(stor[7]));
     gps->lon_hem = *stor[8];
-    gps->fixq = atoi(stor[11]) + make_fractional(atoi(stor[12]));
+    gps->fixq = atoi(stor[9]);
     gps->sat_count = atoi(stor[10]);
-    gps->hdilution = atoi(stor[13]);
-    gps->altitude_m = atoi(stor[14]);
+    gps->hdilution = atoi(stor[11]);
+    gps->altitude_m = atoi(stor[12]);
 
 
     gps->lat_dec_deg = ((double)gps->lat_deg) + (((double)gps->lat_sec)/60);

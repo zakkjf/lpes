@@ -24,7 +24,7 @@
 	} imu_raw_t;
 
 
-int split_packet(char* str, char* board, char* id, char* ver, imu_raw_t *imu, gps_raw_t *gps);
+int split_packet(char* str, imu_raw_t *imu, gps_raw_t *gps);
 
 #endif
 
