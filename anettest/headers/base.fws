@@ -1,8 +1,0 @@
-// header file for program AnetTest
-// this file must be located in the folder with other headers and will be processed automatically before
-// any work with other files explicitly specified
-// option -I must be used or program must be initially correctly configured
-// (under Windows use registry.reg to set default configuration)
-
-define myip 10.178.205.51
-define mymac e0-cb-4e-43-c8-39 

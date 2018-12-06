@@ -1,5 +1,0 @@
-INCLUDE mymac
-INCLUDE gwmac
-
-dstmac mymac
-srcmac gwmac

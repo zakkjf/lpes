@@ -1,7 +1,0 @@
-INCLUDE ethernet_raw
-
-// ***** LLC header ******
-
-.llc.dsap        0xe0
-.llc.ssap        0xe0
-.llc.cntfield    3

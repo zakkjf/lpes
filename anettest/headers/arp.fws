@@ -1,9 +1,0 @@
-INCLUDE ethernet2
-INCLUDE arp_header
-
-CLEARMASK
-
-ethproto arp      // packet's mask will contain only this condition
-
-POS arp.dstip
-PASS 4

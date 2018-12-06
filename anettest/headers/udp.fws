@@ -1,9 +1,0 @@
-INCLUDE ip
-INCLUDE udp_header
-
-CLEARMASK
-
-ethproto = ip
-ip.proto = udp  // packet's mask will contain only this conditions
-
-pos udp.data
