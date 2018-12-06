@@ -21,8 +21,8 @@ int run_distances(gps_raw_t gps, uint8_t choice)
 
 	if(choice == 0)
 	{
-		printf("Distance to the APES lecture hall %f meters\n", distance(apes[0], apes[1], apes[3], gps.lat_dec_deg, gps.lon_dec_deg, gps.altitude_m, KILOM, 0)*1000);
-		printf("Heading to the APES lecture hall %f degrees CW of N\n", angle(gps.lat_dec_deg, gps.lon_dec_deg,apes[0], apes[1]));
+		printf("Distance to the LPES lecture hall %f meters\n", distance(apes[0], apes[1], apes[3], gps.lat_dec_deg, gps.lon_dec_deg, gps.altitude_m, KILOM, 0)*1000);
+		printf("Heading to the LPES lecture hall %f degrees CW of N\n", angle(gps.lat_dec_deg, gps.lon_dec_deg,apes[0], apes[1]));
 	}
 	else
 	{
