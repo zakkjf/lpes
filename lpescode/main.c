@@ -11,6 +11,8 @@
 #include "utils/mpu9250_regs.h"
 #include "drivers/mpu9250.h"
 #include "drivers/ubloxneo6.h"
+#include "gps_decoder.h"
+#include "gps_dist.h"
 
 // TivaWare includes
 #include "driverlib/sysctl.h"
@@ -29,6 +31,7 @@
 #include "semphr.h"
 #include "timers.h"
 #include "queue.h"
+
 
 #define BOARD_ID_VER   "TIVA:01:1"
 #define FAKE_GPS 0 //switch on this mode if GPS is being difficult
@@ -57,6 +60,8 @@ void task3(void *pvParameters);
 void vTimerCallback1(TimerHandle_t xTimer);
 
 char msg[MSG_LEN];
+
+gps_raw_t my_location;
 
 imu_raw_t imu_ptr;
 
@@ -109,8 +114,8 @@ int main(void)
 // Flash the LEDs on the launchpad
 void task1(void *pvParameters)
 {
-   // initi2c(2, SYSTEM_CLOCK);
-   // initMPU9250(2,MPU9250_ADDRESS_1);
+    //initi2c(2, SYSTEM_CLOCK);
+    //initMPU9250(2,MPU9250_ADDRESS_1);
    // assert_mag(2,AK8963_ADDRESS); //startup tests
    // assert_MPU(2,MPU9250_ADDRESS_1);
 
@@ -141,7 +146,7 @@ void task2(void *pvParameters)
 #else
         get_gps(1,msg);
 #endif
-
+        msg[82]='\0';
         tick_counter++;
 
         if( xQueue1 != 0 )
@@ -164,8 +169,9 @@ void task2(void *pvParameters)
 //communication task, sends data over uart to master device using EVEN parity, and to terminal using no parity
 void task3(void *pvParameters)
 {
-    initUART(2, 57600, SYSTEM_CLOCK,UART_CONFIG_PAR_NONE);
+    initUART(2, 9600, SYSTEM_CLOCK,UART_CONFIG_PAR_NONE);
     //initUART(6, 9600, SYSTEM_CLOCK,UART_CONFIG_PAR_EVEN);
+
 
     const TickType_t xMaxBlockTime = 5000;
     BaseType_t xResult;
@@ -196,12 +202,15 @@ void task3(void *pvParameters)
                 {
                    if( xSemaphoreTake( xSemaphore, ( TickType_t ) 10 ) == pdTRUE )
                    {
-                       //pass data and state information to host
-                       sprintf(doop,"@%s:%05d%s",BOARD_ID_VER,imu_ptr.z_accel,msg);
+                       //parse GPS data and store it
+                       sprintf(doop,"%s",msg);
+                       split_GPGGA(doop, &my_location);
+                       run_distances(my_location,0);
                        xSemaphoreGive( xSemaphore );
                    }
                 }
-                sendUARTstring(2, doop, 100);
+                //sendUARTstring(2, doop, 100);
+               // sendUARTstring(2, "TEST\n\r", 7);
                // sendUARTstring(6, doop, 100);
 
                 toggleLED ^= 1;
@@ -213,9 +222,11 @@ void task3(void *pvParameters)
         else
         {
             //pass errorcode to host
-            sprintf(doop,"@IMUDATA:%05d%s",0,ERRORCODE);
-            sendUARTstring(2, doop, 100);
+           // sprintf(doop,"@IMUDATA:%05d%s",0,ERRORCODE);
+           // sendUARTstring(2, doop, 100);
             //sendUARTstring(6, doop, 100);
+
+            //sendUARTstring(2, "TEST\n\r", 7);
             SysCtlReset();
             /* Did not receive a notification within the expected time. Resetting. */
             //prvCheckForErrors();

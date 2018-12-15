@@ -26,14 +26,16 @@ uint8_t get_gps(uint32_t module, char* msg)
 
     do
     {
-        memset(msg, 0, msglen * (sizeof msg[0]) );
+       // memset(msg, 0, msglen * (sizeof msg[0]) );
         getUARTline(module, msg, msglen);
         i++;
         if(i>50)
         {
+            //memset(msg, 0, msglen * (sizeof msg[0]) );
             return 1; //timeout failure
         }
-    }while(!strstr(msg,"$GPGGA"));
-    //sendUARTstring(0, msg, msglen);
+    //sendUARTstring(2, msg, msglen);
+    }while(NULL==strstr(msg,"$GNGGA"));
+    //
     return 0;
 }

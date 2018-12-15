@@ -26,6 +26,9 @@
 #define __UART_NOINTERRUPT_H__
 
 #include <stdint.h>
+#include <stdarg.h>
+
+void uprintf(uint8_t portNum,const char *fmt, ...);
 
 int8_t initUART(uint8_t portNum, uint32_t clock, uint32_t sysclock, uint32_t parity);
 

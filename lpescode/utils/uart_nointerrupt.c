@@ -11,6 +11,8 @@
 #include "driverlib/rom_map.h"
 #include "driverlib/sysctl.h"
 #include "driverlib/uart.h"
+#include <stdio.h>
+#include <stdarg.h>
 
 static const uint32_t g_ui32UARTPeriph[8] =
 {
@@ -152,11 +154,11 @@ int8_t sendUARTline(uint8_t portNum, char* str)
     uint32_t i;
     for(i=0;i<100;i++)//max length is 100
     {
-        UARTCharPut(g_ui32UARTBase[portNum],*(str+i));
-        if(*(str+i)=='\n')
+        if(*(str+i)=='\0')
         {
             return i;
         }
+        UARTCharPut(g_ui32UARTBase[portNum],*(str+i));
     }
     return 0;
 }
@@ -196,4 +198,12 @@ int8_t disableUART(uint8_t portNum)
     return 0;
 }
 
-
+void uprintf(uint8_t portNum,const char *fmt, ...) {
+   char str[250];
+   //memset(str, 0, 250 * (sizeof str[0]) );
+   va_list args;
+   va_start(args, fmt);
+   sprintf(str,fmt, args);
+   va_end(args);
+   sendUARTline(portNum, str);
+}
