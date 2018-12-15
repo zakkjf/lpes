@@ -47,17 +47,17 @@ extern "C"
 #define CLP_D3              4
 #define CLP_D4              8
 
-#define CLP_D1_PORT         GPIO_PORTN_BASE
-#define CLP_D1_PIN          GPIO_PIN_1
+#define CLP_D1_PORT         GPIO_PORTK_BASE
+#define CLP_D1_PIN          GPIO_PIN_0
 
-#define CLP_D2_PORT         GPIO_PORTN_BASE
-#define CLP_D2_PIN          GPIO_PIN_0
+#define CLP_D2_PORT         GPIO_PORTK_BASE
+#define CLP_D2_PIN          GPIO_PIN_1
 
-#define CLP_D3_PORT         GPIO_PORTF_BASE
-#define CLP_D3_PIN          GPIO_PIN_4
+#define CLP_D3_PORT         GPIO_PORTK_BASE
+#define CLP_D3_PIN          GPIO_PIN_2
 
-#define CLP_D4_PORT         GPIO_PORTF_BASE
-#define CLP_D4_PIN          GPIO_PIN_0
+#define CLP_D4_PORT         GPIO_PORTK_BASE
+#define CLP_D4_PIN          GPIO_PIN_3
 
 //*****************************************************************************
 //

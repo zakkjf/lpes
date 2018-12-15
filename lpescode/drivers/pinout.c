@@ -92,10 +92,10 @@ PinoutSet(bool bEthernet, bool bUSB)
     ROM_GPIOPinConfigure(GPIO_PB1_U1TX);
     ROM_GPIOPinTypeUART(GPIO_PORTB_BASE, GPIO_PIN_0 | GPIO_PIN_1);
 
-    //PK0-1 used for uart4
-    //ROM_GPIOPinConfigure(GPIO_PK0_U4RX);
-    //ROM_GPIOPinConfigure(GPIO_PK1_U4TX);
-    //ROM_GPIOPinTypeUART(GPIO_PORTK_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+    //PA2-3 used for UART4 - debug UART port
+    ROM_GPIOPinConfigure(GPIO_PA2_U4RX);
+    ROM_GPIOPinConfigure(GPIO_PA3_U4TX);
+    ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_2 | GPIO_PIN_3);
 
     //PD4-5 used for uart2
     ROM_GPIOPinConfigure(GPIO_PD4_U2RX);
@@ -180,16 +180,16 @@ PinoutSet(bool bEthernet, bool bUSB)
     ROM_GPIOPinWrite(GPIO_PORTJ_BASE, GPIO_PIN_0 | GPIO_PIN_1, 0);
 
     //
-    // PN0 and PN1 are used for USER LEDs.
+    // PK0 through PK3 are used for USER LEDs.
     //
-    ROM_GPIOPinTypeGPIOOutput(GPIO_PORTN_BASE, GPIO_PIN_0 | GPIO_PIN_1);
-    MAP_GPIOPadConfigSet(GPIO_PORTN_BASE, GPIO_PIN_0 | GPIO_PIN_1,
+    ROM_GPIOPinTypeGPIOOutput(GPIO_PORTK_BASE, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3);
+    MAP_GPIOPadConfigSet(GPIO_PORTK_BASE, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3,
                          GPIO_STRENGTH_12MA, GPIO_PIN_TYPE_STD);
 
     //
     // Default the LEDs to OFF.
     //
-    ROM_GPIOPinWrite(GPIO_PORTN_BASE, GPIO_PIN_0 | GPIO_PIN_1, 0);
+    ROM_GPIOPinWrite(GPIO_PORTK_BASE, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, 0);
 }
 
 //*****************************************************************************
