@@ -43,7 +43,7 @@ bool gauge_exit(void *pHandle, unsigned int nSubCmd);
 //nLength: length of data class (all blocks)
 //return value: 0 = success
 int gauge_read_data_class(void *pHandle, unsigned char nDataClass, unsigned char *pData, unsigned
-    har nLength);
+    char nLength);
 
 //gauge_write_data_class: write a data class
 //pHandle: handle to communications adapter
