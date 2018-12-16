@@ -140,7 +140,9 @@ int8_t sendUARTstring(uint8_t portNum, char* str, uint32_t len)
     {
             if(*(str+i)!=0xA5)
             {
+  //              taskENTER_CRITICAL();
                 UARTCharPut(g_ui32UARTBase[portNum],*(str+i));
+//                taskEXIT_CRITICAL();
             }
     }
     return 0;

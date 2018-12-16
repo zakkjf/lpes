@@ -40,6 +40,6 @@ uint8_t sendi2cbytes(uint8_t module, uint8_t address, uint8_t reg, uint16_t leng
  */
 uint8_t geti2cbytes(uint8_t module, uint8_t address, uint8_t reg, uint16_t length, uint8_t* data);
 
-uint8_t fetchi2cbytes(uint8_t module, uint8_t addr1, uint8_t addr2, uint8_t reg, uint16_t length, uint8_t* data);
+uint8_t fetchi2cbytes(uint8_t module, uint8_t addr, uint8_t reg, uint16_t length, uint8_t* data);
 
 #endif

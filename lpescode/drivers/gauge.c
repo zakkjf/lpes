@@ -57,7 +57,7 @@ int gauge_read(unsigned char nRegister, unsigned char *pData, unsigned char nLen
   //  sendi2cbytes(I2C_GAUGE, GAUGE_I2C_ADDR_WRITE, nRegister, 2, pData);
 
 
-    fetchi2cbytes(I2C_GAUGE, GAUGE_I2C_ADDR_WRITE, GAUGE_I2C_ADDR_READ, nRegister, nLength, pData);
+    fetchi2cbytes(I2C_GAUGE, GAUGE_I2C_ADDR_WRITE, nRegister, nLength, pData);
 
     n = nLength;
 
@@ -106,7 +106,9 @@ unsigned int gauge_cmd_read(unsigned char nCmd)
 {
     unsigned char pData[2];
 
-    gauge_read(nCmd, pData, 2);
+    //gauge_read(nCmd, pData, 2);
+
+    geti2cbytes(I2C_GAUGE, GAUGE_I2C_ADDR_WRITE, nCmd, 2, pData);
 
     return (pData[1] << 8) | pData[0];
 }

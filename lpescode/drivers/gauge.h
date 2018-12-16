@@ -24,7 +24,10 @@
 
 #define GAUGE_REG_MAC_WRITE         0x3E
 #define GAUGE_REG_MAC_READ          0x40
-#define GAUGE_REG_SOH               0x2E
+#define GAUGE_REG_ID                0x0002
+#define GAUGE_REG_SOH               0x002E
+#define GAUGE_REG_VOLTAGE           0x0008
+
 
 
 //gauge_read: read bytes from gauge (must be implemented for a specific system)

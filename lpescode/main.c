@@ -51,10 +51,9 @@ void vTimerCallback1(TimerHandle_t xTimer);
 char msg[MSG_LEN];
 
 gps_raw_t my_location;
-
 imu_raw_t imu_ptr;
 
-TaskHandle_t th0;
+//TaskHandle_t th0;
 TaskHandle_t th1;
 TaskHandle_t th2;
 TaskHandle_t th3;
@@ -82,14 +81,15 @@ int main(void)
 
     tick_counter = 0;
 
-    // Initialize I2C
-    initi2c(I2C_GAUGE, output_clock_rate_hz);
-
-
 
     // Initialize the GPIO pins for the Launchpad
     PinoutSet(false, false);
 
+    initUART(DEBUG_UART, 115200, SYSTEM_CLOCK,UART_CONFIG_PAR_NONE);
+    initUART(2, 9600, SYSTEM_CLOCK,UART_CONFIG_PAR_NONE);
+
+    // Initialize I2C
+    initi2c(I2C_GAUGE, SYSTEM_CLOCK);
 
     xQueue1 = xQueueCreate( 10, sizeof(uint32_t) );
 
@@ -112,9 +112,6 @@ int main(void)
 
     vTaskStartScheduler();
 
-    // This crashes the OS
- //   sprintf(temp_buffer, "\r\nDebug UART initialized.\r\n");
-  //  sendUARTstring(DEBUG_UART, temp_buffer, strlen(temp_buffer) );
     return 0;
 }
 
@@ -122,7 +119,7 @@ int main(void)
 // Startup items, run once and kill task
 void task_init(void *pvParameters)
 {
-    char temp_buffer[128];
+   // char temp_buffer[128];
 
 
 
@@ -137,16 +134,39 @@ void task_imu(void *pvParameters)
    // assert_mag(2,AK8963_ADDRESS); //startup tests
    // assert_MPU(2,MPU9250_ADDRESS_1);
 
+    char doop[100];
+    uint16_t battery_voltage = 0;
+    uint8_t gaugeData[4];
+
+
     for (;;)
     {
         if( xSemaphore != NULL )
         {
+
             if( xSemaphoreTake( xSemaphore, ( TickType_t ) 10 ) == pdTRUE )
             {
                // get_sensors(2,MPU9250_ADDRESS_1,&imu_ptr);
-                //xTaskNotify(th3, IMU_BIT, eSetBits);
+                //
                 xSemaphoreGive( xSemaphore );
+
+                //     sendi2cbytes(I2C_GAUGE, GAUGE_I2C_ADDR_WRITE, GAUGE_REG_MAC_WRITE, 2, gaugeData);
+
+
+                //     fetchi2cbytes(I2C_GAUGE, GAUGE_I2C_ADDR_WRITE, GAUGE_I2C_ADDR_READ, GAUGE_REG_MAC_READ, 4, gaugeData);
+               //      gauge_read_data_class(GAUGE_REG_ID, gaugeData, 4);
+
+                  //   battery_voltage = gauge_cmd_read(GAUGE_REG_VOLTAGE);
+
+                 //    sprintf(doop, "Device ID returned: 0x%d%d\r\n", gaugeData[0], gaugeData[1]);
+                   //  sendUARTstring(DEBUG_UART, doop, 100);
+
+                  //   sprintf(doop, "Battery voltage: %dmV\r\n", battery_voltage);
+                    // sendUARTstring(DEBUG_UART, doop, 100);
+                //vTaskDelay(1);
+                xTaskNotify(th3, IMU_BIT, eSetBits);
                 vTaskSuspend(th1);
+
             }
         }
     }
@@ -159,7 +179,7 @@ void task_gps(void *pvParameters)
     for(;;)
     {
 #if FAKE_GPS
-        memcpy(msg, FAKE_GPS_DATA,MSG_LEN);
+        memcpy(msg, FAKE_GPS_DATA, strlen(FAKE_GPS_DATA) );//FAKE_GPS_DATA,MSG_LEN);
         vTaskDelay(1000);
 #else
         get_gps(1,msg);
@@ -187,12 +207,12 @@ void task_gps(void *pvParameters)
 //communication task, sends data over uart to master device using EVEN parity, and to terminal using no parity
 void task_comm(void *pvParameters)
 {
-    uint8_t gaugeData[128];
+    uint8_t gaugeData[4];
     uint8_t i = 0;
 
-    initUART(2, 9600, SYSTEM_CLOCK,UART_CONFIG_PAR_NONE);
+    //initUART(2, 9600, SYSTEM_CLOCK,UART_CONFIG_PAR_NONE);
     //initUART(6, 9600, SYSTEM_CLOCK,UART_CONFIG_PAR_EVEN);
-    initUART(DEBUG_UART, 115200, SYSTEM_CLOCK,UART_CONFIG_PAR_NONE);
+
 
 
 
@@ -210,6 +230,8 @@ void task_comm(void *pvParameters)
     uint32_t ulNotifiedValue;
     char toggleLED = 0;
     char doop[100];
+
+    uint16_t battery_voltage = 0; // voltage in mV
 
     for( ;; )
     {
@@ -233,7 +255,8 @@ void task_comm(void *pvParameters)
 
                 if( xSemaphore != NULL )
                 {
-                   if( xSemaphoreTake( xSemaphore, ( TickType_t ) 10 ) == pdTRUE )
+
+                    if( xSemaphoreTake( xSemaphore, ( TickType_t ) 10 ) == pdTRUE )
                    {
                        //parse GPS data and store it
                        sprintf(doop,"%s",msg);
@@ -256,14 +279,8 @@ void task_comm(void *pvParameters)
        //     gaugeData[0] = 2;
        //     gaugeData[1] = 0;
 
-       //     sendi2cbytes(I2C_GAUGE, GAUGE_I2C_ADDR_WRITE, GAUGE_REG_MAC_WRITE, 2, gaugeData);
 
-       //     gaugeData[0] = 0xAB;
 
-       //     fetchi2cbytes(I2C_GAUGE, GAUGE_I2C_ADDR_WRITE, GAUGE_I2C_ADDR_READ, GAUGE_REG_MAC_READ, 4, gaugeData);
-            gauge_read_data_class(0x0002, gaugeData, 4);
-
-            gauge_cmd_read(0x2E);
         }
         else
         {
@@ -271,9 +288,9 @@ void task_comm(void *pvParameters)
            // sprintf(doop,"@IMUDATA:%05d%s",0,ERRORCODE);
            // sendUARTstring(2, doop, 100);
             //sendUARTstring(6, doop, 100);
-
+            gaugeData[0] = 8;
             //sendUARTstring(2, "TEST\n\r", 7);
-            SysCtlReset();
+        //    SysCtlReset();
             /* Did not receive a notification within the expected time. Resetting. */
             //prvCheckForErrors();
         }

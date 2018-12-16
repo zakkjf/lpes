@@ -15,6 +15,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "drivers/pinout.h"
 #include "utils/uart_nointerrupt.h"
 #include "utils/i2c_nointerrupt.h"

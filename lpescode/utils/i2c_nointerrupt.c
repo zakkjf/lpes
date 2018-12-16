@@ -182,7 +182,7 @@ uint8_t geti2cbytes(uint8_t module, uint8_t address, uint8_t reg, uint16_t lengt
  * @param count number of bytes to red
  * @param dest pointer to data buffer in which data is saved after reading
  */
-uint8_t fetchi2cbytes(uint8_t module, uint8_t addr1, uint8_t addr2, uint8_t reg, uint16_t length, uint8_t* data)
+uint8_t fetchi2cbytes(uint8_t module, uint8_t addr, uint8_t reg, uint16_t length, uint8_t* data)
 {
     uint16_t i;
 
@@ -194,7 +194,7 @@ uint8_t fetchi2cbytes(uint8_t module, uint8_t addr1, uint8_t addr2, uint8_t reg,
 */
 
 
-    I2CMasterSlaveAddrSet(g_ui32I2CBase[module], addr2, true);
+    I2CMasterSlaveAddrSet(g_ui32I2CBase[module], addr, true);
 
     if (length == 1)
         I2CMasterControl(g_ui32I2CBase[module], I2C_MASTER_CMD_SINGLE_RECEIVE);
