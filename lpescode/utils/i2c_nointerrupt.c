@@ -103,7 +103,7 @@ uint8_t geti2cbyte(uint32_t module, uint8_t address, uint8_t reg)
  * @param length Length of data to send
  * @return 0 so that caller can verify the function didn't hang
  */
-uint8_t sendI2Cbytes(uint8_t module, uint8_t address, uint8_t reg, uint16_t length, uint8_t *data)
+uint8_t sendi2cbytes(uint8_t module, uint8_t address, uint8_t reg, uint16_t length, uint8_t *data)
 {
     uint16_t i;
     I2CMasterSlaveAddrSet(g_ui32I2CBase[module], address, false);
@@ -153,6 +153,48 @@ uint8_t geti2cbytes(uint8_t module, uint8_t address, uint8_t reg, uint16_t lengt
     while(I2CMasterBusy(g_ui32I2CBase[module]));
 
     I2CMasterSlaveAddrSet(g_ui32I2CBase[module], address, true);
+
+    if (length == 1)
+        I2CMasterControl(g_ui32I2CBase[module], I2C_MASTER_CMD_SINGLE_RECEIVE);
+    else
+    {
+        I2CMasterControl(g_ui32I2CBase[module], I2C_MASTER_CMD_BURST_RECEIVE_START);
+        while(I2CMasterBusy(g_ui32I2CBase[module]));
+
+        data[0] = (uint8_t)(I2CMasterDataGet(g_ui32I2CBase[module]) & 0xFF);
+        for (i = 1; i < (length-1); i++)
+        {
+            I2CMasterControl(g_ui32I2CBase[module], I2C_MASTER_CMD_BURST_RECEIVE_CONT);
+            while(I2CMasterBusy(g_ui32I2CBase[module]));
+            data[i] = (uint8_t)(I2CMasterDataGet(g_ui32I2CBase[module]) & 0xFF);
+        }
+        I2CMasterControl(g_ui32I2CBase[module], I2C_MASTER_CMD_BURST_RECEIVE_FINISH);
+    }
+    while(I2CMasterBusy(g_ui32I2CBase[module]));
+
+    data[length-1] = (uint8_t)(I2CMasterDataGet(g_ui32I2CBase[module]) & 0xFF);
+    return 0;
+}
+
+/**
+ * Immediately fetch several bytes from I2C device, do not transmit addr or register
+ * @param module tiva module number 0-9 of the i2c interface
+ * @param count number of bytes to red
+ * @param dest pointer to data buffer in which data is saved after reading
+ */
+uint8_t fetchi2cbytes(uint8_t module, uint8_t addr1, uint8_t addr2, uint8_t reg, uint16_t length, uint8_t* data)
+{
+    uint16_t i;
+
+  /*  I2CMasterSlaveAddrSet(g_ui32I2CBase[module], addr1, false);
+    I2CMasterDataPut(g_ui32I2CBase[module], reg);
+    I2CMasterControl(g_ui32I2CBase[module], I2C_MASTER_CMD_BURST_SEND_START);
+
+    while(I2CMasterBusy(g_ui32I2CBase[module]));
+*/
+
+
+    I2CMasterSlaveAddrSet(g_ui32I2CBase[module], addr2, true);
 
     if (length == 1)
         I2CMasterControl(g_ui32I2CBase[module], I2C_MASTER_CMD_SINGLE_RECEIVE);

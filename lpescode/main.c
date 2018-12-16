@@ -23,6 +23,7 @@
 #include "driverlib/rom.h"
 #include "driverlib/uart.h"
 #include "driverlib/rom_map.h"
+#include "driverlib/i2c.h"
 
 //TI compiler stuff
 #include "string.h"
@@ -40,6 +41,7 @@ SemaphoreHandle_t xSemaphore;
 QueueHandle_t xQueue1;
 
 //Task declarations
+void task_init(void *pvParameters);
 void task_imu(void *pvParameters);
 void task_gps(void *pvParameters);
 void task_comm(void *pvParameters);
@@ -52,6 +54,7 @@ gps_raw_t my_location;
 
 imu_raw_t imu_ptr;
 
+TaskHandle_t th0;
 TaskHandle_t th1;
 TaskHandle_t th2;
 TaskHandle_t th3;
@@ -77,13 +80,22 @@ int main(void)
 
     xSemaphore = xSemaphoreCreateMutex();
 
-    tick_counter =0;
+    tick_counter = 0;
+
+    // Initialize I2C
+    initi2c(I2C_GAUGE, output_clock_rate_hz);
+
+
+
     // Initialize the GPIO pins for the Launchpad
     PinoutSet(false, false);
+
 
     xQueue1 = xQueueCreate( 10, sizeof(uint32_t) );
 
     // Create tasks
+  //  xTaskCreate(task_init, (const portCHAR *)"INIT",
+ //               configMINIMAL_STACK_SIZE, NULL, 1, &th0);
     xTaskCreate(task_imu, (const portCHAR *)"IMU",
                 configMINIMAL_STACK_SIZE, NULL, 1, &th1);
     xTaskCreate(task_gps, (const portCHAR *)"GPS",
@@ -100,10 +112,21 @@ int main(void)
 
     vTaskStartScheduler();
 
+    // This crashes the OS
  //   sprintf(temp_buffer, "\r\nDebug UART initialized.\r\n");
-
   //  sendUARTstring(DEBUG_UART, temp_buffer, strlen(temp_buffer) );
     return 0;
+}
+
+
+// Startup items, run once and kill task
+void task_init(void *pvParameters)
+{
+    char temp_buffer[128];
+
+
+
+    return;
 }
 
 // Flash the LEDs on the launchpad
@@ -164,15 +187,30 @@ void task_gps(void *pvParameters)
 //communication task, sends data over uart to master device using EVEN parity, and to terminal using no parity
 void task_comm(void *pvParameters)
 {
+    uint8_t gaugeData[128];
+    uint8_t i = 0;
+
     initUART(2, 9600, SYSTEM_CLOCK,UART_CONFIG_PAR_NONE);
     //initUART(6, 9600, SYSTEM_CLOCK,UART_CONFIG_PAR_EVEN);
     initUART(DEBUG_UART, 115200, SYSTEM_CLOCK,UART_CONFIG_PAR_NONE);
+
+
+
+  //  gaugeData[0] = 0xAB;
+   // gaugeData[1] = 0;
+ //   gaugeData[2] = 1;
+
+   // sendi2cbytes(I2C_GAUGE, GAUGE_I2C_WRITE_ADDR, 0x00, 3, gaugeData);
+  //  geti2cbytes(I2C_GAUGE, GAUGE_I2C_WRITE_ADDR, 0x00, 2, gaugeData);
+
+  //  gauge_read(GAUGECMD_CONTROL_ID, gaugeData, )
 
     const TickType_t xMaxBlockTime = 5000;
     BaseType_t xResult;
     uint32_t ulNotifiedValue;
     char toggleLED = 0;
     char doop[100];
+
     for( ;; )
     {
         /* Wait to be notified of an interrupt. */
@@ -214,6 +252,18 @@ void task_comm(void *pvParameters)
                 vTaskResume(th1);
                 vTaskResume(th2);
             }
+
+       //     gaugeData[0] = 2;
+       //     gaugeData[1] = 0;
+
+       //     sendi2cbytes(I2C_GAUGE, GAUGE_I2C_ADDR_WRITE, GAUGE_REG_MAC_WRITE, 2, gaugeData);
+
+       //     gaugeData[0] = 0xAB;
+
+       //     fetchi2cbytes(I2C_GAUGE, GAUGE_I2C_ADDR_WRITE, GAUGE_I2C_ADDR_READ, GAUGE_REG_MAC_READ, 4, gaugeData);
+            gauge_read_data_class(0x0002, gaugeData, 4);
+
+            gauge_cmd_read(0x2E);
         }
         else
         {
@@ -227,6 +277,9 @@ void task_comm(void *pvParameters)
             /* Did not receive a notification within the expected time. Resetting. */
             //prvCheckForErrors();
         }
+
+
+
     }
 }
 

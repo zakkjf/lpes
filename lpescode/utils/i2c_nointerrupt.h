@@ -28,7 +28,7 @@ uint8_t sendi2cbyte(uint32_t module, uint8_t address, uint8_t reg, uint8_t data)
 
 uint8_t geti2cbyte(uint32_t module, uint8_t address, uint8_t reg);
 
-uint8_t sendI2Cbytes(uint8_t module, uint8_t address, uint8_t reg, uint16_t length, uint8_t *data);
+uint8_t sendi2cbytes(uint8_t module, uint8_t address, uint8_t reg, uint16_t length, uint8_t *data);
 
 /**
  * Read several bytes from I2C device
@@ -39,5 +39,7 @@ uint8_t sendI2Cbytes(uint8_t module, uint8_t address, uint8_t reg, uint16_t leng
  * @param dest pointer to data buffer in which data is saved after reading
  */
 uint8_t geti2cbytes(uint8_t module, uint8_t address, uint8_t reg, uint16_t length, uint8_t* data);
+
+uint8_t fetchi2cbytes(uint8_t module, uint8_t addr1, uint8_t addr2, uint8_t reg, uint16_t length, uint8_t* data);
 
 #endif
