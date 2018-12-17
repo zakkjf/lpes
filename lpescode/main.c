@@ -36,7 +36,25 @@
 #include "timers.h"
 #include "queue.h"
 
-SemaphoreHandle_t xSemaphore;
+#define BOARD_ID_VER   "TIVA:01:1"
+#define FAKE_GPS 1 //switch on this mode if GPS is being difficult
+#define PING_ALIVE 0
+#define FAKE_GPS_DATA "$GPGGA,215907.00,4000.43805,N,10515.80958,W,1,04,9.85,1638.9,M,-21.3,M,,*5C\n\r      " //MUST MATCH MSG_LEN!!!
+#define ERRORCODE "$GPGGA,0.00,0.0,0,0.00,0,0,00,999.99,0,0,0,0,,*5C\n\r      "
+
+//DON'T TOUCH STUFF BELOW THIS LINE//////////////////////////////////////////////////////
+
+#define GPS_BIT     0x01
+#define IMU_BIT     0x02
+#define MSG_LEN     83
+
+#define GPS_TAG  "GPSDATA"
+#define IMU_TAG  "IMUDATA"
+#define TAGSIZE  8
+
+SemaphoreHandle_t xSemaphore1;
+SemaphoreHandle_t xSemaphore2;
+SemaphoreHandle_t xSemaphore3;
 
 QueueHandle_t xQueue1;
 
@@ -49,7 +67,7 @@ void task_comm(void *pvParameters);
 void vTimerCallback1(TimerHandle_t xTimer);
 
 char msg[MSG_LEN];
-
+char modem_msg[MSG_LEN];
 gps_raw_t my_location;
 imu_raw_t imu_ptr;
 
@@ -77,7 +95,11 @@ int main(void)
 
     ASSERT(output_clock_rate_hz == SYSTEM_CLOCK);
 
-    xSemaphore = xSemaphoreCreateMutex();
+    xSemaphore1 = xSemaphoreCreateMutex();
+    xSemaphore2 = xSemaphoreCreateMutex();
+    xSemaphore3 = xSemaphoreCreateMutex();
+
+    initUART(2, 9600, SYSTEM_CLOCK,UART_CONFIG_PAR_NONE);
 
     tick_counter = 0;
 
@@ -141,7 +163,7 @@ void task_imu(void *pvParameters)
 
     for (;;)
     {
-        if( xSemaphore != NULL )
+        if( xSemaphore1 != NULL )
         {
 
             if( xSemaphoreTake( xSemaphore, ( TickType_t ) 10 ) == pdTRUE )
@@ -167,6 +189,11 @@ void task_imu(void *pvParameters)
                 xTaskNotify(th3, IMU_BIT, eSetBits);
                 vTaskSuspend(th1);
 
+            if( xSemaphoreTake( xSemaphore1, ( TickType_t ) 10 ) == pdTRUE )
+            {
+               // get_sensors(2,MPU9250_ADDRESS_1,&imu_ptr);
+                vTaskDelay(1000);
+                xTaskNotify(th3, IMU_BIT, eSetBits);
             }
         }
     }
@@ -175,7 +202,6 @@ void task_imu(void *pvParameters)
 // Flash the LEDs on the launchpad
 void task_gps(void *pvParameters)
 {
-    init_gps(1,SYSTEM_CLOCK);
     for(;;)
     {
 #if FAKE_GPS
@@ -188,19 +214,17 @@ void task_gps(void *pvParameters)
         tick_counter++;
 
         if( xQueue1 != 0 )
+
+        //check for incoming msg
+        if( xSemaphore2 != NULL )
         {
-            /* Send an unsigned long.  Wait for 10 ticks for space to become
-            available if necessary. */
-            if( xQueueSend( xQueue1,
-                           ( void * ) &tick_counter,
-                           ( TickType_t ) 10 ) != pdPASS )
+            if( xSemaphoreTake( xSemaphore2, ( TickType_t ) 10 ) == pdTRUE )
             {
-                /* Failed to post the message, even after 10 ticks. */
+                getUARTline(2, modem_msg, MSG_LEN);
+
+                xTaskNotify(th3, GPS_BIT, eSetBits);
             }
         }
-
-        xTaskNotify(th3, GPS_BIT, eSetBits);
-        vTaskSuspend(th2);
     }
 }
 
@@ -213,6 +237,8 @@ void task_comm(void *pvParameters)
     //initUART(2, 9600, SYSTEM_CLOCK,UART_CONFIG_PAR_NONE);
     //initUART(6, 9600, SYSTEM_CLOCK,UART_CONFIG_PAR_EVEN);
 
+    //initUART(6, 9600, SYSTEM_CLOCK,UART_CONFIG_PAR_EVEN);
+    init_gps(1,SYSTEM_CLOCK);
 
 
 
@@ -247,11 +273,25 @@ void task_comm(void *pvParameters)
             /* A notification was received.  See which bits were set. */
             if( ( ulNotifiedValue & IMU_BIT)!= 0 )
             {
-                vTaskResume(th1);
+
             }
 
             if( ( ulNotifiedValue & GPS_BIT ) != 0 )
             {
+               //parse GPS data and store it
+
+                #if FAKE_GPS
+                        memcpy(msg, FAKE_GPS_DATA,MSG_LEN);
+                        vTaskDelay(1000);
+                #else
+                        get_gps(1,msg);
+                #endif
+               sprintf(doop,"%s",msg);
+               split_GPGGA(doop, &my_location);
+               //run_distances(my_location,0);
+               sendUARTstring(2, "TEST\n\r", 7);
+               xSemaphoreGive( xSemaphore1);
+               xSemaphoreGive( xSemaphore2);
 
                 if( xSemaphore != NULL )
                 {
@@ -265,15 +305,19 @@ void task_comm(void *pvParameters)
                        xSemaphoreGive( xSemaphore );
                    }
                 }
+				
                 //sendUARTstring(2, doop, 100);
                // sendUARTstring(2, "TEST\n\r", 7);
                // sendUARTstring(6, doop, 100);
                //  sendUARTstring(DEBUG_UART, "TEST\n\r", 7);
                 sendUARTstring(DEBUG_UART, doop, 100);
                 toggleLED ^= 1;
+				
                 LEDWrite(LED1, toggleLED);
                 vTaskResume(th1);
                 vTaskResume(th2);
+
+                LEDWrite(0x01, toggleLED);
             }
 
        //     gaugeData[0] = 2;
@@ -288,9 +332,16 @@ void task_comm(void *pvParameters)
            // sprintf(doop,"@IMUDATA:%05d%s",0,ERRORCODE);
            // sendUARTstring(2, doop, 100);
             //sendUARTstring(6, doop, 100);
+
             gaugeData[0] = 8;
             //sendUARTstring(2, "TEST\n\r", 7);
         //    SysCtlReset();
+
+            #if PING_ALIVE
+                        sendUARTstring(2, "ALIVE\n\r", 8);
+            #endif
+            //SysCtlReset();
+
             /* Did not receive a notification within the expected time. Resetting. */
             //prvCheckForErrors();
         }
