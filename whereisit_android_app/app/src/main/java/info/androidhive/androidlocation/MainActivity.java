@@ -142,8 +142,8 @@ public class MainActivity extends AppCompatActivity {
         trkPhoneNo = txtphoneNo.getText().toString();
 
         if (mCurrentLocation != null) {
-            message = myPhoneNo.getText().toString() +"," + mCurrentLocation.getLatitude() + ","
-                    + mCurrentLocation.getLongitude();
+            message = "$"+myPhoneNo.getText().toString() +"," + mCurrentLocation.getLatitude() + ","
+                    + mCurrentLocation.getLongitude()+"\r\n";
 
             if (ContextCompat.checkSelfPermission(this,
                     Manifest.permission.SEND_SMS)
