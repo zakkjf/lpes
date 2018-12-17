@@ -40,6 +40,10 @@ gps_raw_t my_location;
 gps_raw_t phone_location;
 imu_raw_t imu_ptr;
 
+CB_t modem_rx_buffer;
+char modem_rx_data[MODEM_RX_BUFFER_SIZE_MAX][64];
+
+
 void UARTIntHandler(void)
 {
     //
@@ -85,6 +89,8 @@ void UARTIntHandler(void)
               }
         }
     }
+
+  //  CB_buffer_add_item(modem_rx_buffer, )
 }
 
 void
@@ -128,7 +134,34 @@ int main(void)
 
     ASSERT(output_clock_rate_hz == SYSTEM_CLOCK);
 
-    ROM_IntMasterEnable();
+    // Initialize circular buffer for Modem UART Rx
+    CB_init(&modem_rx_buffer, &modem_rx_data, MODEM_RX_BUFFER_SIZE_MAX);
+
+    /*
+    strcpy(doop, "uuuuuu");
+
+    CB_buffer_add_item(&modem_rx_buffer, doop);
+
+    strcpy(doop, "123456");
+
+    CB_buffer_add_item(&modem_rx_buffer, doop);
+
+    strcpy(doop, "modem1");
+
+    CB_buffer_add_item(&modem_rx_buffer, doop);
+
+    CB_buffer_remove_item(&modem_rx_buffer, doop);
+
+    CB_buffer_remove_item(&modem_rx_buffer, doop);
+
+    strcpy(doop, "789123");
+
+    CB_buffer_add_item(&modem_rx_buffer, doop);
+
+    CB_buffer_remove_item(&modem_rx_buffer, doop);
+
+    CB_buffer_remove_item(&modem_rx_buffer, doop);
+*/
 
     // Initialize UART ports
     initUART(DEBUG_UART, DEBUG_UART_BAUD, SYSTEM_CLOCK, UART_CONFIG_PAR_NONE);
@@ -144,6 +177,11 @@ int main(void)
     ROM_UARTIntClear(UART2_BASE, ROM_UARTIntStatus(UART2_BASE, true));
     ROM_IntEnable(INT_UART2);
     ROM_UARTIntEnable(UART2_BASE, UART_INT_RX | UART_INT_RT);
+    ROM_IntMasterEnable();
+
+    // The gauge seems to update its voltage only when it first powers up,
+    // there must be some other trigger for it to update its voltage reading
+ //   gauge_write_data_class(GAUGE_CMD_RESET, i2c_buffer, 4);
 
     // Check whether gas gauge is connected and responsive
     for(i2c_retry = 0; i2c_retry < I2C_RETRY_MAX; i2c_retry++)
@@ -152,6 +190,8 @@ int main(void)
 
         bin32 = ( (i2c_buffer[0] << 24) + (i2c_buffer[1] << 16) +
                 (i2c_buffer[2] << 8) + i2c_buffer[3] );
+
+
 
         if(bin32 == GAUGE_ID)
         {
@@ -176,6 +216,8 @@ int main(void)
     memset(doop, 0, BUFSIZE);
     for(i2c_retry = 0; i2c_retry < I2C_RETRY_MAX; i2c_retry++)
     {
+
+
         bin32 = gauge_cmd_read(GAUGE_REG_VOLTAGE);
 
         // If the reading is the wrong order of magnitude, retry

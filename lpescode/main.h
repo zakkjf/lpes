@@ -15,7 +15,9 @@
 #define GAUGE_I2C           1
 #define GAUGE_ID            0x1000102
 
-#define I2C_RETRY_MAX       8
+#define I2C_RETRY_MAX       64
+
+#define MODEM_RX_BUFFER_SIZE_MAX    255
 
 /*// Trying to write a macro for i2c transaction repeats since we're experiencing unreliable comm
 #define I2C_TRANSACT_TIMEOUT(n, x) ( memset(doop, 0, BUF_SIZE);\
@@ -40,6 +42,7 @@
 #include "modemparse.h"
 #include "gauge.h"
 #include "utils/arraylist.h"
+#include "utils/circbuf.h"
 
 void UARTIntHandler(void);
 
