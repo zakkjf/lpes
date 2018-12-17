@@ -26,15 +26,6 @@
 //TI compiler stuff
 #include "string.h"
 
-// FreeRTOS includes
-#include "FreeRTOSConfig.h"
-#include "FreeRTOS.h"
-#include "task.h"
-#include "semphr.h"
-#include "timers.h"
-#include "queue.h"
-
-
 #define BOARD_ID_VER   "TIVA:01:1"
 #define FAKE_GPS 0 //switch on this mode if GPS is being difficult
 #define PING_ALIVE 0
@@ -42,6 +33,8 @@
 #define ERRORCODE "$GPGGA,0.00,0.0,0,0.00,0,0,00,999.99,0,0,0,0,,*5C\n\r      "
 
 //DON'T TOUCH STUFF BELOW THIS LINE//////////////////////////////////////////////////////
+
+#include <main.h>
 
 #define GPS_BIT     0x01
 #define IMU_BIT     0x02
@@ -51,35 +44,17 @@
 #define IMU_TAG  "IMUDATA"
 #define TAGSIZE  8
 
-SemaphoreHandle_t xSemaphore1;
-SemaphoreHandle_t xSemaphore2;
-SemaphoreHandle_t xSemaphore3;
-
-QueueHandle_t xQueue1;
-
-//Task declarations
-void task1(void *pvParameters);
-void task2(void *pvParameters);
-void task3(void *pvParameters);
-
-void vTimerCallback1(TimerHandle_t xTimer);
-
 char msg[MSG_LEN];
 char modem_msg[MSG_LEN];
 gps_raw_t my_location;
 gps_raw_t phone_location;
 imu_raw_t imu_ptr;
 
-TaskHandle_t th1;
-TaskHandle_t th2;
-TaskHandle_t th3;
-/* An array to hold handles to the created timers. */
-TimerHandle_t xTimer;
 
-uint32_t tick_counter;
 // Main function
 int main(void)
 {
+    char doop[100];
     // Initialize system clock to 120 MHz
     uint32_t output_clock_rate_hz;
     output_clock_rate_hz = ROM_SysCtlClockFreqSet(
@@ -89,174 +64,52 @@ int main(void)
 
     ASSERT(output_clock_rate_hz == SYSTEM_CLOCK);
 
-    xSemaphore1 = xSemaphoreCreateMutex();
-    xSemaphore2 = xSemaphoreCreateMutex();
-    xSemaphore3 = xSemaphoreCreateMutex();
+    initUART(2, 57600, SYSTEM_CLOCK,UART_CONFIG_PAR_NONE);
+    init_gps(1,SYSTEM_CLOCK);
 
-    initUART(2, 9600, SYSTEM_CLOCK,UART_CONFIG_PAR_NONE);
-
-    tick_counter =0;
     // Initialize the GPIO pins for the Launchpad
     PinoutSet(false, false);
 
-    xQueue1 = xQueueCreate( 10, sizeof(uint32_t) );
-
-    // Create tasks
-    xTaskCreate(task1, (const portCHAR *)"IMU",
-                configMINIMAL_STACK_SIZE, NULL, 1, &th1);
-    xTaskCreate(task2, (const portCHAR *)"GPS",
-                configMINIMAL_STACK_SIZE, NULL, 1, &th2);
-    xTaskCreate(task3, (const portCHAR *)"COMM",
-                configMINIMAL_STACK_SIZE, NULL, 1, &th3);
-
-    xTimer = xTimerCreate("Timer0", 250, pdTRUE, ( void * ) 0, vTimerCallback1);
-
-    if( xTimerStart( xTimer, 0 ) != pdPASS )
+    //parse GPS data and store it
+    while(1)
     {
-        //The timer could not be set into the Active state.
+
+        memset(doop,' ',100);
+        getUARTlineOnKey(2, modem_msg,  MSG_LEN, '$');
+
+        #if FAKE_GPS
+                memcpy(msg, FAKE_GPS_DATA,MSG_LEN);
+                SysCtlDelay(SysCtlClockGet()/3);
+        #else
+                get_gps(1,msg);
+        #endif
+        memset(doop,0,100);
+        sprintf(doop,"%s",msg);
+        split_GPGGA(doop, &my_location);
+        //run_distances(my_location,0);
+        memset(doop,0,100);
+        sprintf(doop,"%s",modem_msg);
+        split_modpacket(doop, &phone_location);
+        SysCtlDelay(SysCtlClockGet()*4);
+        sendUARTstring(2, "+++@", 9);//command mode on modem
+        SysCtlDelay(SysCtlClockGet()*4);
+        //phone_location.phone = 2136409224;
+        float dist = distance(phone_location.lat_dec_deg, phone_location.lon_dec_deg, 0, my_location.lat_dec_deg, my_location.lon_dec_deg,0, 1, 0)*1000;
+        float angl = angle(phone_location.lat_dec_deg, phone_location.lon_dec_deg, my_location.lat_dec_deg, my_location.lon_dec_deg);
+        sprintf(doop,"ATP#%llu\r@",phone_location.phone);
+        sendUARTstring(2, doop, 25);//command mode on modem
+        sendUARTstring(2, "ATWR\r@",8);//command mode on modem
+        sendUARTstring(2, "ATCN\r@",8);//command mode on modem
+
+        //memset(doop,0,100);
+        sprintf(doop,"Distance to target %f meters.@", dist);
+        sendUARTstring(2, doop, 50);
+        sprintf(doop,"Heading to target is %f degrees CW of N.\r@", angl);
+        sendUARTstring(2, doop, 50);
     }
 
-    vTaskStartScheduler();
     return 0;
 }
-
-// Flash the LEDs on the launchpad
-void task1(void *pvParameters)
-{
-    //initi2c(2, SYSTEM_CLOCK);
-    //initMPU9250(2,MPU9250_ADDRESS_1);
-   // assert_mag(2,AK8963_ADDRESS); //startup tests
-   // assert_MPU(2,MPU9250_ADDRESS_1);
-
-    for (;;)
-    {
-        if( xSemaphore1 != NULL )
-        {
-            if( xSemaphoreTake( xSemaphore1, ( TickType_t ) 10 ) == pdTRUE )
-            {
-               // get_sensors(2,MPU9250_ADDRESS_1,&imu_ptr);
-                vTaskDelay(1000);
-                xTaskNotify(th3, IMU_BIT, eSetBits);
-            }
-        }
-    }
-}
-
-// Flash the LEDs on the launchpad
-void task2(void *pvParameters)
-{
-    for(;;)
-    {
-        //check for incoming msg
-        if( xSemaphore2 != NULL )
-        {
-            if( xSemaphoreTake( xSemaphore2, ( TickType_t ) 10 ) == pdTRUE )
-            {
-                getUARTline(2, modem_msg, MSG_LEN);
-
-                xTaskNotify(th3, GPS_BIT, eSetBits);
-            }
-        }
-    }
-}
-
-//communication task, sends data over uart to master device using EVEN parity, and to terminal using no parity
-void task3(void *pvParameters)
-{
-
-    //initUART(6, 9600, SYSTEM_CLOCK,UART_CONFIG_PAR_EVEN);
-    init_gps(1,SYSTEM_CLOCK);
-
-    const TickType_t xMaxBlockTime = 5000;
-    BaseType_t xResult;
-    uint32_t ulNotifiedValue;
-    char toggleLED = 0;
-    char doop[100];
-    for( ;; )
-    {
-        /* Wait to be notified of an interrupt. */
-        xResult = xTaskNotifyWait( 0x0000,    /* Don't clear bits on entry. */
-                                    0xFFFF,        /* Clear all bits on exit. */
-                                    &ulNotifiedValue, /* Stores the notified value. */
-                                    xMaxBlockTime );
-
-        if( xResult == pdPASS )
-        {
-            memset(doop,' ',sizeof(doop));
-            /* A notification was received.  See which bits were set. */
-            if( ( ulNotifiedValue & IMU_BIT)!= 0 )
-            {
-
-            }
-
-            if( ( ulNotifiedValue & GPS_BIT ) != 0 )
-            {
-               //parse GPS data and store it
-
-                #if FAKE_GPS
-                        memcpy(msg, FAKE_GPS_DATA,MSG_LEN);
-                        vTaskDelay(1000);
-                #else
-                        get_gps(1,msg);
-                #endif
-               sprintf(doop,"%s",msg);
-               split_GPGGA(doop, &my_location);
-               //run_distances(my_location,0);
-               memset(doop,' ',sizeof(doop));
-               sprintf(doop,"%s",modem_msg);
-               split_modpacket(doop, &phone_location);
-               float dist = distance(phone_location.lat_dec_deg, phone_location.lon_dec_deg, 0, my_location.lat_dec_deg, my_location.lon_dec_deg,0, 1, 0)*1000;
-               float angl = angle(phone_location.lat_dec_deg, phone_location.lon_dec_deg, my_location.lat_dec_deg, my_location.lon_dec_deg);
-               memset(doop,' ',sizeof(doop));
-               sprintf(doop,"Distance to target %f meters.", dist);
-               sendUARTstring(2, doop, 50);
-               sprintf(doop,"Heading to target is %f degrees CW of N.\n\r", angl);
-               sendUARTstring(2, doop, 50);
-               xSemaphoreGive( xSemaphore1);
-               xSemaphoreGive( xSemaphore2);
-
-                //sendUARTstring(2, doop, 100);
-               // sendUARTstring(2, "TEST\n\r", 7);
-               // sendUARTstring(6, doop, 100);
-
-                toggleLED ^= 1;
-                LEDWrite(0x01, toggleLED);
-            }
-        }
-        else
-        {
-            //pass errorcode to host
-           // sprintf(doop,"@IMUDATA:%05d%s",0,ERRORCODE);
-           // sendUARTstring(2, doop, 100);
-            //sendUARTstring(6, doop, 100);
-            #if PING_ALIVE
-                        sendUARTstring(2, "ALIVE\n\r", 8);
-            #endif
-            //SysCtlReset();
-            /* Did not receive a notification within the expected time. Resetting. */
-            //prvCheckForErrors();
-        }
-    }
-}
-
-
-void vTimerCallback1( TimerHandle_t xTimer )
-{
-    uint32_t poo;
-     /* The TX ISR has set a bit. */
-     if( xQueue1 != 0 )
-     {
-
-         // Receive a message on the created queue.  Block for 10 ticks if a
-         // message is not immediately available.
-         if( xQueueReceive( xQueue1, &poo, ( TickType_t ) 10 ) )
-         {
-             //write to LED to show GPS time-sync difference
-             LEDWrite(0x02,poo%2<<1);
-         }
-     }
-}
-
 
 /*  ASSERT() Error function
  *

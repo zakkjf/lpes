@@ -138,9 +138,13 @@ int8_t sendUARTstring(uint8_t portNum, char* str, uint32_t len)
     uint32_t i;
     for(i=0;i<len;i++)
     {
-            if(*(str+i)!=0xA5)
+            if(*(str+i)!='@')
             {
                 UARTCharPut(g_ui32UARTBase[portNum],*(str+i));
+            }
+            else
+            {
+                return -1;
             }
     }
     return 0;
@@ -189,6 +193,24 @@ int8_t getUARTline(uint8_t portNum, char* str, uint32_t maxlen)
     return 0;
 }
 
+//takes a char array of max size 82 and returns the next line
+int8_t getUARTlineOnKey(uint8_t portNum, char* str, uint32_t maxlen, char key)
+{
+    uint32_t i;
+    char grab;
+    while((!UARTCharsAvail(g_ui32UARTBase[portNum]))||key!=UARTCharGetNonBlocking(g_ui32UARTBase[portNum]));
+    for(i=0;i<maxlen-1;i++)
+    {
+        while(!UARTCharsAvail(g_ui32UARTBase[portNum]));
+        *(str+i) = UARTCharGetNonBlocking(g_ui32UARTBase[portNum]);
+        if(*(str+i)== 0x0A)
+        {
+            *(str+i+1)= '\0';
+            return i+1;
+        }
+    }
+    return 0;
+}
 int8_t disableUART(uint8_t portNum)
 {
     //
