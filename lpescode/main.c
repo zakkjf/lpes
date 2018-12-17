@@ -20,8 +20,6 @@
 #define FAKE_GPS_DATA "$GPGGA,215907.00,4000.43805,N,10515.80958,W,1,04,9.85,1638.9,M,-21.3,M,,*5C\n\r      " //MUST MATCH MSG_LEN!!!
 #define ERRORCODE "$GPGGA,0.00,0.0,0,0.00,0,0,00,999.99,0,0,0,0,,*5C\n\r      "
 
-//DON'T TOUCH STUFF BELOW THIS LINE//////////////////////////////////////////////////////
-
 #define GPS_BIT     0x01
 #define IMU_BIT     0x02
 #define MSG_LEN     83
@@ -36,6 +34,9 @@ gps_raw_t my_location;
 gps_raw_t phone_location;
 imu_raw_t imu_ptr;
 
+// Array of contacts received since power-on
+Contacts_t Contact_List[CONTACTS_MAX];
+volatile uint8_t i_Contacts = 0;
 
 // Main function
 int main(void)
@@ -45,6 +46,8 @@ int main(void)
     unsigned char i2c_buffer[8];
     uint32_t bin32 = 0;
     uint8_t i2c_retry = 0;
+
+    Contacts_t new_contact;
 
     // Initialize system clock to 120 MHz
     uint32_t output_clock_rate_hz;
@@ -113,12 +116,14 @@ int main(void)
     sprintf(doop, "%s%lumV\r\n", "Battery voltage = ", bin32);
     sendUARTstring(DEBUG_UART, doop, strlen(doop));
 
+    ArrayList_Init(Contact_List);
+
     //parse GPS data and store it
     while(1)
     {
 
         memset(doop,' ',BUFSIZE);
-        getUARTlineOnKey(2, modem_msg,  MSG_LEN, '$');
+        getUARTlineOnKey(MODEM_UART, modem_msg,  MSG_LEN, '$');
 
         #if FAKE_GPS
                 memcpy(msg, FAKE_GPS_DATA,MSG_LEN);
@@ -138,7 +143,7 @@ int main(void)
         sprintf(doop,"%s",modem_msg);
         split_modpacket(doop, &phone_location);
         SysCtlDelay(SysCtlClockGet()*4);
-        sendUARTstring(2, "+++@", 9);//command mode on modem
+        sendUARTstring(MODEM_UART, "+++@", 9);//command mode on modem
         SysCtlDelay(SysCtlClockGet()*4);
         //phone_location.phone = 2136409224;
 
@@ -148,15 +153,15 @@ int main(void)
         sprintf(doop,"ATP#%llu\r@",phone_location.phone);
 
         // Send command lines and result to modem
-        sendUARTstring(2, doop, 25);//command mode on modem
-        sendUARTstring(2, "ATWR\r@",8);//command mode on modem
-        sendUARTstring(2, "ATCN\r@",8);//command mode on modem
+        sendUARTstring(MODEM_UART, doop, 25);//command mode on modem
+        sendUARTstring(MODEM_UART, "ATWR\r@",8);//command mode on modem
+        sendUARTstring(MODEM_UART, "ATCN\r@",8);//command mode on modem
 
         //memset(doop,0,BUFSIZE);
         sprintf(doop,"Distance to target %f meters.@", dist);
-        sendUARTstring(2, doop, 50);
+        sendUARTstring(MODEM_UART, doop, 50);
         sprintf(doop,"Heading to target is %f degrees CW of N.\r@", angl);
-        sendUARTstring(2, doop, 50);
+        sendUARTstring(MODEM_UART, doop, 50);
     }
 
     return 0;

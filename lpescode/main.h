@@ -39,6 +39,6 @@
 #include "gps_calc.h"
 #include "modemparse.h"
 #include "gauge.h"
-#include "arraylist.h"
+#include "utils/arraylist.h"
 
 #endif /* MAIN_H_ */
