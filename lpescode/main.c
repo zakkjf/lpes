@@ -27,8 +27,9 @@
 #include "string.h"
 
 #define BOARD_ID_VER   "TIVA:01:1"
-#define FAKE_GPS 0 //switch on this mode if GPS is being difficult
+#define FAKE_GPS 1 //switch on this mode if GPS is being difficult
 #define PING_ALIVE 0
+#define MAX_MOD_LENGTH 40
 #define FAKE_GPS_DATA "$GPGGA,215907.00,4000.43805,N,10515.80958,W,1,04,9.85,1638.9,M,-21.3,M,,*5C\n\r      " //MUST MATCH MSG_LEN!!!
 #define ERRORCODE "$GPGGA,0.00,0.0,0,0.00,0,0,00,999.99,0,0,0,0,,*5C\n\r      "
 
@@ -39,22 +40,90 @@
 #define GPS_BIT     0x01
 #define IMU_BIT     0x02
 #define MSG_LEN     83
-
+#define KEY         '$'
+#define ENDKEY      '\n'
 #define GPS_TAG  "GPSDATA"
 #define IMU_TAG  "IMUDATA"
 #define TAGSIZE  8
 
 char msg[MSG_LEN];
 char modem_msg[MSG_LEN];
+char grabkey;
+uint8_t mesg_i;
+uint32_t ui32Status;
+
 gps_raw_t my_location;
 gps_raw_t phone_location;
 imu_raw_t imu_ptr;
 
+void UARTIntHandler(void)
+{
+    //
+    // Get the interrrupt status.
+    //
+    ui32Status = ROM_UARTIntStatus(UART2_BASE, true);
+
+    //
+    // Clear the asserted interrupts.
+    //
+    ROM_UARTIntClear(UART2_BASE, ui32Status);
+
+    //
+    // Loop while there are characters in the receive FIFO.
+    //
+    while(ROM_UARTCharsAvail(UART2_BASE))
+    {
+        //
+        // Read the next character from the UART and write it back to the UART.
+        //
+        if(!grabkey)
+        {
+            if(KEY==ROM_UARTCharGetNonBlocking(UART2_BASE))
+            {
+                grabkey = 1;
+            }
+        }
+
+        while(ROM_UARTCharsAvail(UART2_BASE))
+        {
+              grabkey = ROM_UARTCharGetNonBlocking(UART2_BASE);
+
+              if(grabkey==ENDKEY)
+              {
+                  mesg_i=0;
+                  grabkey=0;
+                  //iterate to next item in buffer
+                  break;
+              }
+              else
+              {
+                  modem_msg[mesg_i++] = grabkey;
+              }
+        }
+    }
+}
+
+void
+UARTSend(const uint8_t *pui8Buffer, uint32_t ui32Count)
+{
+    //
+    // Loop while there are more characters to send.
+    //
+    while(ui32Count--)
+    {
+        //
+        // Write the next character to the UART.
+        //
+        ROM_UARTCharPutNonBlocking(UART0_BASE, *pui8Buffer++);
+    }
+}
 
 // Main function
 int main(void)
 {
     char doop[100];
+    mesg_i=0;
+    grabkey=0;
     // Initialize system clock to 120 MHz
     uint32_t output_clock_rate_hz;
     output_clock_rate_hz = ROM_SysCtlClockFreqSet(
@@ -64,25 +133,31 @@ int main(void)
 
     ASSERT(output_clock_rate_hz == SYSTEM_CLOCK);
 
+    ROM_IntMasterEnable();
+
     initUART(2, 57600, SYSTEM_CLOCK,UART_CONFIG_PAR_NONE);
     init_gps(1,SYSTEM_CLOCK);
 
     // Initialize the GPIO pins for the Launchpad
     PinoutSet(false, false);
 
+    ROM_IntEnable(INT_UART2);
+    ROM_UARTIntEnable(UART2_BASE, UART_INT_RX | UART_INT_RT);
+
     //parse GPS data and store it
     while(1)
     {
 
         memset(doop,' ',100);
-        getUARTlineOnKey(2, modem_msg,  MSG_LEN, '$');
+        //getUARTlineOnKey(2, modem_msg,  MSG_LEN, '$');
 
         #if FAKE_GPS
                 memcpy(msg, FAKE_GPS_DATA,MSG_LEN);
-                SysCtlDelay(SysCtlClockGet()/3);
+               // SysCtlDelay(SysCtlClockGet()/3);
         #else
                 get_gps(1,msg);
         #endif
+/*
         memset(doop,0,100);
         sprintf(doop,"%s",msg);
         split_GPGGA(doop, &my_location);
@@ -106,6 +181,11 @@ int main(void)
         sendUARTstring(2, doop, 50);
         sprintf(doop,"Heading to target is %f degrees CW of N.\r@", angl);
         sendUARTstring(2, doop, 50);
+        SysCtlDelay(SysCtlClockGet()*4);
+        sendUARTstring(2, "+++@", 9);//command mode on modem
+        SysCtlDelay(SysCtlClockGet()*4);
+        sendUARTstring(2, "ATFR\r@",8);//command mode on modem
+        */
     }
 
     return 0;

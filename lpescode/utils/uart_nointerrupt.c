@@ -197,8 +197,11 @@ int8_t getUARTline(uint8_t portNum, char* str, uint32_t maxlen)
 int8_t getUARTlineOnKey(uint8_t portNum, char* str, uint32_t maxlen, char key)
 {
     uint32_t i;
-    char grab;
-    while((!UARTCharsAvail(g_ui32UARTBase[portNum]))||key!=UARTCharGetNonBlocking(g_ui32UARTBase[portNum]));
+    while(1)
+    {
+        while((!UARTCharsAvail(g_ui32UARTBase[portNum])));
+        if(key==UARTCharGetNonBlocking(g_ui32UARTBase[portNum])) break;
+    }
     for(i=0;i<maxlen-1;i++)
     {
         while(!UARTCharsAvail(g_ui32UARTBase[portNum]));
