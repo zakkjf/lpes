@@ -12,22 +12,16 @@ int split_modpacket(char* str, gps_raw_t *gps)
 
     char *stor[5]; //larger than total fields for safety
     char i=0;
-    char delim[] = ",.";
+    char delim[] = ",";
     char* token;
 
     for (token = strtok(str, delim); token; token = strtok(NULL, delim))
     {
         stor[i++] = token;
     }
-    gps->phone = atoi(stor[0]);
-    //printf("%s",stor[1]);
-    gps->lat_deg = atoi(stor[1])/100;
-    gps->lat_sec = atoi(stor[1])%100 + make_fractional(atoi(stor[2]));
-    gps->lon_deg = atoi(stor[3])/100;
-    gps->lon_sec = atoi(stor[3])%100 + make_fractional(atoi(stor[4]));
-
-    gps->lat_dec_deg = ((double)gps->lat_deg) + (((double)gps->lat_sec)/60);
-    gps->lon_dec_deg = ((double)gps->lon_deg) + (((double)gps->lon_sec)/60);
+    gps->phone = atoll(stor[0]);
+    gps->lat_dec_deg  = atof(stor[1]);
+    gps->lon_dec_deg = atof(stor[2]);
 
     free(r);
     return 0;

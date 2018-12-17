@@ -13,6 +13,7 @@
 #include "drivers/ubloxneo6.h"
 #include "gps_decoder.h"
 #include "gps_dist.h"
+#include "gps_calc.h"
 #include "modemparse.h"
 
 // TivaWare includes
@@ -35,7 +36,7 @@
 
 
 #define BOARD_ID_VER   "TIVA:01:1"
-#define FAKE_GPS 1 //switch on this mode if GPS is being difficult
+#define FAKE_GPS 0 //switch on this mode if GPS is being difficult
 #define PING_ALIVE 0
 #define FAKE_GPS_DATA "$GPGGA,215907.00,4000.43805,N,10515.80958,W,1,04,9.85,1638.9,M,-21.3,M,,*5C\n\r      " //MUST MATCH MSG_LEN!!!
 #define ERRORCODE "$GPGGA,0.00,0.0,0,0.00,0,0,00,999.99,0,0,0,0,,*5C\n\r      "
@@ -204,8 +205,13 @@ void task3(void *pvParameters)
                memset(doop,' ',sizeof(doop));
                sprintf(doop,"%s",modem_msg);
                split_modpacket(doop, &phone_location);
-               sprintf(doop,"Distance to the LPES lecture hall %f meters.\n\r", distance(phone_location.lat_dec_deg, phone_location.lon_dec_deg, 0, my_location.lat_dec_deg, my_location.lon_dec_deg, my_location.altitude_m, 1, 0)*1000);
-               sendUARTstring(2, doop, 100);
+               float dist = distance(phone_location.lat_dec_deg, phone_location.lon_dec_deg, 0, my_location.lat_dec_deg, my_location.lon_dec_deg,0, 1, 0)*1000;
+               float angl = angle(phone_location.lat_dec_deg, phone_location.lon_dec_deg, my_location.lat_dec_deg, my_location.lon_dec_deg);
+               memset(doop,' ',sizeof(doop));
+               sprintf(doop,"Distance to target %f meters.", dist);
+               sendUARTstring(2, doop, 50);
+               sprintf(doop,"Heading to target is %f degrees CW of N.\n\r", angl);
+               sendUARTstring(2, doop, 50);
                xSemaphoreGive( xSemaphore1);
                xSemaphoreGive( xSemaphore2);
 

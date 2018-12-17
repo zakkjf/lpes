@@ -8,7 +8,7 @@
 
 typedef struct gps_data{
     //time
-    uint32_t phone;
+    uint64_t phone;
     uint8_t utc_h;
     uint8_t utc_m;
     uint8_t utc_s;

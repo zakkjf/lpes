@@ -1,5 +1,6 @@
 #include "gps_decoder.h"
 #include "gps_calc.h"
+#include "gps_dist.h"
 
 #include "utils/uart_nointerrupt.h"
 
