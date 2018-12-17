@@ -92,10 +92,10 @@ PinoutSet(bool bEthernet, bool bUSB)
     ROM_GPIOPinConfigure(GPIO_PB1_U1TX);
     ROM_GPIOPinTypeUART(GPIO_PORTB_BASE, GPIO_PIN_0 | GPIO_PIN_1);
 
-    //PK0-1 used for uart4
-    //ROM_GPIOPinConfigure(GPIO_PK0_U4RX);
-    //ROM_GPIOPinConfigure(GPIO_PK1_U4TX);
-    //ROM_GPIOPinTypeUART(GPIO_PORTK_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+    //PA2-3 used for UART4 - debug UART port
+    ROM_GPIOPinConfigure(GPIO_PA2_U4RX);
+    ROM_GPIOPinConfigure(GPIO_PA3_U4TX);
+    ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_2 | GPIO_PIN_3);
 
     //PD4-5 used for uart2
     ROM_GPIOPinConfigure(GPIO_PD4_U2RX);
@@ -108,11 +108,11 @@ PinoutSet(bool bEthernet, bool bUSB)
     ROM_GPIOPinConfigure(GPIO_PP1_U6TX);
     ROM_GPIOPinTypeUART(GPIO_PORTP_BASE, GPIO_PIN_0 | GPIO_PIN_1);
 
-    //PN4-5 used for i2c2
-    ROM_GPIOPinConfigure(GPIO_PN4_I2C2SDA);
-    ROM_GPIOPinConfigure(GPIO_PN5_I2C2SCL);
-    ROM_GPIOPinTypeI2CSCL(GPIO_PORTN_BASE, GPIO_PIN_5);
-    ROM_GPIOPinTypeI2C(GPIO_PORTN_BASE, GPIO_PIN_4);
+    //PG0-1 used for i2c1 - gas gauge bus
+    ROM_GPIOPinConfigure(GPIO_PG1_I2C1SDA);
+    ROM_GPIOPinConfigure(GPIO_PG0_I2C1SCL);
+    ROM_GPIOPinTypeI2CSCL(GPIO_PORTG_BASE, GPIO_PIN_0);
+    ROM_GPIOPinTypeI2C(GPIO_PORTG_BASE, GPIO_PIN_1);
 
     //
     // PB0-1/PD6/PL6-7 are used for USB.

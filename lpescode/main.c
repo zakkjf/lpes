@@ -1,5 +1,6 @@
 
 #define TARGET_IS_TM4C129_RA0
+#define DEBUG_OUT
 
 #include "main.h"
 
@@ -41,7 +42,7 @@ int main(void)
 {
     const uint16_t BUFSIZE = 100;
     char doop[BUFSIZE];
-
+    uint16_t bin16 = 0;
 
     // Initialize system clock to 120 MHz
     uint32_t output_clock_rate_hz;
@@ -52,12 +53,34 @@ int main(void)
 
     ASSERT(output_clock_rate_hz == SYSTEM_CLOCK);
 
+    // Initialize UART ports
     initUART(DEBUG_UART, DEBUG_UART_BAUD, SYSTEM_CLOCK, UART_CONFIG_PAR_NONE);
     initUART(MODEM_UART, MODEM_UART_BAUD, SYSTEM_CLOCK, UART_CONFIG_PAR_NONE);
     init_gps(GPS_UART, SYSTEM_CLOCK);
 
+    // Initialize I2C for gas gauge
+    initi2c(GAUGE_I2C, SYSTEM_CLOCK);
+
     // Initialize the GPIO pins for the Launchpad
     PinoutSet(false, false);
+
+    // Check whether gas gauge is connected and responsive
+    gauge_read_data_class(GAUGE_REG_MAC_WRITE, doop, 4);
+
+#ifdef DEBUG_OUT
+    bin16 = (uint16_t)( doop[1] << 8 | doop[0] );
+    if(bin16 == GAUGE_ID)
+    {
+        sprintf(doop, "\r\n%s\r\n", "Gas Gauge initialized");
+    }
+    else
+    {
+        sprintf(doop, "\r\n%s%d\r\n", "Gas Gauge init fail, response = ", bin16);
+    }
+
+    sendUARTstring(DEBUG_UART, doop, strlen(doop));
+
+#endif
 
     //parse GPS data and store it
     while(1)

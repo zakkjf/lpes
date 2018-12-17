@@ -12,6 +12,9 @@
 #define DEBUG_UART          4
 #define DEBUG_UART_BAUD     115200
 
+#define GAUGE_I2C           1
+#define GAUGE_ID            0x1012
+
 #include <stdint.h>
 #include <stdbool.h>
 #include <stdio.h>
