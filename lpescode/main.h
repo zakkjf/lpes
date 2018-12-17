@@ -13,7 +13,16 @@
 #define DEBUG_UART_BAUD     115200
 
 #define GAUGE_I2C           1
-#define GAUGE_ID            0x1012
+#define GAUGE_ID            0x1000102
+
+#define I2C_RETRY_MAX       8
+
+/*// Trying to write a macro for i2c transaction repeats since we're experiencing unreliable comm
+#define I2C_TRANSACT_TIMEOUT(n, x) ( memset(doop, 0, BUF_SIZE);\
+    for(timeout = 0, bin32 = 0; timeout < TIMEOUT_MAX; timeout++) { n;\
+    bin32 = (uint32_t)( (doop[0] << 24) | (uint32_t)(doop[1] << 16) | (uint32_t)(doop[2] << 8) | (uint32_t)doop[3] );\
+    if(bin32 == x) break;\ } )
+*/
 
 #include <stdint.h>
 #include <stdbool.h>

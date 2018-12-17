@@ -42,7 +42,9 @@ int main(void)
 {
     const uint16_t BUFSIZE = 100;
     char doop[BUFSIZE];
-    uint16_t bin16 = 0;
+    unsigned char i2c_buffer[8];
+    uint32_t bin32 = 0;
+    uint8_t i2c_retry = 0;
 
     // Initialize system clock to 120 MHz
     uint32_t output_clock_rate_hz;
@@ -65,22 +67,51 @@ int main(void)
     PinoutSet(false, false);
 
     // Check whether gas gauge is connected and responsive
-    gauge_read_data_class(GAUGE_REG_MAC_WRITE, doop, 4);
+    for(i2c_retry = 0; i2c_retry < I2C_RETRY_MAX; i2c_retry++)
+    {
+        gauge_read_data_class(GAUGE_REG_ID, i2c_buffer, 4);
+
+        bin32 = ( (i2c_buffer[0] << 24) + (i2c_buffer[1] << 16) +
+                (i2c_buffer[2] << 8) + i2c_buffer[3] );
+
+        if(bin32 == GAUGE_ID)
+        {
+#ifdef DEBUG_OUT
+            sprintf(doop, "\r\n%s\r\n", "Gas Gauge initialized");
+#endif
+            break;
+        }
+        else
+        {
+#ifdef DEBUG_OUT
+            sprintf(doop, "\r\n%s%d\r\n", "Gas Gauge init fail, response = ", bin32);
+#endif
+        }
+
+    }
 
 #ifdef DEBUG_OUT
-    bin16 = (uint16_t)( doop[1] << 8 | doop[0] );
-    if(bin16 == GAUGE_ID)
-    {
-        sprintf(doop, "\r\n%s\r\n", "Gas Gauge initialized");
-    }
-    else
-    {
-        sprintf(doop, "\r\n%s%d\r\n", "Gas Gauge init fail, response = ", bin16);
-    }
-
     sendUARTstring(DEBUG_UART, doop, strlen(doop));
-
 #endif
+
+    memset(doop, 0, BUFSIZE);
+    for(i2c_retry = 0; i2c_retry < I2C_RETRY_MAX; i2c_retry++)
+    {
+        bin32 = gauge_cmd_read(GAUGE_REG_VOLTAGE);
+
+        // If the reading is the wrong order of magnitude, retry
+        if(bin32 < 1000 || bin32 > 10000)
+        {
+            continue;
+        }
+        else
+        {
+            break;
+        }
+    }
+
+    sprintf(doop, "%s%lumV\r\n", "Battery voltage = ", bin32);
+    sendUARTstring(DEBUG_UART, doop, strlen(doop));
 
     //parse GPS data and store it
     while(1)
