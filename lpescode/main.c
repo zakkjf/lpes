@@ -98,7 +98,7 @@ UARTSend(const uint8_t *pui8Buffer, uint32_t ui32Count)
         //
         // Write the next character to the UART.
         //
-        ROM_UARTCharPutNonBlocking(UART0_BASE, *pui8Buffer++);
+        ROM_UARTCharPutNonBlocking(UART2_BASE, *pui8Buffer++);
     }
 }
 
@@ -141,7 +141,7 @@ int main(void)
 
     // Initialize the GPIO pins for the Launchpad
     PinoutSet(false, false);
-
+    ROM_UARTIntClear(UART2_BASE, ROM_UARTIntStatus(UART2_BASE, true));
     ROM_IntEnable(INT_UART2);
     ROM_UARTIntEnable(UART2_BASE, UART_INT_RX | UART_INT_RT);
 
