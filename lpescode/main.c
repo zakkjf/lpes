@@ -1,20 +1,7 @@
 
 #define TARGET_IS_TM4C129_RA0
 
-#include <stdint.h>
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include "drivers/pinout.h"
-#include "utils/uart_nointerrupt.h"
-#include "utils/i2c_nointerrupt.h"
-#include "utils/mpu9250_regs.h"
-#include "drivers/mpu9250.h"
-#include "drivers/ubloxneo6.h"
-#include "gps_decoder.h"
-#include "gps_dist.h"
-#include "gps_calc.h"
-#include "modemparse.h"
+#include "main.h"
 
 // TivaWare includes
 #include "driverlib/sysctl.h"
@@ -34,8 +21,6 @@
 
 //DON'T TOUCH STUFF BELOW THIS LINE//////////////////////////////////////////////////////
 
-#include <main.h>
-
 #define GPS_BIT     0x01
 #define IMU_BIT     0x02
 #define MSG_LEN     83
@@ -54,7 +39,10 @@ imu_raw_t imu_ptr;
 // Main function
 int main(void)
 {
-    char doop[100];
+    const uint16_t BUFSIZE = 100;
+    char doop[BUFSIZE];
+
+
     // Initialize system clock to 120 MHz
     uint32_t output_clock_rate_hz;
     output_clock_rate_hz = ROM_SysCtlClockFreqSet(
@@ -64,8 +52,9 @@ int main(void)
 
     ASSERT(output_clock_rate_hz == SYSTEM_CLOCK);
 
-    initUART(2, 57600, SYSTEM_CLOCK,UART_CONFIG_PAR_NONE);
-    init_gps(1,SYSTEM_CLOCK);
+    initUART(DEBUG_UART, DEBUG_UART_BAUD, SYSTEM_CLOCK, UART_CONFIG_PAR_NONE);
+    initUART(MODEM_UART, MODEM_UART_BAUD, SYSTEM_CLOCK, UART_CONFIG_PAR_NONE);
+    init_gps(GPS_UART, SYSTEM_CLOCK);
 
     // Initialize the GPIO pins for the Launchpad
     PinoutSet(false, false);
@@ -74,7 +63,7 @@ int main(void)
     while(1)
     {
 
-        memset(doop,' ',100);
+        memset(doop,' ',BUFSIZE);
         getUARTlineOnKey(2, modem_msg,  MSG_LEN, '$');
 
         #if FAKE_GPS
@@ -83,25 +72,33 @@ int main(void)
         #else
                 get_gps(1,msg);
         #endif
-        memset(doop,0,100);
+
+                // Parse GPGGA packet
+        memset(doop,0,BUFSIZE);
         sprintf(doop,"%s",msg);
         split_GPGGA(doop, &my_location);
         //run_distances(my_location,0);
-        memset(doop,0,100);
+
+        // Parse modem packet
+        memset(doop,0,BUFSIZE);
         sprintf(doop,"%s",modem_msg);
         split_modpacket(doop, &phone_location);
         SysCtlDelay(SysCtlClockGet()*4);
         sendUARTstring(2, "+++@", 9);//command mode on modem
         SysCtlDelay(SysCtlClockGet()*4);
         //phone_location.phone = 2136409224;
+
+        // Calculate recorded phone location distance to this device's GPS location
         float dist = distance(phone_location.lat_dec_deg, phone_location.lon_dec_deg, 0, my_location.lat_dec_deg, my_location.lon_dec_deg,0, 1, 0)*1000;
         float angl = angle(phone_location.lat_dec_deg, phone_location.lon_dec_deg, my_location.lat_dec_deg, my_location.lon_dec_deg);
         sprintf(doop,"ATP#%llu\r@",phone_location.phone);
+
+        // Send command lines and result to modem
         sendUARTstring(2, doop, 25);//command mode on modem
         sendUARTstring(2, "ATWR\r@",8);//command mode on modem
         sendUARTstring(2, "ATCN\r@",8);//command mode on modem
 
-        //memset(doop,0,100);
+        //memset(doop,0,BUFSIZE);
         sprintf(doop,"Distance to target %f meters.@", dist);
         sendUARTstring(2, doop, 50);
         sprintf(doop,"Heading to target is %f degrees CW of N.\r@", angl);
