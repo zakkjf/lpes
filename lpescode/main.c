@@ -1,20 +1,8 @@
 
 #define TARGET_IS_TM4C129_RA0
+#define DEBUG_OUT
 
-#include <stdint.h>
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include "drivers/pinout.h"
-#include "utils/uart_nointerrupt.h"
-#include "utils/i2c_nointerrupt.h"
-#include "utils/mpu9250_regs.h"
-#include "drivers/mpu9250.h"
-#include "drivers/ubloxneo6.h"
-#include "gps_decoder.h"
-#include "gps_dist.h"
-#include "gps_calc.h"
-#include "modemparse.h"
+#include "main.h"
 
 // TivaWare includes
 #include "driverlib/sysctl.h"
@@ -32,10 +20,6 @@
 #define MAX_MOD_LENGTH 40
 #define FAKE_GPS_DATA "$GPGGA,215907.00,4000.43805,N,10515.80958,W,1,04,9.85,1638.9,M,-21.3,M,,*5C\n\r      " //MUST MATCH MSG_LEN!!!
 #define ERRORCODE "$GPGGA,0.00,0.0,0,0.00,0,0,00,999.99,0,0,0,0,,*5C\n\r      "
-
-//DON'T TOUCH STUFF BELOW THIS LINE//////////////////////////////////////////////////////
-
-#include <main.h>
 
 #define GPS_BIT     0x01
 #define IMU_BIT     0x02
@@ -118,12 +102,23 @@ UARTSend(const uint8_t *pui8Buffer, uint32_t ui32Count)
     }
 }
 
+// Array of contacts received since power-on
+Contacts_t Contact_List[CONTACTS_MAX];
+volatile uint8_t i_Contacts = 0;
+
 // Main function
 int main(void)
 {
     char doop[100];
     mesg_i=0;
     grabkey=0;
+    const uint16_t BUFSIZE = 100;
+    unsigned char i2c_buffer[8];
+    uint32_t bin32 = 0;
+    uint8_t i2c_retry = 0;
+
+    Contacts_t new_contact;
+
     // Initialize system clock to 120 MHz
     uint32_t output_clock_rate_hz;
     output_clock_rate_hz = ROM_SysCtlClockFreqSet(
@@ -135,8 +130,14 @@ int main(void)
 
     ROM_IntMasterEnable();
 
-    initUART(2, 57600, SYSTEM_CLOCK,UART_CONFIG_PAR_NONE);
-    init_gps(1,SYSTEM_CLOCK);
+    // Initialize UART ports
+    initUART(DEBUG_UART, DEBUG_UART_BAUD, SYSTEM_CLOCK, UART_CONFIG_PAR_NONE);
+    initUART(MODEM_UART, MODEM_UART_BAUD, SYSTEM_CLOCK, UART_CONFIG_PAR_NONE);
+
+    init_gps(GPS_UART, SYSTEM_CLOCK);
+
+    // Initialize I2C for gas gauge
+    initi2c(GAUGE_I2C, SYSTEM_CLOCK);
 
     // Initialize the GPIO pins for the Launchpad
     PinoutSet(false, false);
@@ -144,12 +145,60 @@ int main(void)
     ROM_IntEnable(INT_UART2);
     ROM_UARTIntEnable(UART2_BASE, UART_INT_RX | UART_INT_RT);
 
+    // Check whether gas gauge is connected and responsive
+    for(i2c_retry = 0; i2c_retry < I2C_RETRY_MAX; i2c_retry++)
+    {
+        gauge_read_data_class(GAUGE_REG_ID, i2c_buffer, 4);
+
+        bin32 = ( (i2c_buffer[0] << 24) + (i2c_buffer[1] << 16) +
+                (i2c_buffer[2] << 8) + i2c_buffer[3] );
+
+        if(bin32 == GAUGE_ID)
+        {
+#ifdef DEBUG_OUT
+            sprintf(doop, "\r\n%s\r\n", "Gas Gauge initialized");
+#endif
+            break;
+        }
+        else
+        {
+#ifdef DEBUG_OUT
+            sprintf(doop, "\r\n%s%d\r\n", "Gas Gauge init fail, response = ", bin32);
+#endif
+        }
+
+    }
+
+#ifdef DEBUG_OUT
+    sendUARTstring(DEBUG_UART, doop, strlen(doop));
+#endif
+
+    memset(doop, 0, BUFSIZE);
+    for(i2c_retry = 0; i2c_retry < I2C_RETRY_MAX; i2c_retry++)
+    {
+        bin32 = gauge_cmd_read(GAUGE_REG_VOLTAGE);
+
+        // If the reading is the wrong order of magnitude, retry
+        if(bin32 < 1000 || bin32 > 10000)
+        {
+            continue;
+        }
+        else
+        {
+            break;
+        }
+    }
+
+    sprintf(doop, "%s%lumV\r\n", "Battery voltage = ", bin32);
+    sendUARTstring(DEBUG_UART, doop, strlen(doop));
+
+    ArrayList_Init(Contact_List);
+
     //parse GPS data and store it
     while(1)
     {
-
-        memset(doop,' ',100);
-        //getUARTlineOnKey(2, modem_msg,  MSG_LEN, '$');
+        /*
+        memset(doop,' ',BUFSIZE);
 
         #if FAKE_GPS
                 memcpy(msg, FAKE_GPS_DATA,MSG_LEN);
@@ -157,35 +206,44 @@ int main(void)
         #else
                 get_gps(1,msg);
         #endif
-/*
-        memset(doop,0,100);
+
+        // Parse GPGGA packet
+        memset(doop,0,BUFSIZE);
         sprintf(doop,"%s",msg);
         split_GPGGA(doop, &my_location);
-        //run_distances(my_location,0);
-        memset(doop,0,100);
+
+        // Parse modem packet
+        memset(doop,0,BUFSIZE);
         sprintf(doop,"%s",modem_msg);
         split_modpacket(doop, &phone_location);
         SysCtlDelay(SysCtlClockGet()*4);
-        sendUARTstring(2, "+++@", 9);//command mode on modem
+        sendUARTstring(MODEM_UART, "+++@", 9);//command mode on modem
         SysCtlDelay(SysCtlClockGet()*4);
         //phone_location.phone = 2136409224;
+
+        // Calculate recorded phone location distance to this device's GPS location
         float dist = distance(phone_location.lat_dec_deg, phone_location.lon_dec_deg, 0, my_location.lat_dec_deg, my_location.lon_dec_deg,0, 1, 0)*1000;
         float angl = angle(phone_location.lat_dec_deg, phone_location.lon_dec_deg, my_location.lat_dec_deg, my_location.lon_dec_deg);
         sprintf(doop,"ATP#%llu\r@",phone_location.phone);
-        sendUARTstring(2, doop, 25);//command mode on modem
-        sendUARTstring(2, "ATWR\r@",8);//command mode on modem
-        sendUARTstring(2, "ATCN\r@",8);//command mode on modem
 
-        //memset(doop,0,100);
+        // Send command lines and result to modem
+        sendUARTstring(MODEM_UART, doop, 25);//command mode on modem
+        sendUARTstring(MODEM_UART, "ATWR\r@",8);//command mode on modem
+        sendUARTstring(MODEM_UART, "ATCN\r@",8);//command mode on modem
+
+        //memset(doop,0,BUFSIZE);
         sprintf(doop,"Distance to target %f meters.@", dist);
-        sendUARTstring(2, doop, 50);
+        sendUARTstring(MODEM_UART, doop, 50);
         sprintf(doop,"Heading to target is %f degrees CW of N.\r@", angl);
+
         sendUARTstring(2, doop, 50);
         SysCtlDelay(SysCtlClockGet()*4);
         sendUARTstring(2, "+++@", 9);//command mode on modem
         SysCtlDelay(SysCtlClockGet()*4);
         sendUARTstring(2, "ATFR\r@",8);//command mode on modem
-        */
+
+        sendUARTstring(MODEM_UART, doop, 50);
+                */
     }
 
     return 0;

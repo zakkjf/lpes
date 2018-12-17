@@ -25,8 +25,8 @@ typedef struct Contacts
 
 
 /*
- * This function initializes a new list. It doesn't even need to do anything,
- * why did I write this? Just declare an array in main.
+ * This function initializes a new list. We assume that the array list has been
+ * declared on the stack and is of size CONTACTS_MAX.
  */
 int8_t ArrayList_Init(Contacts_t* al);
 
