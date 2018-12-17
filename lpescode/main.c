@@ -13,6 +13,7 @@
 #include "drivers/ubloxneo6.h"
 #include "gps_decoder.h"
 #include "gps_dist.h"
+#include "modemparse.h"
 
 // TivaWare includes
 #include "driverlib/sysctl.h"
@@ -65,7 +66,7 @@ void vTimerCallback1(TimerHandle_t xTimer);
 char msg[MSG_LEN];
 char modem_msg[MSG_LEN];
 gps_raw_t my_location;
-
+gps_raw_t phone_location;
 imu_raw_t imu_ptr;
 
 TaskHandle_t th1;
@@ -200,7 +201,11 @@ void task3(void *pvParameters)
                sprintf(doop,"%s",msg);
                split_GPGGA(doop, &my_location);
                //run_distances(my_location,0);
-               sendUARTstring(2, "TEST\n\r", 7);
+               memset(doop,' ',sizeof(doop));
+               sprintf(doop,"%s",modem_msg);
+               split_modpacket(doop, &phone_location);
+               sprintf(doop,"Distance to the LPES lecture hall %f meters.\n\r", distance(phone_location.lat_dec_deg, phone_location.lon_dec_deg, 0, my_location.lat_dec_deg, my_location.lon_dec_deg, my_location.altitude_m, 1, 0)*1000);
+               sendUARTstring(2, doop, 100);
                xSemaphoreGive( xSemaphore1);
                xSemaphoreGive( xSemaphore2);
 
