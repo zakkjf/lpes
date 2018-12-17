@@ -14,8 +14,7 @@
 #define GAUGECMD_ADDR               0x0000
 #define GAUGECMD_CONTROL_STATUS     0x0000
 #define GAUGECMD_CONTROL_ID         0x0001
-#define GAUGECMD_FW_ID              0x2000
-#define GAUGEREG_FW_ID              0x0040
+#define GAUGE_CMD_RESET             0x0041
 
 // BQ35100 gas gauge I2C addresses
 #define GAUGE_I2C_ADDR_WRITE        0x55 // 0xAA (the TiVa I2C drivers left-shift these by 1
