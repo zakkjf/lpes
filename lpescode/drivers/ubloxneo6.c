@@ -13,7 +13,7 @@ uint8_t detect_gps()
 
 uint8_t init_gps(uint32_t module, uint32_t sysclock)
 {
-    initUART(module, 9600, sysclock,UART_CONFIG_PAR_NONE);
+    initUART(module, GPS_UART_BAUD, sysclock,UART_CONFIG_PAR_NONE);
     return 0;
 }
 uint8_t get_gps(uint32_t module, char* msg)

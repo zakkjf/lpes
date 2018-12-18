@@ -23,7 +23,10 @@
 //*****************************************************************************
 
 #include <stdint.h>
-#include "FreeRTOS.h"
+#include "main.h"
+
+extern CB_t modem_rx_buffer;
+extern char modem_rx_data[MODEM_RX_BUFFER_SIZE_MAX][64];
 
 //*****************************************************************************
 //
@@ -120,7 +123,7 @@ void (* const g_pfnVectors[])(void) =
     IntDefaultHandler,                      // GPIO Port F
     IntDefaultHandler,                      // GPIO Port G
     IntDefaultHandler,                      // GPIO Port H
-    IntDefaultHandler,                      // UART2 Rx and Tx
+    UARTIntHandler,                      // UART2 Rx and Tx
     IntDefaultHandler,                      // SSI1 Rx and Tx
     IntDefaultHandler,                      // Timer 3 subtimer A
     IntDefaultHandler,                      // Timer 3 subtimer B
