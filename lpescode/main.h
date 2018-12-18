@@ -17,7 +17,7 @@
 
 #define I2C_RETRY_MAX       64
 
-#define MODEM_RX_BUFFER_SIZE_MAX    255
+#define MODEM_RX_BUFFER_SIZE_MAX    10
 
 /*// Trying to write a macro for i2c transaction repeats since we're experiencing unreliable comm
 #define I2C_TRANSACT_TIMEOUT(n, x) ( memset(doop, 0, BUF_SIZE);\
@@ -43,6 +43,9 @@
 #include "gauge.h"
 #include "utils/arraylist.h"
 #include "utils/circbuf.h"
+
+extern CB_t modem_rx_buffer;
+extern char modem_rx_data[MODEM_RX_BUFFER_SIZE_MAX][64];
 
 void UARTIntHandler(void);
 

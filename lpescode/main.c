@@ -1,6 +1,6 @@
 
 #define TARGET_IS_TM4C129_RA0
-#define DEBUG_OUT
+//#define DEBUG_OUT
 
 #include "main.h"
 
@@ -25,13 +25,14 @@
 #define IMU_BIT     0x02
 #define MSG_LEN     83
 #define KEY         '$'
-#define ENDKEY      '\n'
+#define ENDKEY      '\r'
 #define GPS_TAG  "GPSDATA"
 #define IMU_TAG  "IMUDATA"
 #define TAGSIZE  8
-
+#define BUFSIZE 100
 char msg[MSG_LEN];
 char modem_msg[MSG_LEN];
+char str_msg[MSG_LEN];
 char grabkey;
 uint8_t mesg_i;
 uint32_t ui32Status;
@@ -42,7 +43,6 @@ imu_raw_t imu_ptr;
 
 CB_t modem_rx_buffer;
 char modem_rx_data[MODEM_RX_BUFFER_SIZE_MAX][64];
-
 
 void UARTIntHandler(void)
 {
@@ -71,22 +71,24 @@ void UARTIntHandler(void)
                 grabkey = 1;
             }
         }
-
-        while(ROM_UARTCharsAvail(UART2_BASE))
+        else
         {
-              grabkey = ROM_UARTCharGetNonBlocking(UART2_BASE);
+            grabkey = ROM_UARTCharGetNonBlocking(UART2_BASE);
 
-              if(grabkey==ENDKEY)
-              {
-                  mesg_i=0;
-                  grabkey=0;
-                  //iterate to next item in buffer
-                  break;
-              }
-              else
-              {
-                  modem_msg[mesg_i++] = grabkey;
-              }
+            if(grabkey==ENDKEY)
+            {
+                modem_msg[mesg_i++]='\0';
+                CB_buffer_add_item(&modem_rx_buffer, modem_msg);
+                memset(modem_msg,0,MSG_LEN);
+                mesg_i=0;
+                grabkey=0;
+                //iterate to next item in buffer
+                break;
+            }
+            else
+            {
+                modem_msg[mesg_i++] = grabkey;
+            }
         }
     }
 
@@ -115,10 +117,7 @@ volatile uint8_t i_Contacts = 0;
 // Main function
 int main(void)
 {
-    char doop[100];
-    mesg_i=0;
-    grabkey=0;
-    const uint16_t BUFSIZE = 100;
+
     unsigned char i2c_buffer[8];
     uint32_t bin32 = 0;
     uint8_t i2c_retry = 0;
@@ -134,35 +133,6 @@ int main(void)
 
     ASSERT(output_clock_rate_hz == SYSTEM_CLOCK);
 
-    // Initialize circular buffer for Modem UART Rx
-    CB_init(&modem_rx_buffer, &modem_rx_data, MODEM_RX_BUFFER_SIZE_MAX);
-
-    /*
-    strcpy(doop, "uuuuuu");
-
-    CB_buffer_add_item(&modem_rx_buffer, doop);
-
-    strcpy(doop, "123456");
-
-    CB_buffer_add_item(&modem_rx_buffer, doop);
-
-    strcpy(doop, "modem1");
-
-    CB_buffer_add_item(&modem_rx_buffer, doop);
-
-    CB_buffer_remove_item(&modem_rx_buffer, doop);
-
-    CB_buffer_remove_item(&modem_rx_buffer, doop);
-
-    strcpy(doop, "789123");
-
-    CB_buffer_add_item(&modem_rx_buffer, doop);
-
-    CB_buffer_remove_item(&modem_rx_buffer, doop);
-
-    CB_buffer_remove_item(&modem_rx_buffer, doop);
-*/
-
     // Initialize UART ports
     initUART(DEBUG_UART, DEBUG_UART_BAUD, SYSTEM_CLOCK, UART_CONFIG_PAR_NONE);
     initUART(MODEM_UART, MODEM_UART_BAUD, SYSTEM_CLOCK, UART_CONFIG_PAR_NONE);
@@ -174,11 +144,8 @@ int main(void)
 
     // Initialize the GPIO pins for the Launchpad
     PinoutSet(false, false);
-    ROM_UARTIntClear(UART2_BASE, ROM_UARTIntStatus(UART2_BASE, true));
-    ROM_IntEnable(INT_UART2);
-    ROM_UARTIntEnable(UART2_BASE, UART_INT_RX | UART_INT_RT);
-    ROM_IntMasterEnable();
 
+/*
     // The gauge seems to update its voltage only when it first powers up,
     // there must be some other trigger for it to update its voltage reading
  //   gauge_write_data_class(GAUGE_CMD_RESET, i2c_buffer, 4);
@@ -235,12 +202,25 @@ int main(void)
     sendUARTstring(DEBUG_UART, doop, strlen(doop));
 
     ArrayList_Init(Contact_List);
-
+*/
     //parse GPS data and store it
+    ///INITIALIZE EVERYTHING BELOW THIS LINE, I2C register calls MESS WITH HEAP ALLOCATION FOR SOME BIZARRE FUCKING REASON
+    mesg_i=0;
+    grabkey=0;
+    char doop[200];
+    // Initialize circular buffer for Modem UART Rx
+    CB_init(&modem_rx_buffer, &modem_rx_data, MODEM_RX_BUFFER_SIZE_MAX);
+
+    ROM_UARTIntClear(UART2_BASE, ROM_UARTIntStatus(UART2_BASE, true));
+    ROM_IntEnable(INT_UART2);
+    ROM_UARTIntEnable(UART2_BASE, UART_INT_RX | UART_INT_RT);
+    ROM_IntMasterEnable();
     while(1)
     {
-        /*
-        memset(doop,' ',BUFSIZE);
+        memset(str_msg,' ',MSG_LEN);
+
+        while(CB_EMPTY==CB_is_empty(&modem_rx_buffer));
+        CB_buffer_remove_item(&modem_rx_buffer, str_msg);
 
         #if FAKE_GPS
                 memcpy(msg, FAKE_GPS_DATA,MSG_LEN);
@@ -256,11 +236,11 @@ int main(void)
 
         // Parse modem packet
         memset(doop,0,BUFSIZE);
-        sprintf(doop,"%s",modem_msg);
+        sprintf(doop,"%s",str_msg);
         split_modpacket(doop, &phone_location);
-        SysCtlDelay(SysCtlClockGet()*4);
+        SysCtlDelay(SysCtlClockGet()*3);
         sendUARTstring(MODEM_UART, "+++@", 9);//command mode on modem
-        SysCtlDelay(SysCtlClockGet()*4);
+        SysCtlDelay(SysCtlClockGet()*3);
         //phone_location.phone = 2136409224;
 
         // Calculate recorded phone location distance to this device's GPS location
@@ -274,18 +254,18 @@ int main(void)
         sendUARTstring(MODEM_UART, "ATCN\r@",8);//command mode on modem
 
         //memset(doop,0,BUFSIZE);
-        sprintf(doop,"Distance to target %f meters.@", dist);
+        sprintf(doop,"Distance to target %.2f meters.\n\r@", dist);
         sendUARTstring(MODEM_UART, doop, 50);
-        sprintf(doop,"Heading to target is %f degrees CW of N.\r@", angl);
-
-        sendUARTstring(2, doop, 50);
+        //sprintf(doop,"Heading to target is %.2f degrees CW of N.\r@", angl);
+/*
+        //sendUARTstring(2, doop, 50);
         SysCtlDelay(SysCtlClockGet()*4);
         sendUARTstring(2, "+++@", 9);//command mode on modem
         SysCtlDelay(SysCtlClockGet()*4);
         sendUARTstring(2, "ATFR\r@",8);//command mode on modem
 
         sendUARTstring(MODEM_UART, doop, 50);
-                */
+        */
     }
 
     return 0;

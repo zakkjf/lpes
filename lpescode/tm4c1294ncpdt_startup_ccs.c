@@ -25,6 +25,9 @@
 #include <stdint.h>
 #include "main.h"
 
+extern CB_t modem_rx_buffer;
+extern char modem_rx_data[MODEM_RX_BUFFER_SIZE_MAX][64];
+
 //*****************************************************************************
 //
 // Forward declaration of the default fault handlers.
