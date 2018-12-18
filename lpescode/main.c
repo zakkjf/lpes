@@ -59,6 +59,8 @@ void UARTIntHandler(void)
     //
     // Loop while there are characters in the receive FIFO.
     //
+    ROM_UARTCharPutNonBlocking(UART4_BASE, 'R');
+
     while(ROM_UARTCharsAvail(UART2_BASE))
     {
         //
@@ -135,6 +137,8 @@ int main(void)
     // Initialize UART ports
     initUART(DEBUG_UART, DEBUG_UART_BAUD, SYSTEM_CLOCK, UART_CONFIG_PAR_NONE);
     initUART(MODEM_UART, MODEM_UART_BAUD, SYSTEM_CLOCK, UART_CONFIG_PAR_NONE);
+
+    sendUARTstring(DEBUG_UART, "Start Debug\r\n@", 20);//command mode on modem
 
     init_gps(GPS_UART, SYSTEM_CLOCK);
 
@@ -248,8 +252,9 @@ int main(void)
         sprintf(doop,"ATP#%llu\r@",phone_location.phone);
         // Send command lines and result to modem
         sendUARTstring(MODEM_UART, doop, 20);//command mode on modem
+        sendUARTstring(DEBUG_UART, doop, 20);//command mode on modem
         SysCtlDelay(SysCtlClockGet());
-        sendUARTstring(MODEM_UART, "ATWR\r@",9);//command mode on modem
+        sendUARTstring(MODEM_UART, "ATAC\r@",9);//command mode on modem
         SysCtlDelay(SysCtlClockGet());
         sendUARTstring(MODEM_UART, "ATCN\r@",9);//command mode on modem
         SysCtlDelay(SysCtlClockGet());
@@ -259,12 +264,12 @@ int main(void)
         memset(doop,0,BUFSIZE);
         sprintf(doop,"Heading to target is %.2f degrees CW of N.\r@", angl);
         sendUARTstring(MODEM_UART, doop, 50);
-
+/*
         SysCtlDelay(SysCtlClockGet()*3);
         sendUARTstring(2, "+++@", 9);//command mode on modem
         SysCtlDelay(SysCtlClockGet()*3);
         sendUARTstring(2, "ATFR\r@",8);//command mode on modem
-
+*/
     }
 
     return 0;

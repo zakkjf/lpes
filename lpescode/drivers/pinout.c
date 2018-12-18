@@ -93,9 +93,9 @@ PinoutSet(bool bEthernet, bool bUSB)
     //ROM_GPIOPinTypeUART(GPIO_PORTB_BASE, GPIO_PIN_0 | GPIO_PIN_1);
 
     //PA2-3 used for UART4 - debug UART port
-   // ROM_GPIOPinConfigure(GPIO_PA2_U4RX);
-    //ROM_GPIOPinConfigure(GPIO_PA3_U4TX);
-    //ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_2 | GPIO_PIN_3);
+    ROM_GPIOPinConfigure(GPIO_PA2_U4RX);
+    ROM_GPIOPinConfigure(GPIO_PA3_U4TX);
+    ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_2 | GPIO_PIN_3);
 
     //PD4-5 used for uart2
     ROM_GPIOPinConfigure(GPIO_PD4_U2RX);
