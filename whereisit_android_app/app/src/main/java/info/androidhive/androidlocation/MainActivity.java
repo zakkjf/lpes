@@ -101,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
     private Boolean mRequestingLocationUpdates;
     private static final int MY_PERMISSIONS_REQUEST_SEND_SMS =0;
     Button sendBtn;
-    EditText txtphoneNo;
     EditText myPhoneNo;
     String trkPhoneNo;
     String message;
@@ -119,16 +118,15 @@ public class MainActivity extends AppCompatActivity {
         restoreValuesFromBundle(savedInstanceState);
 
         sendBtn = (Button) findViewById(R.id.btn_tracker_ping);
-        txtphoneNo = (EditText) findViewById(R.id.editTargetPhone);
         myPhoneNo =  (EditText) findViewById(R.id.editYourPhone);
 
         sendBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                if (isValidMobile(txtphoneNo.getText().toString()) && isValidMobile(myPhoneNo.getText().toString())) {
+                if (isValidMobile(myPhoneNo.getText().toString())) {
                     sendSMSMessage();
                 } else {
                     Toast.makeText(getApplicationContext(),
-                            "Please enter two valid phone numbers before sending", Toast.LENGTH_LONG).show();
+                            "Please enter a valid US phone number before sending", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -139,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void sendSMSMessage() {
-        trkPhoneNo = txtphoneNo.getText().toString();
+        trkPhoneNo = "5664380435";
 
         if (mCurrentLocation != null) {
             message = "$"+myPhoneNo.getText().toString() +"," + mCurrentLocation.getLatitude() + ","
@@ -181,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.LENGTH_LONG).show();
                 } else {
                     Toast.makeText(getApplicationContext(),
-                            "SMS faild, please try again.", Toast.LENGTH_LONG).show();
+                            "SMS failed, please try again.", Toast.LENGTH_LONG).show();
                     return;
                 }
             }
