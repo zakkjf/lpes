@@ -80,3 +80,199 @@ double deg2rad(double deg) {
 double rad2deg(double rad) {
   return (rad * 180 / pi);
 }
+
+int cardinal_dir_eight_wind(char* cardinal, float angle)
+{
+    /*
+    Card 8  Direction   LowerBound  UpperBound
+    N       0           337.5       22.5
+    NE      45          22.5        67.5
+    E       90          67.5        112.5
+    SE      135         112.5       157.5
+    S       180         157.5       202.5
+    SW      225         202.5       247.5
+    W       270         247.5       292.5
+    NW      315         292.5       337.5
+    */
+    if(angle > 337.5 || angle <= 22.5)
+    {
+        strcpy(cardinal,"N");
+    }
+    else if (angle > 22.5 && angle <= 67.5)
+    {
+        strcpy(cardinal,"NE");
+    }
+    else if (angle > 67.5 && angle <= 112.5)
+    {
+        strcpy(cardinal,"E");
+    }
+    else if (angle > 112.5 && angle <= 157.5)
+    {
+        strcpy(cardinal,"SE");
+    }
+    else if (angle > 157.5 && angle <= 202.5)
+    {
+        strcpy(cardinal,"S");
+    }
+    else if (angle > 202.5 && angle <= 247.5)
+    {
+        strcpy(cardinal,"SW");
+    }
+    else if (angle > 247.5 && angle <= 292.5)
+    {
+        strcpy(cardinal,"W");
+    }
+    else if (angle > 292.5 && angle <= 337.5)
+    {
+        strcpy(cardinal,"NW");
+    }
+    else
+    {
+        strcpy(cardinal,"??");
+        return 1;
+    }
+    return 0;
+}
+
+int cardinal_dir_sixteen_wind(char* cardinal, float angle)
+{
+    /*
+    Card 16 Direction   LowerBound  UpperBound
+    N       0           348.75      11.25
+    NNE     22.5        11.25       33.75
+    NE      45          33.75       56.25
+    ENE     67.5        56.25       78.75
+    E       90          78.75       101.25
+    ESE     112.5       101.25      123.75
+    SE      135         123.75      146.25
+    SSE     157.5       146.25      168.75
+    S       180         168.75      191.25
+    SSW     202.5       191.25      213.75
+    SW      225         213.75      236.25
+    WSW     247.5       236.25      258.75
+    W       270         258.75      281.25
+    WNW     292.5       281.25      303.75
+    NW      315         303.75      326.25
+    NNW     337.5       326.25      348.75
+    */
+
+    if(angle > 348.75 || angle <= 11.25)
+    {
+        strcpy(cardinal,"N");
+    }
+    else if (angle > 11.25 && angle <= 33.75)
+    {
+        strcpy(cardinal,"NNE");
+    }
+    else if (angle > 33.75 && angle <= 56.25)
+    {
+        strcpy(cardinal,"NE");
+    }
+    else if (angle > 56.25 && angle <= 78.75)
+    {
+        strcpy(cardinal,"ENE");
+    }
+    else if (angle > 78.75 && angle <= 101.25)
+    {
+        strcpy(cardinal,"E");
+    }
+    else if (angle > 101.25 && angle <= 123.75)
+    {
+        strcpy(cardinal,"ESE");
+    }
+    else if (angle > 123.75 && angle <= 146.25)
+    {
+        strcpy(cardinal,"SE");
+    }
+    else if (angle > 146.25 && angle <= 168.75)
+    {
+        strcpy(cardinal,"SSE");
+    }
+    else if (angle > 168.75 && angle <= 191.25)
+    {
+        strcpy(cardinal,"S");
+    }
+    else if (angle > 191.25 && angle <= 213.75)
+    {
+        strcpy(cardinal,"SSW");
+    }
+    else if (angle > 213.75 && angle <= 236.25)
+    {
+        strcpy(cardinal,"SW");
+    }
+    else if (angle > 236.25 && angle <= 258.75)
+    {
+        strcpy(cardinal,"WSW");
+    }
+    else if (angle > 258.75 && angle <= 281.25)
+    {
+        strcpy(cardinal,"W");
+    }
+    else if (angle > 281.25 && angle <= 303.75)
+    {
+        strcpy(cardinal,"WNW");
+    }
+    else if (angle > 303.75 && angle <= 326.25)
+    {
+        strcpy(cardinal,"NW");
+    }
+    else if (angle > 326.25 && angle <= 348.75)
+    {
+        strcpy(cardinal,"NNW");
+    }
+    else
+    {
+        strcpy(cardinal,"???");
+        return 1;
+    }
+
+    return 0;
+}
+
+int get_obfuscated_dist(char* dir_mesg, float dist, float angle)
+{
+    //Under 15m: "I'm very close to you! Look around!"
+    //15m < d < 30m: "I'm very close by, somewhere <approx heading> !"
+    //30m < d < 50m: "I'm in the area around here, somewhere <apx heading> !"
+    //50m < d <100m: "I'm within walking distance, somewhere <apx heading> !"
+    //100m < d <500m: "Come find me! I'm to the <apx heading> !"
+    //500m < d < inf: "I'm pretty far away! Head <apx heading> !"
+    char cardinal[4] = "    ";
+
+    if(dist>500)
+    {
+        cardinal_dir_sixteen_wind(cardinal, angle);
+        sprintf(dir_mesg,"I'm pretty far away! Head %s !@",cardinal);
+    }
+    else if(500 > dist && dist >= 100)
+    {
+        cardinal_dir_sixteen_wind(cardinal, angle);
+        sprintf(dir_mesg,"Come find me! I'm to the %s !@",cardinal);
+    }
+    else if(100 > dist && dist >= 50)
+    {
+        cardinal_dir_sixteen_wind(cardinal, angle);
+        sprintf(dir_mesg,"I'm within walking distance, somewhere %s !@",cardinal);
+    }
+    else if(50 > dist && dist >= 30)
+    {
+        cardinal_dir_eight_wind(cardinal, angle);
+        sprintf(dir_mesg,"I'm in the area around here, somewhere %s !@",cardinal);
+    }
+    else if(30 > dist && dist >= 15)
+    {
+        cardinal_dir_eight_wind(cardinal, angle);
+        sprintf(dir_mesg,"I'm very close by, somewhere %s !@",cardinal);
+    }
+    else if(15 > dist && dist >= 0)
+    {
+        sprintf(dir_mesg,"I'm very close to you! Look around!@");
+    }
+    else
+    {
+        sprintf(dir_mesg,"You are an invalid distance from the tracker. Something is wack.@");
+        return 1;
+    }
+
+    return 0;
+}
