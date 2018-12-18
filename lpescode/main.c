@@ -15,7 +15,7 @@
 #include "string.h"
 
 #define BOARD_ID_VER   "TIVA:01:1"
-#define FAKE_GPS 1 //switch on this mode if GPS is being difficult
+#define FAKE_GPS 0 //switch on this mode if GPS is being difficult
 #define PING_ALIVE 0
 #define MAX_MOD_LENGTH 40
 #define FAKE_GPS_DATA "$GPGGA,215907.00,4000.43805,N,10515.80958,W,1,04,9.85,1638.9,M,-21.3,M,,*5C\n\r      " //MUST MATCH MSG_LEN!!!
@@ -228,7 +228,7 @@ int main(void)
                 memcpy(msg, FAKE_GPS_DATA,MSG_LEN);
                // SysCtlDelay(SysCtlClockGet()/3);
         #else
-                get_gps(1,msg);
+                get_gps(GPS_UART,msg);
         #endif
 
         // Parse GPGGA packet
