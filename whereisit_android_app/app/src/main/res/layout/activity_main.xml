@@ -74,20 +74,4 @@
 
     </android.support.design.widget.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/editTargetPhone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="Enter Target Phone Number"
-            android:inputType="phone" />
-
-
-    </android.support.design.widget.TextInputLayout>
-
 </LinearLayout>
