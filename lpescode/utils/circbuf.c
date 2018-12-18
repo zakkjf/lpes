@@ -46,7 +46,8 @@ CB_status CB_buffer_add_item(CB_t *buffer, char add_data[])
 
   else {
     //*((buffer->data)+buffer->head) = add_data; // insert item at head
-
+    uint32_t test = buffer->head * 16;
+    uint32_t test2 = &(buffer->data[buffer->head * 16]);
     strcpy( &(buffer->data[buffer->head * 16]), add_data);
 
     CB_advance_head(buffer);
@@ -85,6 +86,8 @@ CB_status CB_buffer_remove_item(CB_t *buffer, char *rm_data)
     return CB_EMPTY;
 
   //*rm_data = *((buffer->data)+buffer->tail); // read item at tail and store
+  uint32_t test = buffer->tail * 16;
+  uint32_t test2 = &(buffer->data[buffer->tail * 16]);
   strcpy(rm_data, &(buffer->data[buffer->tail * 16]) );
 
     // update count (done here as dedicated sub function was not working on

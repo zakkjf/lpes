@@ -69,7 +69,7 @@ int8_t initUART(uint8_t portNum, uint32_t clock, uint32_t sysclock, uint32_t par
     UARTConfigSetExpClk(baseaddr, sysclock, clock,
     (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
     UART_CONFIG_PAR_NONE));
-
+    UARTFIFOEnable(baseaddr);
     return 0;
 }
 

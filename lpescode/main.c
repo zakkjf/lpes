@@ -33,8 +33,6 @@
 char msg[MSG_LEN];
 char modem_msg[MSG_LEN];
 char str_msg[MSG_LEN];
-char grabkey;
-uint8_t mesg_i;
 uint32_t ui32Status;
 
 gps_raw_t my_location;
@@ -46,6 +44,8 @@ char modem_rx_data[MODEM_RX_BUFFER_SIZE_MAX][64];
 
 void UARTIntHandler(void)
 {
+    static char grabkey = 0;
+    static uint8_t mesg_i = 0;
     //
     // Get the interrrupt status.
     //
@@ -79,7 +79,7 @@ void UARTIntHandler(void)
             {
                 modem_msg[mesg_i++]='\0';
                 CB_buffer_add_item(&modem_rx_buffer, modem_msg);
-                memset(modem_msg,0,MSG_LEN);
+                //memset(modem_msg,0,MSG_LEN);
                 mesg_i=0;
                 grabkey=0;
                 //iterate to next item in buffer
@@ -96,7 +96,7 @@ void UARTIntHandler(void)
 }
 
 void
-UARTSend(const uint8_t *pui8Buffer, uint32_t ui32Count)
+UARTSend(uint8_t module, const char *pui8Buffer, uint32_t ui32Count)
 {
     //
     // Loop while there are more characters to send.
@@ -117,7 +117,6 @@ volatile uint8_t i_Contacts = 0;
 // Main function
 int main(void)
 {
-
     unsigned char i2c_buffer[8];
     uint32_t bin32 = 0;
     uint8_t i2c_retry = 0;
@@ -205,8 +204,7 @@ int main(void)
 */
     //parse GPS data and store it
     ///INITIALIZE EVERYTHING BELOW THIS LINE, I2C register calls MESS WITH HEAP ALLOCATION FOR SOME BIZARRE FUCKING REASON
-    mesg_i=0;
-    grabkey=0;
+
     char doop[200];
     // Initialize circular buffer for Modem UART Rx
     CB_init(&modem_rx_buffer, &modem_rx_data, MODEM_RX_BUFFER_SIZE_MAX);
@@ -239,33 +237,34 @@ int main(void)
         sprintf(doop,"%s",str_msg);
         split_modpacket(doop, &phone_location);
         SysCtlDelay(SysCtlClockGet()*3);
-        sendUARTstring(MODEM_UART, "+++@", 9);//command mode on modem
+        sendUARTstring(MODEM_UART, "+++", 3);//command mode on modem
         SysCtlDelay(SysCtlClockGet()*3);
         //phone_location.phone = 2136409224;
 
         // Calculate recorded phone location distance to this device's GPS location
         float dist = distance(phone_location.lat_dec_deg, phone_location.lon_dec_deg, 0, my_location.lat_dec_deg, my_location.lon_dec_deg,0, 1, 0)*1000;
         float angl = angle(phone_location.lat_dec_deg, phone_location.lon_dec_deg, my_location.lat_dec_deg, my_location.lon_dec_deg);
+        memset(doop,0,BUFSIZE);
         sprintf(doop,"ATP#%llu\r@",phone_location.phone);
-
         // Send command lines and result to modem
-        sendUARTstring(MODEM_UART, doop, 25);//command mode on modem
-        sendUARTstring(MODEM_UART, "ATWR\r@",8);//command mode on modem
-        sendUARTstring(MODEM_UART, "ATCN\r@",8);//command mode on modem
-
-        //memset(doop,0,BUFSIZE);
-        sprintf(doop,"Distance to target %.2f meters.\n\r@", dist);
+        sendUARTstring(MODEM_UART, doop, 20);//command mode on modem
+        SysCtlDelay(SysCtlClockGet());
+        sendUARTstring(MODEM_UART, "ATWR\r@",9);//command mode on modem
+        SysCtlDelay(SysCtlClockGet());
+        sendUARTstring(MODEM_UART, "ATCN\r@",9);//command mode on modem
+        SysCtlDelay(SysCtlClockGet());
+        memset(doop,0,BUFSIZE);
+        sprintf(doop,"Distance to target %.2f meters.\n@", dist);
         sendUARTstring(MODEM_UART, doop, 50);
-        //sprintf(doop,"Heading to target is %.2f degrees CW of N.\r@", angl);
-/*
-        //sendUARTstring(2, doop, 50);
-        SysCtlDelay(SysCtlClockGet()*4);
+        memset(doop,0,BUFSIZE);
+        sprintf(doop,"Heading to target is %.2f degrees CW of N.\r@", angl);
+        sendUARTstring(MODEM_UART, doop, 50);
+
+        SysCtlDelay(SysCtlClockGet()*3);
         sendUARTstring(2, "+++@", 9);//command mode on modem
-        SysCtlDelay(SysCtlClockGet()*4);
+        SysCtlDelay(SysCtlClockGet()*3);
         sendUARTstring(2, "ATFR\r@",8);//command mode on modem
 
-        sendUARTstring(MODEM_UART, doop, 50);
-        */
     }
 
     return 0;

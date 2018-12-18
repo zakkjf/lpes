@@ -17,7 +17,7 @@
 
 #define I2C_RETRY_MAX       64
 
-#define MODEM_RX_BUFFER_SIZE_MAX    10
+#define MODEM_RX_BUFFER_SIZE_MAX    128
 
 /*// Trying to write a macro for i2c transaction repeats since we're experiencing unreliable comm
 #define I2C_TRANSACT_TIMEOUT(n, x) ( memset(doop, 0, BUF_SIZE);\
