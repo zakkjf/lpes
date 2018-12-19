@@ -239,7 +239,7 @@ int get_obfuscated_dist(char* dir_mesg, float dist, float angle)
     //500m < d < inf: "I'm pretty far away! Head <apx heading> !"
     char cardinal[4] = "    ";
 
-    if(dist>500)
+    if(dist < MAX_POSSIBLE_GPS_DISTANCE && dist > 500)
     {
         cardinal_dir_sixteen_wind(cardinal, angle);
         sprintf(dir_mesg,"I'm pretty far away! Head %s !@",cardinal);

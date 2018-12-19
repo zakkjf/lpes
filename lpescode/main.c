@@ -261,7 +261,7 @@ int main(void)
             sprintf(doop,"Heading to target is %.2f degrees CW of N.@", angl);
             sendUARTstring(MODEM_UART, doop, 50);
             memset(doop,0,BUFSIZE);
-            sprintf(doop, "%s%lumV\n\r@", " Battery voltage =", bin32);
+            sprintf(doop, "%s%lumV\n\r@", " Battery starting voltage =", bin32);
             sendUARTstring(MODEM_UART, doop, 80);
         }
         else
@@ -270,7 +270,7 @@ int main(void)
             get_obfuscated_dist(doop, dist, angl);
             sendUARTstring(MODEM_UART, doop, 80);
             memset(doop,0,BUFSIZE);
-            sprintf(doop, "%s%lumV\n\r@", " Battery voltage =", bin32);
+            sprintf(doop, "%s%lumV\n\r@", " Battery starting voltage =", bin32);
             sendUARTstring(MODEM_UART, doop, 80);
         }
 /*

@@ -31,6 +31,8 @@
 #define MILES 0
 #define KILOM 1
 
+//maximum realistic point-to-point distance on earth (in meters), about 20 million meters or 20,000 kilometers
+#define MAX_POSSIBLE_GPS_DISTANCE ((float)20000000)
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 /*::  Function prototypes                                           :*/
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
