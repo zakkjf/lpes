@@ -14,6 +14,11 @@
 //TI compiler stuff
 #include "string.h"
 
+#define ADAM_PHONE 8582319229
+#define ZACH_PHONE 5136388369
+#define MASTER_PHONE_1 ADAM_PHONE
+#define MASTER_PHONE_2 0
+
 #define BOARD_ID_VER   "TIVA:01:1"
 #define FAKE_GPS 0 //switch on this mode if GPS is being difficult
 #define PING_ALIVE 0
@@ -80,7 +85,10 @@ void UARTIntHandler(void)
             if(grabkey==ENDKEY)
             {
                 modem_msg[mesg_i++]='\0';
-                CB_buffer_add_item(&modem_rx_buffer, modem_msg);
+                if(CB_FULL!=CB_is_full(&modem_rx_buffer)) //make sure message buffer is not full
+                {
+                    CB_buffer_add_item(&modem_rx_buffer, modem_msg);
+                }
                 //memset(modem_msg,0,MSG_LEN);
                 mesg_i=0;
                 grabkey=0;
@@ -96,59 +104,13 @@ void UARTIntHandler(void)
 
   //  CB_buffer_add_item(modem_rx_buffer, )
 }
-
-void
-UARTSend(uint8_t module, const char *pui8Buffer, uint32_t ui32Count)
+uint32_t checkBatt()
 {
-    //
-    // Loop while there are more characters to send.
-    //
-    while(ui32Count--)
-    {
-        //
-        // Write the next character to the UART.
-        //
-        ROM_UARTCharPutNonBlocking(UART2_BASE, *pui8Buffer++);
-    }
-}
-
-// Array of contacts received since power-on
-Contacts_t Contact_List[CONTACTS_MAX];
-volatile uint8_t i_Contacts = 0;
-
-// Main function
-int main(void)
-{
+    char doop[200];
     unsigned char i2c_buffer[8];
     uint32_t bin32 = 0;
     uint8_t i2c_retry = 0;
 
-    Contacts_t new_contact;
-
-    // Initialize system clock to 120 MHz
-    uint32_t output_clock_rate_hz;
-    output_clock_rate_hz = ROM_SysCtlClockFreqSet(
-                               (SYSCTL_XTAL_16MHZ | SYSCTL_OSC_INT |
-                                SYSCTL_USE_PLL | SYSCTL_CFG_VCO_480),
-                               SYSTEM_CLOCK);
-
-    ASSERT(output_clock_rate_hz == SYSTEM_CLOCK);
-
-    // Initialize UART ports
-    initUART(DEBUG_UART, DEBUG_UART_BAUD, SYSTEM_CLOCK, UART_CONFIG_PAR_NONE);
-    initUART(MODEM_UART, MODEM_UART_BAUD, SYSTEM_CLOCK, UART_CONFIG_PAR_NONE);
-
-    sendUARTstring(DEBUG_UART, "Start Debug\r\n@", 20);//command mode on modem
-
-    init_gps(GPS_UART, SYSTEM_CLOCK);
-
-    // Initialize I2C for gas gauge
-    initi2c(GAUGE_I2C, SYSTEM_CLOCK);
-
-    // Initialize the GPIO pins for the Launchpad
-    PinoutSet(false, false);
-
-/*
     // The gauge seems to update its voltage only when it first powers up,
     // there must be some other trigger for it to update its voltage reading
  //   gauge_write_data_class(GAUGE_CMD_RESET, i2c_buffer, 4);
@@ -204,12 +166,42 @@ int main(void)
     sprintf(doop, "%s%lumV\r\n", "Battery voltage = ", bin32);
     sendUARTstring(DEBUG_UART, doop, strlen(doop));
 
-    ArrayList_Init(Contact_List);
-*/
+    return bin32;
+}
+// Main function
+int main(void)
+{
+    char doop[200];
+
+    uint32_t bin32 = 0;
+
+
+    // Initialize system clock to 120 MHz
+    uint32_t output_clock_rate_hz;
+    output_clock_rate_hz = ROM_SysCtlClockFreqSet(
+                               (SYSCTL_XTAL_16MHZ | SYSCTL_OSC_INT |
+                                SYSCTL_USE_PLL | SYSCTL_CFG_VCO_480),
+                               SYSTEM_CLOCK);
+
+    ASSERT(output_clock_rate_hz == SYSTEM_CLOCK);
+
+    // Initialize UART ports
+    initUART(DEBUG_UART, DEBUG_UART_BAUD, SYSTEM_CLOCK, UART_CONFIG_PAR_NONE);
+    initUART(MODEM_UART, MODEM_UART_BAUD, SYSTEM_CLOCK, UART_CONFIG_PAR_NONE);
+
+    sendUARTstring(DEBUG_UART, "Start Debug\r\n@", 20);//command mode on modem
+
+    init_gps(GPS_UART, SYSTEM_CLOCK);
+
+    // Initialize I2C for gas gauge
+    initi2c(GAUGE_I2C, SYSTEM_CLOCK);
+
+    // Initialize the GPIO pins for the Launchpad
+    PinoutSet(false, false);
+
     //parse GPS data and store it
     ///INITIALIZE EVERYTHING BELOW THIS LINE, I2C register calls MESS WITH HEAP ALLOCATION FOR SOME BIZARRE FUCKING REASON
 
-    char doop[200];
     // Initialize circular buffer for Modem UART Rx
     CB_init(&modem_rx_buffer, &modem_rx_data, MODEM_RX_BUFFER_SIZE_MAX);
 
@@ -217,8 +209,10 @@ int main(void)
     ROM_IntEnable(INT_UART2);
     ROM_UARTIntEnable(UART2_BASE, UART_INT_RX | UART_INT_RT);
     ROM_IntMasterEnable();
+
     while(1)
     {
+        bin32 = checkBatt();
         memset(str_msg,' ',MSG_LEN);
 
         while(CB_EMPTY==CB_is_empty(&modem_rx_buffer));
@@ -259,11 +253,26 @@ int main(void)
         sendUARTstring(MODEM_UART, "ATCN\r@",9);//command mode on modem
         SysCtlDelay(SysCtlClockGet());
         memset(doop,0,BUFSIZE);
-        sprintf(doop,"Distance to target %.2f meters.\n@", dist);
-        sendUARTstring(MODEM_UART, doop, 50);
-        memset(doop,0,BUFSIZE);
-        sprintf(doop,"Heading to target is %.2f degrees CW of N.\r@", angl);
-        sendUARTstring(MODEM_UART, doop, 50);
+        if(phone_location.phone==MASTER_PHONE_1 || phone_location.phone==MASTER_PHONE_2)
+        {
+            sprintf(doop,"BOW BEFORE YOUR CREATOR MODE: Distance to target %.2f meters.@", dist);
+            sendUARTstring(MODEM_UART, doop, 70);
+            memset(doop,0,BUFSIZE);
+            sprintf(doop,"Heading to target is %.2f degrees CW of N.@", angl);
+            sendUARTstring(MODEM_UART, doop, 50);
+            memset(doop,0,BUFSIZE);
+            sprintf(doop, "%s%lumV\n\r@", " Battery starting voltage =", bin32);
+            sendUARTstring(MODEM_UART, doop, 80);
+        }
+        else
+        {
+            memset(doop,0,BUFSIZE);
+            get_obfuscated_dist(doop, dist, angl);
+            sendUARTstring(MODEM_UART, doop, 80);
+            memset(doop,0,BUFSIZE);
+            sprintf(doop, "%s%lumV\n\r@", " Battery starting voltage =", bin32);
+            sendUARTstring(MODEM_UART, doop, 80);
+        }
 /*
         SysCtlDelay(SysCtlClockGet()*3);
         sendUARTstring(2, "+++@", 9);//command mode on modem

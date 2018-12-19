@@ -31,6 +31,8 @@
 #define MILES 0
 #define KILOM 1
 
+//maximum realistic point-to-point distance on earth (in meters), about 20 million meters or 20,000 kilometers
+#define MAX_POSSIBLE_GPS_DISTANCE ((float)20000000)
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 /*::  Function prototypes                                           :*/
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
@@ -47,3 +49,9 @@ typedef struct gps_diff
 double distance(double lat1, double lon1, double alt1, double lat2, double lon2, double alt2, char unit, char factor_in_alt);
 
 double angle(double lat1, double lon1, double lat2, double lon2);
+
+int cardinal_dir_eight_wind(char* cardinal, float angle);
+
+int cardinal_dir_sixteen_wind(char* cardinal, float angle);
+
+int get_obfuscated_dist(char* dir_mesg, float dist, float angle);
